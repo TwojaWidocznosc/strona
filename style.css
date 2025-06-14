@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.25;
+}
+header {
+    background: #fdffff;
+    color: var(--text);
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    height: 80px;
+}
+nav {
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a {
+    color: var(--text);
+    /* margin-left: 1rem; */
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* -----------------    Hero  ---------------------- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--section-background);
+    padding: 40px 60px;
+    text-align: center;
+}
+.hero img {
+    height: 300px;
+}
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    height: 300px;
+    width: 600px;
+    text-align: start;
+}
+.hero-left h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.cta-buttons a.btn {
+    border-radius: 8px;
+    margin: 5px;
+}
+/* -----------------    Hero  ---------------------- */
+
+
+
+
+
+/* -----------------    Oferty  ---------------------- */
+
+#oferty.section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+#oferty.section h2 {
+    font-size: 2.8rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+
+
+div.option-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.option-buttons button.btn {
+    width: 292px;
+    height: 60px;
+
+    font-weight: 700;
+}
+
+
+
+.packages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.package-title{
+    font-size: 1.8rem;
+}
+.package-price{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+.package h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+/* -----------------    Oferty  ---------------------- */
+
+.testimonials, .how-it-works {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.testimonial, .step {
+    max-width: 300px;
+}
+
+.contact-form {
+    background-color: #f9fafb;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.contact-form button {
+    padding: 12px 24px;
+    background-color: #ef4444;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f5f9;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 430px) {
+    body {
+        width: 100%;
+    }
+    header {
+        display: flex;
+        height: 30px;
+        padding: 5px 20px;
+    }
+    header a {
+        height: 20px;
+    }
+    header img {
+        height: 20px;
+    }
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+    nav a {
+        height: auto;
+        font-size: 0.5rem;
+    }
+
+    .hero {
+        padding: 10px 20px;
+    }
+    .hero img {
+        height: auto;
+        width: 50%;
+    }
+    .hero-left {
+        height: 160px;
+        gap: 10px;
+    }
+    .hero-left h1 {
+        font-size: 1rem;
+    }
+
+
+    #oferty.section {
+        margin-top: 5px;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+    #oferty.section h2 {
+        font-size: 1rem;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    div.option-buttons {
+        width: 100%;
+        flex-wrap: none;
+        gap: 5px;
+    }
+    .option-buttons button.btn {
+        font-size: 0.4rem;
+        width: 30%;
+        height: 30px;
+    }
+
+    .packages {
+        gap: 5px;
+    }
+}
