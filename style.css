@@ -172,16 +172,16 @@ footer {
     }
     header {
         display: flex;
-        height: 60px;
-        padding: 5px 20px;
+        height: 70px;
+        padding: 10px 20px;
         z-index: 3;
         position: relative;
     }
     header a {
-        height: 40px;
+        height: 60px;
     }
     header img {
-        height: 40px;
+        height: 60px;
     }
     nav {
         display: none;
@@ -189,8 +189,8 @@ footer {
 
     .hamburger {
         display: block;
-        font-size: 1.4rem;
-        padding-right: 10px;
+        font-size: 2.4rem;
+        padding-right: 20px;
         cursor: pointer;
     }
 
@@ -199,7 +199,7 @@ footer {
         /* display: none; */
         display: flex;
         position: absolute;
-        top: -64px;
+        top: -44px;
         right: 0;
         width: 200px;
         flex-direction: column;
@@ -222,11 +222,11 @@ footer {
     }
 
     .mobile-menu.active {
-        top: 70px;
+        top: 90px;
     }
 
     .hero {
-        height: 220px;
+        height: 320px;
         padding: 10px 20px;
     }
     @keyframes start {
@@ -256,7 +256,7 @@ footer {
         gap: 30px;
     }
     .hero-left h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     .cta-buttons {
         display: flex;
@@ -268,19 +268,19 @@ footer {
         margin: 0;
         border-radius: 4px;
         padding: 8px 16px;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 
 
     #oferty.section {
         margin-top: 5px;
         padding: 10px 20px;
-        gap: 10px;
+        gap: 20px;
     }
     #oferty.section h2 {
-        font-size: 1rem;
-        margin-top: 5px;
-        margin-bottom: 10px;
+        font-size: 1.8rem;
+        margin-top: 15px;
+        margin-bottom: 20px;
     }
 
     div.option-buttons {
@@ -289,9 +289,9 @@ footer {
         gap: 5px;
     }
     .option-buttons button.btn {
-        font-size: 0.4rem;
+        font-size: 0.7rem;
         width: 30%;
-        height: 30px;
+        height: 50px;
     }
 
     .packages {

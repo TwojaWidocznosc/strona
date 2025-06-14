@@ -85,30 +85,35 @@
 
     .offer-card {
         gap: 4px;
-        width: calc(30% - 12px);
-        height: 160px;
+        width: calc(45% - 12px);
+        height: 230px;
         padding: 5px;
         border-radius: 4px;
         border: 0.25px solid #e5e7eb;
     }
 
     .offer-card .title{
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
     .offer-card .price{
-        font-size: 1rem;
+        font-size: 1.7rem;
         font-weight: 600;
     }
     .offer-card .desc {
-        font-size: 0.4rem;
+        font-size: 0.6rem;
+    }
+    .offer-card .btn {
+        font-size: 0.6rem;
+        padding: 8px 20px;
+        /* height: 40px; */
     }
     .badge {
-        top: -7.5px;
-        padding: 2px 4px;
+        top: -15px;
+        padding: 6px 8px;
         border-radius: 2px;
-        font-size: 0.35rem;
-        height: 7.5px;
-        width: 60%;
+        font-size: 0.6rem;
+        height: 12px;
+        width: 70%;
         /* box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
     }
 }
