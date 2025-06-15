@@ -56,6 +56,12 @@ nav a {
     font-weight: 700;
     margin: 0;
 }
+.hero-left h4 {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 
 .cta-buttons a.btn {
     border-radius: 8px;
@@ -178,10 +184,10 @@ footer {
         position: relative;
     }
     header a {
-        height: 60px;
+        height: 50px;
     }
     header img {
-        height: 60px;
+        height: 50px;
     }
     nav {
         display: none;
@@ -224,10 +230,25 @@ footer {
     .mobile-menu.active {
         top: 90px;
     }
-
+    
     .hero {
-        height: 320px;
-        padding: 10px 20px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        background-color: #fff;
+        height: 375px;
+        padding: 10px 40px 150px 30px;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url(image2.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.25; /* <-- tylko tło */
+        z-index: -1;
     }
     @keyframes start {
         0% {
@@ -258,6 +279,9 @@ footer {
     .hero-left h1 {
         font-size: 1.8rem;
     }
+    .hero-left h4 {
+        font-size: 0.8rem;
+    }
     .cta-buttons {
         display: flex;
         justify-content: start;
@@ -274,7 +298,7 @@ footer {
 
     #oferty.section {
         margin-top: 5px;
-        padding: 10px 20px;
+        padding: 30px 20px;
         gap: 20px;
     }
     #oferty.section h2 {
