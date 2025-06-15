@@ -11,26 +11,33 @@ btn.forEach(element => {
         if(e.srcElement.id == "strony"){
             let packages = document.querySelector(".packages")
             packages.innerHTML = "" 
-            let offers = [["Portfolio", "499 zł", "", false], ["Standard", "899 zł", "", true], ["Premium", "1499 zł", "", false]]
+            let offers = [
+                ["Portfolio", "499 zł", '<li>Podstawowa strona</li> <li class="unactive">Hosting</li> <li>Domena: 1 rok</li> <li class="unactive">SEO</li> <li class="unactive">Podstrony</li> <li>Dostosowanie mobilne</li> <li class="unactive">Baza danych</li>', false], 
+                ["Standard", "899 zł", '<li>Podstawowa strona</li> <li class="unactive">Hosting</li> <li>Domena: 1 rok</li> <li>SEO</li> <li>1-2 Podstrony</li> <li>Dostosowanie mobilne</li> <li>Podstawowa baza danych</li>', true], 
+                ["Premium", "1499 zł", '<li>Profesjonalna strona</li><li>Hosting: 1 rok</li><li>Domena: 1 rok</li><li>SEO</li><li>5-6 Podstron</li><li>Dostosowanie mobilne</li><li>Baza danych</li>', false]]
             
             offers.forEach(offer => {
                 if(offer[3] == true){
-                    packages.innerHTML += '<div class="offer-card">  <div class="badge">Najczęściej wybierane</div> <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aspernatur, sapiente ullam sit aperiam necessitatibus perspiciatis dolore, porro quam dolores in quibusdam nemo at qui quaerat quasi. Dolor, sed explicabo!</div>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
+                    packages.innerHTML += '<div class="offer-card">  <div class="badge">Najczęściej wybierane</div> <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <ul class="desc">'+offer[2]+'</ul>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
                 }  else {
-                    packages.innerHTML += '<div class="offer-card">   <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aspernatur, sapiente ullam sit aperiam necessitatibus perspiciatis dolore, porro quam dolores in quibusdam nemo at qui quaerat quasi. Dolor, sed explicabo!</div>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
+                    packages.innerHTML += '<div class="offer-card">   <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <ul class="desc">'+offer[2]+'</ul>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
                 }
             })
         }
         if(e.srcElement.id == "socialmedia"){
             let packages = document.querySelector(".packages")
             packages.innerHTML = ""  
-            let offers = [["IG Start", "149 zł/msc", "", false], ["IG Normal", "199 zł/msc", "", true], ["IG Boost", "399 zł/msc", "", false], ["IG Pro", "599 zł/msc", "", false]]
+            let offers = [
+                ["IG Start", "149 zł/msc", "", false], 
+                ["IG Normal", "199 zł/msc", "", true], 
+                ["IG Boost", "399 zł/msc", "", false], 
+                ["IG Pro", "599 zł/msc", "", false]]
             
             offers.forEach(offer => {
                 if(offer[3] == true){
-                    packages.innerHTML += '<div class="offer-card">  <div class="badge">Najczęściej wybierane</div> <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aspernatur, sapiente ullam sit aperiam necessitatibus perspiciatis dolore, porro quam dolores in quibusdam nemo at qui quaerat quasi. Dolor, sed explicabo!</div>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
+                    packages.innerHTML += '<div class="offer-card">  <div class="badge">Najczęściej wybierane</div> <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <ul class="desc">'+offer[2]+'</ul>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
                 }  else {
-                    packages.innerHTML += '<div class="offer-card">   <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aspernatur, sapiente ullam sit aperiam necessitatibus perspiciatis dolore, porro quam dolores in quibusdam nemo at qui quaerat quasi. Dolor, sed explicabo!</div>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
+                    packages.innerHTML += '<div class="offer-card">   <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <ul class="desc">'+offer[2]+'</ul>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
                 }
             })
         }
@@ -54,13 +61,16 @@ function changeOffer(e) {
     if(e.id == "strony"){
         let packages = document.querySelector(".packages")
         packages.innerHTML = "" 
-        let offers = [["Portfolio", "499 zł", "", false], ["Standard", "899 zł", "", true], ["Premium", "1499 zł", "", false]]
+        let offers = [
+            ["Portfolio", "499 zł", '<li>Podstawowa strona</li> <li class="unactive">Hosting</li> <li>Domena: 1 rok</li> <li class="unactive">SEO</li> <li class="unactive">Podstrony</li> <li>Dostosowanie mobilne</li> <li class="unactive">Baza danych</li>', false], 
+            ["Standard", "899 zł", '<li>Podstawowa strona</li> <li class="unactive">Hosting</li> <li>Domena: 1 rok</li> <li>SEO</li> <li>1-2 Podstrony</li> <li>Dostosowanie mobilne</li> <li>Podstawowa baza danych</li>', true], 
+            ["Premium", "1499 zł", '<li>Profesjonalna strona</li><li>Hosting: 1 rok</li><li>Domena: 1 rok</li><li>SEO</li><li>5-6 Podstron</li><li>Dostosowanie mobilne</li><li>Baza danych</li>', false]]
         
         offers.forEach(offer => {
             if(offer[3] == true){
-                packages.innerHTML += '<div class="offer-card">  <div class="badge">Najczęściej wybierane</div> <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aspernatur, sapiente ullam sit aperiam necessitatibus perspiciatis dolore, porro quam dolores in quibusdam nemo at qui quaerat quasi. Dolor, sed explicabo!</div>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
+                packages.innerHTML += '<div class="offer-card">  <div class="badge">Najczęściej wybierane</div> <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <ul class="desc">'+offer[2]+'</ul>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
             }  else {
-                packages.innerHTML += '<div class="offer-card">   <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aspernatur, sapiente ullam sit aperiam necessitatibus perspiciatis dolore, porro quam dolores in quibusdam nemo at qui quaerat quasi. Dolor, sed explicabo!</div>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
+                packages.innerHTML += '<div class="offer-card">   <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <ul class="desc">'+offer[2]+'</ul>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
             }
         })
     }
@@ -71,9 +81,9 @@ function changeOffer(e) {
         
         offers.forEach(offer => {
             if(offer[3] == true){
-                packages.innerHTML += '<div class="offer-card">  <div class="badge">Najczęściej wybierane</div> <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aspernatur, sapiente ullam sit aperiam necessitatibus perspiciatis dolore, porro quam dolores in quibusdam nemo at qui quaerat quasi. Dolor, sed explicabo!</div>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
+                packages.innerHTML += '<div class="offer-card">  <div class="badge">Najczęściej wybierane</div> <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <ul class="desc">'+offer[2]+'</ul>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
             }  else {
-                packages.innerHTML += '<div class="offer-card">   <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aspernatur, sapiente ullam sit aperiam necessitatibus perspiciatis dolore, porro quam dolores in quibusdam nemo at qui quaerat quasi. Dolor, sed explicabo!</div>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
+                packages.innerHTML += '<div class="offer-card">   <div class="title">'+offer[0]+'</div>  <div class="price">'+offer[1]+'</div> <ul class="desc">'+offer[2]+'</ul>    <a href="" class="btn btn-primary">Więcej</a>   </div>'
             }
         })
     }
@@ -93,10 +103,11 @@ function toggleMenu() {
 }
 
 function ctaScroll(type) {
-    document.getElementById("oferty").scrollIntoView({  behavior: 'smooth'  })
+    document.getElementById("oferty").scrollIntoView({  behavior: 'smooth', block: "start" })
     if (type == "page") {
         changeOffer(document.getElementById("strony"))
     } else if (type == "social") {
         changeOffer(document.getElementById("socialmedia"))
     }
 }
+
