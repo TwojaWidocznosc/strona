@@ -1,7 +1,10 @@
-var btn = document.querySelectorAll(".option-buttons button.btn")
-var socialButtons = document.querySelectorAll("#oferty div.social-buttons button.btn")
+const optionType_btn_array = document.querySelectorAll("#option-type button.seg-btn")
+const optionType_slider = document.querySelectorAll("#option-type .slider")
+
+const optionSocial_btn_array = document.querySelectorAll("#option-social button.seg-btn")
+const optionSocial_slider = document.querySelectorAll("#option-social .slider")
+
 var packages = document.querySelectorAll("#oferty .offer-card")
-const slider = document.querySelector('.slider')
 
 let offersData = [];
 
@@ -12,22 +15,22 @@ async function loadOffers() {
 
 
 loadOffers().then(() => {
-    socialButtons.forEach(button => {
+    optionSocial_btn_array.forEach(button => {
         button.addEventListener("click", function(activeButton) {
-            changeOffer(activeButton.srcElement, socialButtons)
+            changeOffer(activeButton.srcElement, optionSocial_btn_array, index, optionSocial_slider)
         })
     })
-    btn.forEach((element, index) => {
-        element.addEventListener("click", function(e) {
-            changeOffer(e.srcElement, btn, index)
+    optionType_btn_array.forEach((element, index) => {
+        element.addEventListener("click", function(activeButton) {
+            changeOffer(activeButton.srcElement, optionType_btn_array, index, optionType_slider)
         })
     });
 });
 
 
-function changeOffer(button, buttonsArray, index) {
+function changeOffer(button, buttonsArray, index, slider) {
     
-    let socialButtons = document.querySelector("#oferty div.social-buttons")
+    let socialButtons = document.querySelector("#oferty #option-social")
     let packages = document.querySelector(".packages")
     packages.innerHTML = ""
 
@@ -39,7 +42,7 @@ function changeOffer(button, buttonsArray, index) {
     slider.style.left = `calc(${(100 / buttonsArray.length) * index}% + 4px)`
     slider.style.width = `calc(${100 / buttonsArray.length}% - 8px)`
     
-    if(button.id == "strony"){
+    if(button.id == "site"){
         socialButtons.classList.remove("active")
         
         const siteOffers = offersData.find(x => x.id === "site").offers;
@@ -77,7 +80,7 @@ function changeOffer(button, buttonsArray, index) {
                 </div>`
         })
     }
-    if(button.id == "niewiem"){
+    if(button.id == "other"){
         socialButtons.classList.remove("active")
 
         const siteOffers = offersData.find(x => x.id === "other").offers;
@@ -97,7 +100,7 @@ function changeOffer(button, buttonsArray, index) {
         })
     }
 
-    if(button.id == "IG"){
+    if(button.id == "instagram"){
         const siteOffers = offersData.find(x => x.id === "socialmedia").types.find(x => x.id === "instagram").offers;
         
         siteOffers.forEach(offer => {
@@ -114,7 +117,7 @@ function changeOffer(button, buttonsArray, index) {
                 </div>`
         })
     }
-    if(button.id == "YT"){
+    if(button.id == "youtube"){
         const siteOffers = offersData.find(x => x.id === "socialmedia").types.find(x => x.id === "youtube").offers;
         
         siteOffers.forEach(offer => {
@@ -131,7 +134,7 @@ function changeOffer(button, buttonsArray, index) {
                 </div>`
         })
     }
-    if(button.id == "TIKTOK"){
+    if(button.id == "tiktok"){
         const siteOffers = offersData.find(x => x.id === "socialmedia").types.find(x => x.id === "tiktok").offers;
         
         siteOffers.forEach(offer => {
