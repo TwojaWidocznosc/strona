@@ -39,7 +39,7 @@
                 "popular": false,
                 "features": [
                     "<li>Profesjonalna strona</li>",
-                    "<li>Hosting: 2 lata</li>", 
+                    "<li>Hosting: 1 rok</li>", 
                     "<li>Domena: 1 rok</li>",
                     "<li>SEO</li>", 
                     "<li>5-6 Podstron</li>", 
@@ -104,6 +104,106 @@
                         "id": "pro",
                         "label": "IG Pro",
                         "price": "599 zł/msc",
+                        "popular": false,
+                        "features": [
+                            "<li>Profesjonalna strona</li>",
+                            "<li>Hosting: 1 rok</li>", 
+                            "<li>Domena: 1 rok</li>",
+                            "<li>SEO</li>", 
+                            "<li>5-6 Podstron</li>", 
+                            "<li>Dostosowanie mobilne</li>",
+                            "<li>Baza danych</li>"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "youtube",
+                "offers": [
+                    {
+                        "id": "start",
+                        "label": "YT Start",
+                        "price": "249 zł/msc",
+                        "popular": true,
+                        "features": [
+                            "<li>Podstawowa strona</li>",
+                            "<li class='unactive'>Hosting</li>", 
+                            "<li>Domena: 1 rok</li>",
+                            "<li class='unactive'>SEO</li>", 
+                            "<li class='unactive'>Podstrony</li>", 
+                            "<li>Dostosowanie mobilne</li>",
+                            "<li class='unactive'>Baza danych</li>"
+                        ]
+                    },
+                    {
+                        "id": "boost",
+                        "label": "YT Boost",
+                        "price": "649 zł/msc",
+                        "popular": false,
+                        "features": [
+                            "<li>Podstawowa strona</li>",
+                            "<li class='unactive'>Hosting</li>", 
+                            "<li>Domena: 1 rok</li>",
+                            "<li>SEO</li>", 
+                            "<li>1-2 Podstrony</li>", 
+                            "<li>Dostosowanie mobilne</li>",
+                            "<li>Podstawowa baza danych</li>"
+                        ]
+                    },
+                    {
+                        "id": "pro",
+                        "label": "YT Pro",
+                        "price": "1099 zł/msc",
+                        "popular": false,
+                        "features": [
+                            "<li>Profesjonalna strona</li>",
+                            "<li>Hosting: 1 rok</li>", 
+                            "<li>Domena: 1 rok</li>",
+                            "<li>SEO</li>", 
+                            "<li>5-6 Podstron</li>", 
+                            "<li>Dostosowanie mobilne</li>",
+                            "<li>Baza danych</li>"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "tiktok",
+                "offers": [
+                    {
+                        "id": "start",
+                        "label": "TikTok Start",
+                        "price": "249 zł/msc",
+                        "popular": true,
+                        "features": [
+                            "<li>Podstawowa strona</li>",
+                            "<li class='unactive'>Hosting</li>", 
+                            "<li>Domena: 1 rok</li>",
+                            "<li class='unactive'>SEO</li>", 
+                            "<li class='unactive'>Podstrony</li>", 
+                            "<li>Dostosowanie mobilne</li>",
+                            "<li class='unactive'>Baza danych</li>"
+                        ]
+                    },
+                    {
+                        "id": "boost",
+                        "label": "TikTok Boost",
+                        "price": "649 zł/msc",
+                        "popular": false,
+                        "features": [
+                            "<li>Podstawowa strona</li>",
+                            "<li class='unactive'>Hosting</li>", 
+                            "<li>Domena: 1 rok</li>",
+                            "<li>SEO</li>", 
+                            "<li>1-2 Podstrony</li>", 
+                            "<li>Dostosowanie mobilne</li>",
+                            "<li>Podstawowa baza danych</li>"
+                        ]
+                    },
+                    {
+                        "id": "pro",
+                        "label": "TikTok Pro",
+                        "price": "1099 zł/msc",
                         "popular": false,
                         "features": [
                             "<li>Profesjonalna strona</li>",
