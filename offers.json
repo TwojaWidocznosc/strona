@@ -76,7 +76,7 @@
                 "label": "Standard plan",
                 "price": "99 zł/msc",
                 "description": "Najlepsze dla rosnących firm.",
-                "popular": true,
+                "popular": false,
                 "features": [
                     "<li>Podstawowa strona</li>",
                     "<li class='unactive'>Hosting</li>", 
@@ -92,7 +92,7 @@
                 "label": "Premium plan",
                 "price": "199 zł/msc",
                 "description": "Najlepsze dla dużych organizacji.",
-                "popular": false,
+                "popular": true,
                 "features": [
                     "<li>Profesjonalna strona</li>",
                     "<li>Hosting: 1 rok</li>", 
