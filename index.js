@@ -15,13 +15,13 @@ async function loadOffers() {
 
 
 loadOffers().then(() => {
-    optionSocial_btn_array.forEach(button => {
+    optionSocial_btn_array.forEach((button, index) => {
         button.addEventListener("click", function(activeButton) {
             changeOffer(activeButton.srcElement, optionSocial_btn_array, index, optionSocial_slider)
         })
     })
-    optionType_btn_array.forEach((element, index) => {
-        element.addEventListener("click", function(activeButton) {
+    optionType_btn_array.forEach((button, index) => {
+        button.addEventListener("click", function(activeButton) {
             changeOffer(activeButton.srcElement, optionType_btn_array, index, optionType_slider)
         })
     });
