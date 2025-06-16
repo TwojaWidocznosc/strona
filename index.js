@@ -36,8 +36,8 @@ function changeOffer(button, buttonsArray, index) {
         element.classList.remove("active")
     })
     button.classList.add("active")
-    slider.style.left = `calc(${(100 / buttons.length) * index}% + 4px)`
-    slider.style.width = `calc(${100 / buttons.length}% - 8px)`
+    slider.style.left = `calc(${(100 / buttonsArray.length) * index}% + 4px)`
+    slider.style.width = `calc(${100 / buttonsArray.length}% - 8px)`
     
     if(button.id == "strony"){
         socialButtons.classList.remove("active")
