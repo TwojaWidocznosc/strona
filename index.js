@@ -1,13 +1,13 @@
 var btn = document.querySelectorAll(".option-buttons button.btn")
 var socialButtons = document.querySelectorAll("#oferty div.social-buttons button.btn")
 var packages = document.querySelectorAll("#oferty .offer-card")
-
+const slider = document.querySelector('.slider')
 
 let offersData = [];
 
 async function loadOffers() {
-  const res = await fetch("offers.json");
-  offersData = await res.json();
+    const res = await fetch("offers.json");
+    offersData = await res.json();
 }
 
 
@@ -17,15 +17,15 @@ loadOffers().then(() => {
             changeOffer(activeButton.srcElement, socialButtons)
         })
     })
-    btn.forEach(element => {
+    btn.forEach((element, index) => {
         element.addEventListener("click", function(e) {
-            changeOffer(e.srcElement, btn)
+            changeOffer(e.srcElement, btn, index)
         })
     });
 });
 
 
-function changeOffer(button, buttonsArray) {
+function changeOffer(button, buttonsArray, index) {
     
     let socialButtons = document.querySelector("#oferty div.social-buttons")
     let packages = document.querySelector(".packages")
@@ -36,6 +36,8 @@ function changeOffer(button, buttonsArray) {
         element.classList.remove("active")
     })
     button.classList.add("active")
+    slider.style.left = `calc(${(100 / buttons.length) * index}% + 4px)`
+    slider.style.width = `calc(${100 / buttons.length}% - 8px)`
     
     if(button.id == "strony"){
         socialButtons.classList.remove("active")
