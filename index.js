@@ -33,9 +33,9 @@ function changeOffer(button, buttonsArray) {
 
     buttonsArray.forEach(element => {
         // console.log(element)
-        element.classList.remove = "active"
+        element.classList.remove("active")
     })
-    button.classList.add = "active"
+    button.classList.add("active")
     
     if(button.id == "strony"){
         socialButtons.classList.remove("active")
