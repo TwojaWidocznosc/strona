@@ -1,5 +1,6 @@
 const site_serviceType_btn_array = document.querySelectorAll("#site #service-type button.seg-btn")
 const site_serviceType_slider = document.querySelector("#site #service-type .slider")
+let offersCards = document.querySelector("#site .offers-cards")
 
 // set segmented buttons width
 site_serviceType_slider.style.width = `calc(${100 / site_serviceType_btn_array.length}% - 8px)`
@@ -11,8 +12,10 @@ async function loadOffers() {
     offersData = await res.json();
 }
 
-function offerChange(clickedButton, slider, btn_array, index) {
+function offerChange(clickedButton, slider, offersCards, btn_array, index) {
     slider.style.left = `calc(${(100 / btn_array.length) * index}% + 4px)`
+
+    offersCards.innerHTML = ""
     
     if (clickedButton.id == "site") {
         const siteOffers = offersData.find(x => x.id === "site").offers;
@@ -20,7 +23,7 @@ function offerChange(clickedButton, slider, btn_array, index) {
         siteOffers.forEach(offer => {
             const featuresHTML = offer.features.join("")
             const badgeHTML = offer.popular ? '<div class="popular">🔥Popularne</div>' : "" 
-            packages.innerHTML += `
+            offersCards.innerHTML += `
                 <div class="offer-card">
                     <div class="group">
                         <div class="title">${offer.label} ${badgeHTML}</div>
@@ -36,10 +39,10 @@ function offerChange(clickedButton, slider, btn_array, index) {
     if (clickedButton.id == "site_support") {
         const site_supportOffers = offersData.find(x => x.id === "site_support").offers;
         
-        siteOffers.forEach(offer => {
+        site_supportOffers.forEach(offer => {
             const featuresHTML = offer.features.join("")
             const badgeHTML = offer.popular ? '<div class="popular">🔥Popularne</div>' : "" 
-            packages.innerHTML += `
+            offersCards.innerHTML += `
                 <div class="offer-card">
                     <div class="group">
                         <div class="title">${offer.label} ${badgeHTML}</div>
@@ -57,7 +60,7 @@ function offerChange(clickedButton, slider, btn_array, index) {
 loadOffers().then(() => {
     site_serviceType_btn_array.forEach((btn, index) => {
         btn.addEventListener("click", function(clickedButton) {
-            offerChange(clickedButton.srcElement, site_serviceType_slider, site_serviceType_btn_array, index)
+            offerChange(clickedButton.srcElement, site_serviceType_slider, offersCards, site_serviceType_btn_array, index)
         })
     });
 });
