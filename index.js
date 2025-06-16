@@ -43,7 +43,14 @@ function changeOffer(button, buttonsArray) {
             const featuresHTML = offer.features.join("")
             const badgeHTML = offer.popular ? '<div class="badge">Najczęściej wybierane</div>' : ""
 
-            packages.innerHTML += '<div class="offer-card"> ${badgeHTML} <div class="title">${offer.title}</div> <div class="price">${offer.price}</div> <ul class="desc">${featuresHTML}</ul> <a href="" class="btn btn-primary">Więcej</a> </div>'
+            packages.innerHTML += `
+                <div class="offer-card">
+                    ${badgeHTML}
+                    <div class="title">${offer.label}</div>
+                    <div class="price">${offer.price}</div>
+                    <ul class="desc">${featuresHTML}</ul>
+                    <a href="#" class="btn btn-primary">Więcej</a>
+                </div>`
         })
     }
     if(button.id == "socialmedia"){
