@@ -87,6 +87,14 @@ nav a {
     margin-bottom: 40px;
 }
 
+.offers-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    padding-top: 20px;
+}
 
 .packages {
     display: flex;
@@ -233,7 +241,7 @@ footer {
         content: "";
         position: absolute;
         inset: 0;
-        background-image: url(image2.png);
+        background-image: url(images/image2.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -289,7 +297,7 @@ footer {
 
     #oferty.section {
         margin-top: 5px;
-        padding: 30px 20px;
+        padding: 30px 10px;
         gap: 20px;
     }
     #oferty.section h2 {
@@ -298,7 +306,18 @@ footer {
         margin-bottom: 20px;
     }
 
-    #option-social {
+    #site {
+        padding: 0;
+    }
+    #site #service-type button.seg-btn {
+        height: 25px;
+        font-size: 0.6rem;
+    }
+    #site #service-type.seg-control {
+        width: 70%;
+    }
+
+    /* #option-social {
         display: none;
         width: 75%;
         justify-content: center;
@@ -311,7 +330,7 @@ footer {
     #option-social button.seg-btn {
         font-size: 0.5rem;
         height: 25px;
-    }
+    } */
 
     .packages {
         gap: 5px;

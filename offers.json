@@ -3,9 +3,10 @@
         "id": "site",
         "offers": [
             {
-                "id": "portfolio",
-                "label": "Portfolio",
+                "id": "start",
+                "label": "Start",
                 "price": "499 zł",
+                "description": "Najlepsze dla małych firm i freelancerów.",
                 "popular": false,
                 "features": [
                     "<li>Podstawowa strona</li>",
@@ -21,6 +22,7 @@
                 "id": "standard",
                 "label": "Standard",
                 "price": "899 zł",
+                "description": "Najlepsze dla rosnących firm.",
                 "popular": true,
                 "features": [
                     "<li>Podstawowa strona</li>",
@@ -36,6 +38,60 @@
                 "id": "premium",
                 "label": "Premium",
                 "price": "1499 zł",
+                "description": "Najlepsze dla dużych organizacji.",
+                "popular": false,
+                "features": [
+                    "<li>Profesjonalna strona</li>",
+                    "<li>Hosting: 1 rok</li>", 
+                    "<li>Domena: 1 rok</li>",
+                    "<li>SEO</li>", 
+                    "<li>5-6 Podstron</li>", 
+                    "<li>Dostosowanie mobilne</li>",
+                    "<li>Baza danych</li>"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "site_support",
+        "offers": [
+            {
+                "id": "start",
+                "label": "Start plan",
+                "price": "49 zł/msc",
+                "description": "Najlepsze dla małych firm i freelancerów.",
+                "popular": false,
+                "features": [
+                    "<li>Podstawowa strona</li>",
+                    "<li class='unactive'>Hosting</li>", 
+                    "<li>Domena: 1 rok</li>",
+                    "<li class='unactive'>SEO</li>", 
+                    "<li class='unactive'>Podstrony</li>", 
+                    "<li>Dostosowanie mobilne</li>",
+                    "<li class='unactive'>Baza danych</li>"
+                ]
+            },
+            {
+                "id": "standard",
+                "label": "Standard plan",
+                "price": "99 zł/msc",
+                "description": "Najlepsze dla rosnących firm.",
+                "popular": true,
+                "features": [
+                    "<li>Podstawowa strona</li>",
+                    "<li class='unactive'>Hosting</li>", 
+                    "<li>Domena: 1 rok</li>",
+                    "<li>SEO</li>", 
+                    "<li>1-2 Podstrony</li>", 
+                    "<li>Dostosowanie mobilne</li>",
+                    "<li>Podstawowa baza danych</li>"
+                ]
+            },
+            {
+                "id": "premium",
+                "label": "Premium plan",
+                "price": "199 zł/msc",
+                "description": "Najlepsze dla dużych organizacji.",
                 "popular": false,
                 "features": [
                     "<li>Profesjonalna strona</li>",
