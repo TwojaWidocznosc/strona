@@ -1,8 +1,8 @@
 const optionType_btn_array = document.querySelectorAll("#option-type button.seg-btn")
-const optionType_slider = document.querySelectorAll("#option-type .slider")
+const optionType_slider = document.querySelector("#option-type .slider")
 
 const optionSocial_btn_array = document.querySelectorAll("#option-social button.seg-btn")
-const optionSocial_slider = document.querySelectorAll("#option-social .slider")
+const optionSocial_slider = document.querySelector("#option-social .slider")
 
 var packages = document.querySelectorAll("#oferty .offer-card")
 
