@@ -1,0 +1,136 @@
+[
+    {
+        "id": "site",
+        "offers": [
+            {
+                "id": "portfolio",
+                "label": "Portfolio",
+                "price": "499 zł",
+                "popular": false,
+                "features": [
+                    "<li>Podstawowa strona</li>",
+                    "<li class='unactive'>Hosting</li>", 
+                    "<li>Domena: 1 rok</li>",
+                    "<li class='unactive'>SEO</li>", 
+                    "<li class='unactive'>Podstrony</li>", 
+                    "<li>Dostosowanie mobilne</li>",
+                    "<li class='unactive'>Baza danych</li>"
+                ]
+            },
+            {
+                "id": "standard",
+                "label": "Standard",
+                "price": "899 zł",
+                "popular": true,
+                "features": [
+                    "<li>Podstawowa strona</li>",
+                    "<li class='unactive'>Hosting</li>", 
+                    "<li>Domena: 1 rok</li>",
+                    "<li>SEO</li>", 
+                    "<li>1-2 Podstrony</li>", 
+                    "<li>Dostosowanie mobilne</li>",
+                    "<li>Podstawowa baza danych</li>"
+                ]
+            },
+            {
+                "id": "premium",
+                "label": "Premium",
+                "price": "1499 zł",
+                "popular": false,
+                "features": [
+                    "<li>Profesjonalna strona</li>",
+                    "<li>Hosting: 1 rok</li>", 
+                    "<li>Domena: 1 rok</li>",
+                    "<li>SEO</li>", 
+                    "<li>5-6 Podstron</li>", 
+                    "<li>Dostosowanie mobilne</li>",
+                    "<li>Baza danych</li>"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "socialmedia",
+        "types": [
+            {
+                "id": "instagram",
+                "offers": [
+                    {
+                        "id": "start",
+                        "label": "IG Start",
+                        "price": "149 zł/msc",
+                        "popular": false,
+                        "features": [
+                            "<li>Podstawowa strona</li>",
+                            "<li class='unactive'>Hosting</li>", 
+                            "<li>Domena: 1 rok</li>",
+                            "<li class='unactive'>SEO</li>", 
+                            "<li class='unactive'>Podstrony</li>", 
+                            "<li>Dostosowanie mobilne</li>",
+                            "<li class='unactive'>Baza danych</li>"
+                        ]
+                    },
+                    {
+                        "id": "normal",
+                        "label": "IG Normal",
+                        "price": "199 zł/msc",
+                        "popular": true,
+                        "features": [
+                            "<li>Podstawowa strona</li>",
+                            "<li class='unactive'>Hosting</li>", 
+                            "<li>Domena: 1 rok</li>",
+                            "<li>SEO</li>", 
+                            "<li>1-2 Podstrony</li>", 
+                            "<li>Dostosowanie mobilne</li>",
+                            "<li>Podstawowa baza danych</li>"
+                        ]
+                    },
+                    {
+                        "id": "boost",
+                        "label": "IG Boost",
+                        "price": "399 zł/msc",
+                        "popular": false,
+                        "features": [
+                            "<li>Profesjonalna strona</li>",
+                            "<li>Hosting: 1 rok</li>", 
+                            "<li>Domena: 1 rok</li>",
+                            "<li>SEO</li>", 
+                            "<li>5-6 Podstron</li>", 
+                            "<li>Dostosowanie mobilne</li>",
+                            "<li>Baza danych</li>"
+                        ]
+                    },
+                    {
+                        "id": "pro",
+                        "label": "IG Pro",
+                        "price": "599 zł/msc",
+                        "popular": false,
+                        "features": [
+                            "<li>Profesjonalna strona</li>",
+                            "<li>Hosting: 1 rok</li>", 
+                            "<li>Domena: 1 rok</li>",
+                            "<li>SEO</li>", 
+                            "<li>5-6 Podstron</li>", 
+                            "<li>Dostosowanie mobilne</li>",
+                            "<li>Baza danych</li>"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "other",
+        "offers": [
+            {
+                "id": "konsultacja",
+                "label": "Konsultacja",
+                "price": "0",
+                "popular": false,
+                "features": [
+                    "Napisz do nas maila z informacjami o twojej działalności, a my zaproponujemy spersonalizowaną ofertę dla twojej działalności, która przyciągnie największą ilość klientów"
+                ]
+            }
+        ]
+    }
+  ]

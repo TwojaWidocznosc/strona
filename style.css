@@ -180,6 +180,7 @@ footer {
         display: flex;
         height: 70px;
         padding: 10px 20px;
+        padding-right: 40px;
         z-index: 3;
         position: relative;
     }
@@ -195,9 +196,14 @@ footer {
 
     .hamburger {
         display: block;
-        font-size: 2.4rem;
-        padding-right: 20px;
+        /* font-size: 2.4rem; */
+        /* padding-right: 20px; */
         cursor: pointer;
+    }
+
+    .hamburger svg{
+        height: 40px;
+        width: 40px;
     }
 
     .mobile-menu {
@@ -310,9 +316,28 @@ footer {
 
     div.option-buttons {
         width: 100%;
-        flex-wrap: none;
+        flex-wrap: nowrap;
         gap: 5px;
     }
+
+    div.social-buttons {
+        display: none;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    div.social-buttons.active {
+        display: flex;
+    }
+
+    .social-buttons button.btn {
+        font-size: 0.6rem;
+        width: 22%;
+        height: 35px;
+        font-weight: 500;
+    }
+
+
     .option-buttons button.btn {
         font-size: 0.7rem;
         width: 30%;
