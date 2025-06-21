@@ -3,206 +3,728 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twoja Widoczność</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="colors.css">
-    <link rel="stylesheet" href="premade.css">
+    <title>Twoja Widoczność - Tworzenie Stron Internetowych</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Deep dark background */
+            color: #e2e8f0; /* Light gray text */
+            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+        }
+
+        /* Custom scrollbar for a sleek look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #60a5fa;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+
+        /* Animated background elements */
+        .shape {
+            position: absolute;
+            background: rgba(96, 165, 250, 0.1); /* Light blue, semi-transparent */
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out alternate;
+            z-index: 0;
+            filter: blur(50px);
+            opacity: 0.7;
+        }
+
+        .shape-1 { top: 10%; left: 5%; width: 150px; height: 150px; animation-duration: 25s; }
+        .shape-2 { bottom: 20%; right: 10%; width: 200px; height: 200px; animation-duration: 22s; }
+        .shape-3 { top: 30%; right: 15%; width: 100px; height: 100px; animation-duration: 28s; background: rgba(251, 191, 36, 0.1); } /* Yellow */
+        .shape-4 { bottom: 5%; left: 20%; width: 180px; height: 180px; animation-duration: 30s; background: rgba(167, 139, 250, 0.1); } /* Purple */
+        .shape-5 { top: 60%; left: 30%; width: 120px; height: 120px; animation-duration: 20s; }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(20px, 30px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        /* Typing effect for hero slogan */
+        .typing-text::after {
+            content: '|';
+            display: inline-block;
+            animation: blink-caret 0.75s infinite;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+
+        /* Glassmorphism effect for cards */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6); /* Slightly darker, semi-transparent */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(71, 85, 105, 0.3); /* Lighter border */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.45);
+        }
+
+        /* Scroll reveal animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Modal styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            max-width: 90%;
+            max-height: 80%;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .modal-overlay.open .modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .modal-close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: #e2e8f0;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Loading spinner */
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #60a5fa;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* FAQ Accordion Styling */
+        .accordion-header {
+            background-color: rgba(30, 41, 59, 0.8);
+            color: #e2e8f0;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .accordion-header:hover {
+            background-color: rgba(46, 60, 78, 0.8);
+        }
+        .accordion-content {
+            background-color: rgba(46, 60, 78, 0.6);
+            color: #cbd5e1;
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            border-radius: 0 0 0.75rem 0.75rem;
+        }
+        .accordion-content.open {
+            max-height: 200px; /* Adjust based on content */
+            padding: 1rem 1.5rem 1.5rem;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-header.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
 </head>
-<body>
+<body class="relative min-h-screen">
+    <!-- Animated background shapes -->
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <div class="shape shape-5"></div>
 
-
-    <header>
-        <a href="index.html">
-            <img src="images/logo-full-cropped.svg" alt="">
+    <!-- Header / Hero Section -->
+    <header class="relative z-10 py-20 md:py-32 flex flex-col items-center justify-center text-center overflow-hidden">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-tight mb-4 animate-pulse">
+            Twoja Widoczność
+        </h1>
+        <p class="text-xl md:text-3xl text-blue-300 mb-8 typing-text max-w-2xl mx-auto px-4">
+            Twoja Przyszłość w Sieci Zaczyna Się Tutaj!
+        </p>
+        <a href="#packages" class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+            Zobacz Nasze Pakiety
         </a>
-        <nav>
-          <a href="#uslugi">Strona Główna</a>
-          <a href="#uslugi">Usługi</a>
-          <a href="#o-nas">O nas</a>
-          <a href="mailto:kontakt@twojawidocznosc.online">Kontakt</a>
-        </nav>
-        <div class="hamburger" onclick="toggleMenu()">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
-            </svg>
-            <!-- ☰ -->
-        </div>
-      </header>
+    </header>
 
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="#">Strona Główna</a>
-        <a href="#">Usługi</a>
-        <a href="#">O nas</a>
-        <a href="kontakt/kontakt.html">Kontakt</a>
-      </div>
-
-    <!--    ----------------------  Hero  ----------------------------   -->
-    <section class="hero">
-        <div class="hero-left">
-            <div>
-                <h1>Twoja firma zasługuje</h1>
-                <h1>na widoczność</h1>
-                <h1>która działa</h1>
-                <h4>Tworzymy nowoczesne strony i prowadzimy social media tak, by przyciągały klientów i budowały Twoją markę. Bez szablonów, bez ściemy – z podejściem jak do własnego biznesu</h4>
-            </div>
-            <div class="cta-buttons">
-                <a href="#" onclick="ctaScroll('page')" class="btn btn-primary">Chcę stronę</a>
-                <a href="#" onclick="ctaScroll('social')" class="btn btn-secondary">Chcę social media</a>
-            </div>
-        </div>
-        <!-- <img src="image1.svg" alt=""> -->
-    </section>
-    <!--    ----------------------  Hero  ----------------------------   -->
-
-    <!--    ----------------------          ----------------------------   -->
-
-    <!--    ----------------------  Oferty  ----------------------------   -->
-    <section class="section" id="oferty">
-        <h2>Co Cię interesuje?</h2>
-        
-        <section class="section" id="site">
-            <h3>Strony WWW</h3>
-
-            <div class="seg-control" id="service-type">
-                <div class="slider"></div>
-                <button class="seg-btn btn" id="site">Strona 🌐</button>
-                <button class="seg-btn btn" id="site_support">Support strony 🔧</button>
-            </div>
-
-            <div class="offers-cards">
-                <div class="offer-card">
-                    <div class="group">
-                        <div class="title">Start
-                            <div class="popular">🔥Popularne</div>
-                        </div>
-                        <div class="desc">Najlepsze dla małych firm i freelancerów.</div>
-                    </div>
-                    <div class="group">
-                        <div class="price">499 zł</div>
-                        <a href="" class="btn btn-primary">Więcej</a>
-                    </div>
-                </div>
-                <div class="offer-card">
-                    <div class="group">
-                        <div class="title">Standard</div>
-                        <div class="desc">Najlepsze dla rosnących firm.</div>
-                    </div>
-                    <div class="group">
-                        <div class="price">899 zł</div>
-                        <a href="" class="btn btn-primary">Więcej</a>
-                    </div>
-                </div>
-                <div class="offer-card">
-                    <div class="group">
-                        <div class="title">Premium</div>
-                        <div class="desc">Najlepsze dla dużych organizacji.</div>
-                    </div>
-                    <div class="group">
-                        <div class="price">1499 zł</div>
-                        <a href="" class="btn btn-primary">Więcej</a>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-<!-- 
-        <div class="seg-control" id="option-type">
-            <div class="slider"></div>
-            <button class="seg-btn btn" id="site">Strona</button>
-            <button class="seg-btn btn" id="socialmedia">Social media</button>
-            <button class="seg-btn btn" id="other">Nie wiem</button>
-        </div>
-
-        <div class="seg-control" id="option-social">
-            <div class="slider"></div>
-            <button class="seg-btn btn" id="instagram">Instagram</button>
-            <button class="seg-btn btn" id="youtube">Youtube</button>
-            <button class="seg-btn btn" id="tiktok">Tik tok</button>
-        </div> -->
-
-        <!-- <div class="social-buttons">
-            <button id="IG" class="btn btn-primary">Instagram</button>
-            <button id="YT" class="btn btn-unactive">YouTube</button>
-            <button id="TIKTOK" class="btn btn-unactive">Tik tok</button>
-        </div> -->
-
-        <!-- <div class="packages">
-            <div class="offer-card">
-                <div class="title">Portfolio</div>
-                <div class="price">499 zł</div>
-                <ul class="desc">
-                    <li>Podstawowa strona</li>
-                    <li class="unactive">Hosting</li>
-                    <li>Domena: 1 rok</li>
-                    <li class="unactive">SEO</li>
-                    <li class="unactive">Podstrony</li>
-                    <li>Dostosowanie mobilne</li>
-                    <li class="unactive">Baza danych</li>
-                  </ul>
-                <a href="" class="btn btn-primary">Więcej</a>
-            </div>
-            <div class="offer-card">
-                <div class="badge">Najczęściej wybierane</div>
-                <div class="title">Standard</div>
-                <div class="price">899 zł</div>
-                <ul class="desc">
-                    <li>Podstawowa strona</li>
-                    <li class="unactive">Hosting</li>
-                    <li>Domena: 1 rok</li>
-                    <li>SEO</li>
-                    <li>1-2 Podstrony</li>
-                    <li>Dostosowanie mobilne</li>
-                    <li>Podstawowa baza danych</li>
-                  </ul>
-                <a href="" class="btn btn-primary">Więcej</a>
-            </div>
-            <div class="offer-card">
-                <div class="title">Premium</div>
-                <div class="price">1499 zł</div>
-                <ul class="desc">
-                    <li>Profesjonalna strona</li>
-                    <li>Hosting: 1 rok</li>
-                    <li>Domena: 1 rok</li>
-                    <li>SEO</li>
-                    <li>5-6 Podstron</li>
-                    <li>Dostosowanie mobilne</li>
-                    <li>Baza danych</li>
-                  </ul>
-                <a href="" class="btn btn-primary">Więcej</a>
-            </div>
-        </div> -->
-
-    </section>
-    <!--    ----------------------  Oferty  ----------------------------   -->
-    
-<!-- 
-    <section class="section">
-        <h2>Jak to działa?</h2>
-        <div class="how-it-works">
-            <div class="step"><p>1. Zbieramy Twoje potrzeby</p></div>
-            <div class="step"><p>2. Projektujemy</p></div>
-            <div class="step"><p>3. Wdrażamy i uruchamiamy</p></div>
-            <div class="step"><p>4. Działasz – a my wspieramy</p></div>
-        </div>
-    </section> -->
-
-    <section id="kontakt" class="section">
-        <h2>Zostaw kontakt – odezwiemy się jeszcze dziś</h2>
-        <div class="contact-form">
-            <input type="email" placeholder="E-mail">
-            <textarea placeholder="Wiadomość"></textarea>
-            <button>Wyślij</button>
+    <!-- AI Website Idea Generator Section -->
+    <section id="ai-idea-generator" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white">✨ Generator Pomysłów na Stronę ✨</h2>
+        <p class="text-lg md:text-xl text-blue-200 max-w-4xl mx-auto mb-8">
+            Opisz swoją branżę, produkt lub usługę, a nasza sztuczna inteligencja wygeneruje unikalny pomysł na Twoją stronę internetową!
+        </p>
+        <div class="max-w-2xl mx-auto flex flex-col items-center">
+            <textarea id="idea-input" rows="4" placeholder="Np. 'sklep z ręcznie robioną biżuterią', 'firma doradztwa finansowego', 'blog podróżniczy o Azji'"
+                      class="w-full p-4 rounded-lg bg-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:outline-none mb-6"></textarea>
+            <button id="generate-idea-btn"
+                    class="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105 flex items-center justify-center">
+                <span id="idea-btn-text">Generuj Pomysł!</span>
+                <div id="idea-spinner" class="spinner ml-3 hidden"></div>
+            </button>
         </div>
     </section>
-    <!--    ----------------------  Footer  ----------------------------   -->
-    <footer>
-        © 2025 Twoja Widoczność. Wszelkie prawa zastrzeżone.
+
+    <!-- About Section - Expanded to build more trust -->
+    <section id="about" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white">Dlaczego Wybrać Nas?</h2>
+        <p class="text-lg md:text-xl text-blue-200 max-w-4xl mx-auto mb-12">
+            W Twojej Widoczności nie tylko tworzymy strony – budujemy cyfrowe fundamenty sukcesu. Nasze podejście opiera się na innowacji, transparentności i głębokim zrozumieniu potrzeb klienta. Z nami Twoja marka zabłyśnie w sieci!
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+                <div class="text-5xl text-yellow-400 mb-4">✨</div>
+                <h3 class="text-2xl font-semibold mb-2 text-white">Kreatywny Design</h3>
+                <p class="text-blue-300">Unikalne i nowoczesne projekty, które wyróżnią Cię z tłumu i zapadną w pamięć.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+                <div class="text-5xl text-green-400 mb-4">🚀</div>
+                <h3 class="text-2xl font-semibold mb-2 text-white">Szybkość i Optymalizacja</h3>
+                <p class="text-blue-300">Strony ładowane błyskawicznie, zoptymalizowane pod SEO, byś zawsze był na szczycie.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+                <div class="text-5xl text-purple-400 mb-4">📱</div>
+                <h3 class="text-2xl font-semibold mb-2 text-white">Pełna Responsywność</h3>
+                <p class="text-blue-300">Doskonały wygląd i funkcjonalność na każdym urządzeniu i rozdzielczości ekranu.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+                <div class="text-5xl text-red-400 mb-4">🤝</div>
+                <h3 class="text-2xl font-semibold mb-2 text-white">Transparentność</h3>
+                <p class="text-blue-300">Jasne zasady, brak ukrytych kosztów – wiesz, za co płacisz od początku do końca.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+                <div class="text-5xl text-cyan-400 mb-4">💡</div>
+                <h3 class="text-2xl font-semibold mb-2 text-white">Wsparcie i Doradztwo</h3>
+                <p class="text-blue-300">Jesteśmy z Tobą na każdym etapie – od pomysłu po wsparcie po wdrożeniu.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+                <div class="text-5xl text-orange-400 mb-4">📈</div>
+                <h3 class="text-2xl font-semibold mb-2 text-white">Koncentracja na Celach</h3>
+                <p class="text-blue-300">Tworzymy strony, które nie tylko wyglądają, ale przede wszystkim realizują Twoje cele biznesowe.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section - Process Outline -->
+    <section id="how-we-work" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
+        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white">Jak Pracujemy? Nasz Sprawdzony Proces</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div class="glass-card p-6 rounded-xl flex flex-col items-center text-center">
+                <div class="text-6xl text-blue-400 mb-4">1.</div>
+                <h3 class="text-2xl font-semibold mb-2 text-white">Konsultacja i Planowanie</h3>
+                <p class="text-blue-300">Zaczynamy od zrozumienia Twoich potrzeb, celów i wizji. Określamy zakres projektu i harmonogram.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl flex flex-col items-center text-center">
+                <div class="text-6xl text-indigo-400 mb-4">2.</div>
+                <h3 class="text-2xl font-semibold mb-2 text-white">Projektowanie i Akceptacja</h3>
+                <p class="text-blue-300">Tworzymy unikalny projekt graficzny strony. Po Twojej akceptacji przechodzimy do kolejnego etapu.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl flex flex-col items-center text-center">
+                <div class="text-6xl text-purple-400 mb-4">3.</div>
+                <h3 class="text-2xl font-semibold mb-2 text-white">Implementacja i Optymalizacja</h3>
+                <p class="text-blue-300">Kodujemy stronę, dbając o czystość kodu, responsywność i optymalizację pod SEO. Testujemy każdą funkcjonalność.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl flex flex-col items-center text-center">
+                <div class="text-6xl text-pink-400 mb-4">4.</div>
+                <h3 class="text-2xl font-semibold mb-2 text-white">Wdrożenie i Wsparcie</h3>
+                <p class="text-blue-300">Publikujemy Twoją stronę w sieci i zapewniamy wsparcie posprzedażowe, by działała bez zarzutu.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
+        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white">Co Mówią Nasi Zadowoleni Klienci?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div class="glass-card p-8 rounded-xl text-left">
+                <p class="text-xl italic text-blue-200 mb-6">"Twoja Widoczność to strzał w dziesiątkę! Nasza nowa strona jest piękna, szybka i w końcu widać nas w Google. Obsługa klienta na najwyższym poziomie!"</p>
+                <p class="font-bold text-white text-lg">- Anna K., Właścicielka Kwiaciarni "Kwiatowy Zakątek"</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-left">
+                <p class="text-xl italic text-blue-200 mb-6">"Profesjonalizm, kreatywność i terminowość. Strona dla mojej kancelarii wygląda nowocześnie i profesjonalnie. Polecam każdemu, kto szuka jakości!"</p>
+                <p class="font-bold text-white text-lg">- Mecenas Jan N., Kancelaria Prawna "Lex Perfecta"</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-left">
+                <p class="text-xl italic text-blue-200 mb-6">"Potrzebowaliśmy strony szybko i skutecznie. Twoja Widoczność przekroczyła nasze oczekiwania. Ruch na stronie wzrósł, a my zyskaliśmy nowych klientów. Dziękujemy!"</p>
+                <p class="font-bold text-white text-lg">- Piotr W., Manager "Smaki Świata - Catering"</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-left">
+                <p class="text-xl italic text-blue-200 mb-6">"Genialne podejście do klienta i niesamowite umiejętności! Moja strona z rękodziełem to teraz prawdziwa perełka w internecie. Jestem zachwycona!"</p>
+                <p class="font-bold text-white text-lg">- Ewa S., Artystka i Twórczyni "Artystyczne Dusze"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white scroll-reveal">Nasze Pakiety Tworzenia Stron</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Package: Intro -->
+            <div class="glass-card p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal">
+                <div>
+                    <h3 class="text-3xl font-bold text-blue-400 mb-4">Intro</h3>
+                    <p class="text-5xl font-extrabold text-white mb-6">799 zł</p>
+                    <ul class="text-blue-200 text-lg space-y-2 mb-8 text-left">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Strona One-Page</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Responsywny Design</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Podstawowy Kontakt</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Galeria Zdjęć</li>
+                        <li class="flex items-center text-red-400"><span class="mr-2">✕</span> Optymalizacja SEO</li>
+                        <li class="flex items-center text-red-400"><span class="mr-2">✕</span> Blog/Aktualności</li>
+                    </ul>
+                </div>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">
+                    Wybierz Intro
+                </button>
+            </div>
+
+            <!-- Package: Startup -->
+            <div class="glass-card p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal">
+                <div>
+                    <h3 class="text-3xl font-bold text-indigo-400 mb-4">Startup</h3>
+                    <p class="text-5xl font-extrabold text-white mb-6">999 zł</p>
+                    <ul class="text-blue-200 text-lg space-y-2 mb-8 text-left">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Do 5 Podstron</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Blog/Aktualności</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Formularz Kontaktowy</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Optymalizacja SEO</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Integracja z Social Media</li>
+                        <li class="flex items-center text-red-400"><span class="mr-2">✕</span> Wsparcie Priorytetowe</li>
+                    </ul>
+                </div>
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">
+                    Wybierz Startup
+                </button>
+            </div>
+
+            <!-- Package: Widoczność -->
+            <div class="glass-card p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal border-2 border-yellow-500 transform scale-105">
+                <!-- Highlighted package -->
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-slate-900 text-sm font-bold px-4 py-1 rounded-full shadow-lg animate-bounce">
+                    NAJLEPSZY WYBÓR!
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-yellow-400 mb-4">Widoczność</h3>
+                    <p class="text-5xl font-extrabold text-white mb-6">1799 zł</p>
+                    <ul class="text-blue-200 text-lg space-y-2 mb-8 text-left">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Do 10 Podstron</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Rozbudowany Blog</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Zaawansowane SEO</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Integracja Google Analytics</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Mapa Strony (XML)</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Wsparcie Priorytetowe</li>
+                        <li class="flex items-center text-red-400"><span class="mr-2">✕</span> Sklep Internetowy</li>
+                    </ul>
+                </div>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold py-3 px-6 rounded-full transition duration-300 w-full">
+                    Wybierz Widoczność
+                </button>
+            </div>
+
+            <!-- Package: MAX Widoczność -->
+            <div class="glass-card p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal">
+                <div>
+                    <h3 class="text-3xl font-bold text-pink-400 mb-4">MAX Widoczność</h3>
+                    <p class="text-5xl font-extrabold text-white mb-6">2199 zł</p>
+                    <ul class="text-blue-200 text-lg space-y-2 mb-8 text-left">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Nielimitowane Podstrony</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Sklep Internetowy (podstawowy)</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Pełna Optymalizacja SEO</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Kampanie Reklamowe (konsultacja)</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Comiesięczne Raporty</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Dedykowany Opiekun Projektu</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Roczny Hosting i Domena*</li>
+                    </ul>
+                </div>
+                <button class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">
+                    Wybierz MAX Widoczność
+                </button>
+            </div>
+            <p class="text-sm text-blue-300 mt-4 col-span-full">*Szczegóły dotyczące hostingu i domeny w pakiecie MAX Widoczność dostępne po konsultacji.</p>
+        </div>
+    </section>
+
+    <!-- Our Projects/Portfolio Section -->
+    <section id="portfolio" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
+        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white">Nasze Realizacje</h2>
+        <p class="text-lg md:text-xl text-blue-200 max-w-4xl mx-auto mb-12">
+            Poznaj projekty, które z dumą zrealizowaliśmy. Każda strona to dowód naszego zaangażowania w cyfrowy sukces naszych klientów.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card p-6 rounded-xl text-center">
+                <img src="https://placehold.co/600x400/1e293b/e2e8f0?text=Projekt+Sklepu+Online" alt="Projekt sklepu internetowego" class="rounded-lg mb-4 w-full h-auto object-cover">
+                <h3 class="text-2xl font-semibold mb-2 text-white">Sklep Online dla "Eko Smaki"</h3>
+                <p class="text-blue-300">Stworzyliśmy intuicyjny e-commerce dla lokalnego dostawcy zdrowej żywności, zwiększając sprzedaż o 40%.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl text-center">
+                <img src="https://placehold.co/600x400/1e293b/e2e8f0?text=Strona+Firmowa+B2B" alt="Strona firmowa B2B" class="rounded-lg mb-4 w-full h-auto object-cover">
+                <h3 class="text-2xl font-semibold mb-2 text-white">Strona Korporacyjna dla "Tech Solutions"</h3>
+                <p class="text-blue-300">Elegancka i funkcjonalna strona B2B, która podkreśla innowacyjność firmy technologicznej.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl text-center">
+                <img src="https://placehold.co/600x400/1e293b/e2e8f0?text=Blog+Podróżniczy" alt="Blog podróżniczy" class="rounded-lg mb-4 w-full h-auto object-cover">
+                <h3 class="text-2xl font-semibold mb-2 text-white">Blog Podróżniczy "Świat w Obiektywie"</h3>
+                <p class="text-blue-300">Wizualnie porywający blog zoptymalizowany pod kątem szybkiego ładowania zdjęć i czytelności treści.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
+        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white">Najczęściej Zadawane Pytania</h2>
+        <div class="max-w-3xl mx-auto space-y-4 text-left">
+            <div class="glass-card rounded-xl overflow-hidden">
+                <div class="accordion-header" data-accordion="1">
+                    Czy oferujecie pomoc w wyborze pakietu?
+                    <span class="accordion-icon">&#9660;</span>
+                </div>
+                <div class="accordion-content" id="accordion-content-1">
+                    Oczywiście! Skontaktuj się z nami, a chętnie pomożemy Ci wybrać pakiet idealnie dopasowany do Twoich potrzeb i budżetu.
+                </div>
+            </div>
+
+            <div class="glass-card rounded-xl overflow-hidden">
+                <div class="accordion-header" data-accordion="2">
+                    Jak długo trwa stworzenie strony internetowej?
+                    <span class="accordion-icon">&#9660;</span>
+                </div>
+                <div class="accordion-content" id="accordion-content-2">
+                    Czas realizacji zależy od wybranego pakietu i złożoności projektu. Strony typu "Intro" mogą być gotowe już w kilka dni, natomiast bardziej rozbudowane projekty wymagają od 2 do 4 tygodni. Zawsze informujemy o szacowanym czasie na początku współpracy.
+                </div>
+            </div>
+
+            <div class="glass-card rounded-xl overflow-hidden">
+                <div class="accordion-header" data-accordion="3">
+                    Czy mogę samodzielnie edytować stronę po jej stworzeniu?
+                    <span class="accordion-icon">&#9660;</span>
+                </div>
+                <div class="accordion-content" id="accordion-content-3">
+                    Tak, większość naszych stron budujemy w oparciu o intuicyjne systemy zarządzania treścią (CMS), które pozwalają na łatwe dodawanie i edytowanie treści, zdjęć czy wpisów blogowych, nawet bez znajomości kodowania. Zapewniamy szkolenie podstawowe.
+                </div>
+            </div>
+
+            <div class="glass-card rounded-xl overflow-hidden">
+                <div class="accordion-header" data-accordion="4">
+                    Czy oferujecie wsparcie po wdrożeniu strony?
+                    <span class="accordion-icon">&#9660;</span>
+                </div>
+                <div class="accordion-content" id="accordion-content-4">
+                    Absolutnie! W pakietach "Widoczność" i "MAX Widoczność" oferujemy priorytetowe wsparcie. Możesz także wykupić pakiety wsparcia technicznego lub abonamenty na aktualizacje i utrzymanie strony, aby Twoja witryna zawsze działała płynnie.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Section -->
+    <section id="contact" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white">Gotowy na Cyfrową Rewolucję?</h2>
+        <p class="text-lg md:text-xl text-blue-200 max-w-3xl mx-auto mb-12">
+            Skontaktuj się z nami, aby omówić Twój projekt. Stworzymy dla Ciebie stronę, która nie tylko będzie widoczna, ale i zachwyci każdego odwiedzającego!
+        </p>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+            <a href="mailto:kontakt@twojawidocznosc.pl" class="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-10 rounded-full shadow-xl transform transition duration-300 hover:scale-105">
+                Skontaktuj Się z Nami
+            </a>
+            <button id="generate-slogan-btn"
+                    class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transform transition duration-300 hover:scale-105 flex items-center justify-center">
+                <span id="slogan-btn-text">✨ Zaproponuj Slogan ✨</span>
+                <div id="slogan-spinner" class="spinner ml-3 hidden"></div>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-slate-900 py-8 px-4 text-center text-blue-300">
+        <p>&copy; 2025 Twoja Widoczność. Wszelkie prawa zastrzeżone.</p>
+        <p class="text-sm mt-2">Stworzono z pasją do widoczności w sieci.</p>
     </footer>
-    <!--    ----------------------  Footer  ----------------------------   -->
 
-    <script src="index.js"></script>
+    <!-- Universal Modal for AI Responses -->
+    <div id="ai-response-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-button" id="modal-close-btn">&times;</button>
+            <h3 id="modal-title" class="text-3xl font-bold text-white mb-4"></h3>
+            <div id="modal-body" class="text-blue-200 text-lg leading-relaxed whitespace-pre-wrap"></div>
+        </div>
+    </div>
+
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Typing effect for the hero slogan
+        const sloganElement = document.querySelector('.typing-text');
+        const originalSlogan = sloganElement.textContent;
+        sloganElement.textContent = ''; // Clear content to start typing
+        let charIndex = 0;
+
+        function typeSlogan() {
+            if (charIndex < originalSlogan.length) {
+                sloganElement.textContent += originalSlogan.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeSlogan, 70); // Typing speed
+            } else {
+                // Optional: Remove blinking cursor after typing is complete
+                sloganElement.classList.remove('typing-text');
+            }
+        }
+        window.addEventListener('load', typeSlogan); // Start typing on load
+
+
+        // Scroll reveal animation
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+
+        const observerOptions = {
+            root: null, // relative to the viewport
+            rootMargin: '0px',
+            threshold: 0.1 // 10% of the element needs to be visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, observerOptions);
+
+        scrollRevealElements.forEach(el => {
+            observer.observe(el);
+        });
+
+        // Universal Modal Logic
+        const modalOverlay = document.getElementById('ai-response-modal');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+
+        function openModal(title, content) {
+            modalTitle.textContent = title;
+            modalBody.innerHTML = content; // Use innerHTML for potential line breaks or basic formatting
+            modalOverlay.classList.add('open');
+        }
+
+        function closeModal() {
+            modalOverlay.classList.remove('open');
+            modalTitle.textContent = '';
+            modalBody.textContent = '';
+        }
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        // Gemini API integration logic
+        const generateIdeaBtn = document.getElementById('generate-idea-btn');
+        const ideaInput = document.getElementById('idea-input');
+        const ideaBtnText = document.getElementById('idea-btn-text');
+        const ideaSpinner = document.getElementById('idea-spinner');
+
+        generateIdeaBtn.addEventListener('click', async () => {
+            const industry = ideaInput.value.trim();
+            if (!industry) {
+                openModal('Błąd', 'Proszę wpisać opis branży lub pomysłu.');
+                return;
+            }
+
+            ideaBtnText.textContent = 'Generowanie...';
+            ideaSpinner.classList.remove('hidden');
+            generateIdeaBtn.disabled = true;
+
+            const prompt = `Wygeneruj kreatywny i unikalny pomysł na stronę internetową dla firmy lub projektu z branży/o tematyce: "${industry}". W odpowiedzi podaj:
+- Nazwę strony (polska i chwytliwa)
+- Główny cel strony
+- Docelową grupę odbiorców
+- Kluczowe funkcjonalności (3-5 punktów)
+- Unikalny element, który wyróżni stronę na tle konkurencji
+- Propozycję stylu wizualnego (np. kolorystyka, typografia, ogólny vibe)
+
+Formatuj odpowiedź jako czytelny tekst z nagłówkami dla każdego punktu.`;
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiKey = ""; // Canvas will provide this at runtime
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const generatedText = result.candidates[0].content.parts[0].text;
+                    openModal('Twój Pomysł na Stronę', generatedText);
+                } else {
+                    openModal('Błąd', 'Nie udało się wygenerować pomysłu. Spróbuj ponownie.');
+                }
+            } catch (error) {
+                console.error('Błąd podczas wywoływania Gemini API:', error);
+                openModal('Błąd Połączenia', 'Wystąpił problem z połączeniem. Sprawdź konsolę.');
+            } finally {
+                ideaBtnText.textContent = 'Generuj Pomysł!';
+                ideaSpinner.classList.add('hidden');
+                generateIdeaBtn.disabled = false;
+            }
+        });
+
+        const generateSloganBtn = document.getElementById('generate-slogan-btn');
+        const sloganBtnText = document.getElementById('slogan-btn-text');
+        const sloganSpinner = document.getElementById('slogan-spinner');
+
+        generateSloganBtn.addEventListener('click', async () => {
+            sloganBtnText.textContent = 'Generowanie...';
+            sloganSpinner.classList.remove('hidden');
+            generateSloganBtn.disabled = true;
+
+            const prompt = `Jesteś ekspertem od marketingu i copywritingu. Podaj 5 kreatywnych i chwytliwych propozycji sloganów marketingowych dla firmy zajmującej się tworzeniem stron internetowych, która nazywa się "Twoja Widoczność". Slogany powinny podkreślać wartość strony internetowej w kontekście zwiększania widoczności online i przyciągania klientów. Każdy slogan w nowej linii, poprzedzony myślnikiem.`;
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiKey = ""; // Canvas will provide this at runtime
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const generatedText = result.candidates[0].content.parts[0].text;
+                    openModal('Proponowane Slogany', generatedText);
+                } else {
+                    openModal('Błąd', 'Nie udało się wygenerować sloganów. Spróbuj ponownie.');
+                }
+            } catch (error) {
+                console.error('Błąd podczas wywoływania Gemini API:', error);
+                openModal('Błąd Połączenia', 'Wystąpił problem z połączeniem. Sprawdź konsolę.');
+            } finally {
+                sloganBtnText.textContent = '✨ Zaproponuj Slogan ✨';
+                sloganSpinner.classList.add('hidden');
+                generateSloganBtn.disabled = false;
+            }
+        });
+
+        // FAQ Accordion Logic
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = document.getElementById(`accordion-content-${header.dataset.accordion}`);
+                const isActive = header.classList.contains('active');
+
+                // Close all other open accordions
+                document.querySelectorAll('.accordion-header.active').forEach(openHeader => {
+                    if (openHeader !== header) {
+                        openHeader.classList.remove('active');
+                        document.getElementById(`accordion-content-${openHeader.dataset.accordion}`).classList.remove('open');
+                    }
+                });
+
+                // Toggle current accordion
+                if (!isActive) {
+                    header.classList.add('active');
+                    content.classList.add('open');
+                } else {
+                    header.classList.remove('active');
+                    content.classList.remove('open');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
+
