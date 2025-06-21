@@ -1,342 +1,261 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: var(--background);
-    color: var(--text);
-    line-height: 1.25;
-}
-header {
-    background: #fdffff;
-    color: var(--text);
-    padding: 20px 40px 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header img {
-    height: 80px;
-}
-nav {
-    width: 600px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-nav a {
-    color: var(--text);
-    /* margin-left: 1rem; */
-    text-decoration: none;
-    font-size: 1.25rem;
-    font-weight: 500;
-}
-
-/* -----------------    Hero  ---------------------- */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--section-background);
-    padding: 40px 60px;
-    text-align: center;
-}
-.hero img {
-    height: 300px;
-}
-.hero-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
-    height: 300px;
-    width: 600px;
-    text-align: start;
-}
-.hero-left h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 0;
-}
-.hero-left h4 {
-    margin: 0;
-    margin-top: 10px;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.cta-buttons a.btn {
-    border-radius: 8px;
-    margin: 5px;
-}
-/* -----------------    Hero  ---------------------- */
-
-
-
-
-
-/* -----------------    Oferty  ---------------------- */
-
-#oferty.section {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-#oferty.section h2 {
-    font-size: 2.8rem;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-.offers-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    padding-top: 20px;
-}
-
-.packages {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.package-title{
-    font-size: 1.8rem;
-}
-.package-price{
-    font-size: 2.8rem;
-    font-weight: 600;
-}
-.package h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-/* -----------------    Oferty  ---------------------- */
-
-.testimonials, .how-it-works {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.testimonial, .step {
-    max-width: 300px;
-}
-
-.contact-form {
-    background-color: #f9fafb;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 12px;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-}
-
-.contact-form button {
-    padding: 12px 24px;
-    background-color: #ef4444;
-    color: white;
-    font-weight: 600;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f1f5f9;
-    font-size: 0.9rem;
-}
-
-.hamburger,
-.mobile-menu {
-    display: none;
-}
-
-@media (max-width: 430px) {
-    body {
-        width: 100%;
-    }
-    header {
-        display: flex;
-        height: 70px;
-        padding: 10px 20px;
-        padding-right: 40px;
-        z-index: 3;
-        position: relative;
-    }
-    header a {
-        height: 50px;
-    }
-    header img {
-        height: 50px;
-    }
-    nav {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-        /* font-size: 2.4rem; */
-        /* padding-right: 20px; */
-        cursor: pointer;
-    }
-
-    .hamburger svg{
-        height: 40px;
-        width: 40px;
-    }
-
-    .mobile-menu {
-        transition: top 0.15s ease-in-out;
-        /* display: none; */
-        display: flex;
-        position: absolute;
-        top: -44px;
-        right: 0;
-        width: 200px;
-        flex-direction: column;
-        background-color: white;
-        border-top: 1px solid #e5e7eb;
-        z-index: 2;
-        /* opacity: 0; */
-        /* visibility: hidden; */
-    }
-    
-    .mobile-menu a {
-        border-bottom: 1px solid #e5e7eb;
-        height: auto;
-        font-size: 0.8rem;
-        text-decoration: none;
-        color: var(--text);
-        text-align: center;
-        padding: 8px 4px;
-        display: block;
-    }
-
-    .mobile-menu.active {
-        top: 90px;
-    }
-    
-    .hero {
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
-        background-color: #fff;
-        height: 375px;
-        padding: 10px 40px 150px 30px;
-    }
-    .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-image: url(images/image2.png);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.25; /* <-- tylko tło */
-        z-index: -1;
-    }
-    @keyframes start {
-        0% {
-            filter: blur(0px);
-            right: -40px;
-            width: 45%;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); /* Light background */
+            color: #1e293b; /* Dark slate text */
+            overflow-x: hidden; /* Prevent horizontal scroll due to shapes */
         }
-        100% {
-            filter: blur(6px);
-            right: 30px;
-            width: 40%;
+
+        /* Custom scrollbar for a light look */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-    }
-    .hero img {
-        animation: 1s ease-out 0s 1 start;
-        position: absolute;
-        right: 30px;
-        z-index: 0;
-        height: auto;
-        width: 40%;
-        filter: blur(6px);
-    }
-    .hero-left {
-        z-index: 1;
-        height: 160px;
-        gap: 30px;
-    }
-    .hero-left h1 {
-        line-height: 1.2;
-        font-size: 1.9rem;
-    }
-    .hero-left h4 {
-        font-size: 0.8rem;
-    }
-    .cta-buttons {
-        display: flex;
-        justify-content: start;
-        gap: 10px;
-        font-weight: 600;
-    }
-    .cta-buttons a.btn {
-        margin: 0;
-        border-radius: 4px;
-        padding: 8px 16px;
-        font-size: 0.8rem;
-    }
 
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+        }
 
-    #oferty.section {
-        margin-top: 5px;
-        padding: 30px 10px;
-        gap: 20px;
-    }
-    #oferty.section h2 {
-        font-size: 1.8rem;
-        margin-top: 15px;
-        margin-bottom: 20px;
-    }
+        ::-webkit-scrollbar-thumb {
+            background: #93c5fd;
+            border-radius: 4px;
+        }
 
-    #site {
-        padding: 0;
-    }
-    #site #service-type button.seg-btn {
-        height: 25px;
-        font-size: 0.6rem;
-    }
-    #site #service-type.seg-control {
-        width: 70%;
-    }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #60a5fa;
+        }
 
-    /* #option-social {
-        display: none;
-        width: 75%;
-        justify-content: center;
-    }
+        /* Animated background elements - adjusted for light theme */
+        .shape {
+            position: absolute;
+            background: rgba(96, 165, 250, 0.15); /* Slightly more opaque blue */
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out alternate;
+            z-index: 0; /* Keep shapes behind content */
+            filter: blur(60px);
+            opacity: 0.8;
+        }
 
-    #option-social.active {
-        display: flex;
-    }
+        /* Define specific shapes with positions, sizes, and animation durations */
+        .shape-1 { top: 10%; left: 5%; width: 150px; height: 150px; animation-duration: 25s; }
+        .shape-2 { bottom: 20%; right: 10%; width: 200px; height: 200px; animation-duration: 22s; }
+        .shape-3 { top: 30%; right: 15%; width: 100px; height: 100px; animation-duration: 28s; background: rgba(251, 191, 36, 0.15); } /* Yellow */
+        .shape-4 { bottom: 5%; left: 20%; width: 180px; height: 180px; animation-duration: 30s; background: rgba(167, 139, 250, 0.15); } /* Purple */
+        .shape-5 { top: 60%; left: 30%; width: 120px; height: 120px; animation-duration: 20s; }
+        .shape-6 { top: 5%; right: 25%; width: 80px; height: 80px; animation-duration: 27s; background: rgba(52, 211, 153, 0.15); } /* Green */
+        .shape-7 { bottom: 15%; left: 5%; width: 130px; height: 130px; animation-duration: 23s; background: rgba(239, 68, 68, 0.15); } /* Red */
 
-    #option-social button.seg-btn {
-        font-size: 0.5rem;
-        height: 25px;
-    } */
+        /* Keyframe animation for floating effect */
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(20px, 30px); }
+            100% { transform: translate(0, 0); }
+        }
 
-    .packages {
-        gap: 5px;
-    }
+        /* Typing effect for hero slogan */
+        .typing-text::after {
+            content: '|';
+            display: inline-block;
+            animation: blink-caret 0.75s infinite;
+        }
 
-    #kontakt.section h2 {
-        font-size: 1.8rem;
-    }
-}
+        /* Keyframe animation for blinking caret */
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #1e293b; }
+        }
+
+        /* Glassmorphism effect for cards - light version */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+            backdrop-filter: blur(12px); /* Stronger blur for better effect */
+            border: 1px solid rgba(203, 213, 225, 0.5); /* Light border */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08); /* Softer shadow */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        /* Scroll reveal animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Modal styles for light theme */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Darker overlay for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+            max-width: 90%;
+            max-height: 90%;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            animation: fadeInScale 0.3s forwards; /* Add entry animation */
+        }
+
+        .modal-overlay.open .modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .modal-close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: #334155;
+            font-size: 1.8rem; /* Larger close button */
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .modal-close-button:hover {
+            color: #ef4444; /* Red on hover */
+        }
+
+        /* Loading spinner */
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #60a5fa;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* FAQ Accordion Styling for light theme */
+        .accordion-header {
+            background-color: rgba(255, 255, 255, 0.85); /* Slightly more opaque */
+            color: #1e293b;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+        }
+        .accordion-header:hover {
+            background-color: rgba(241, 245, 249, 0.95);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+        .accordion-content {
+            background-color: rgba(241, 245, 249, 0.8); /* Slightly more opaque */
+            color: #334155;
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out; /* Slower transition */
+            border-radius: 0 0 0.75rem 0.75rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03); /* Subtle shadow */
+        }
+        .accordion-content.open {
+            max-height: 300px; /* Increased max-height for more content */
+            padding: 1rem 1.5rem 1.5rem;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-header.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Hamburger menu specific styles */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            z-index: 50; /* Ensure it's above other elements */
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #1e293b;
+            border-radius: 2px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hamburger.open span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        /* Mobile navigation menu */
+        .mobile-nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.98); /* Near opaque white */
+            backdrop-filter: blur(15px);
+            z-index: 40; /* Below hamburger, above content */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-nav-menu.open {
+            transform: translateX(0);
+        }
