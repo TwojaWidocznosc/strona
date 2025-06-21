@@ -3,52 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twoja Widoczność - Tworzenie Stron Internetowych</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Twoja Widoczność - Tworzenie Stron Internetowych (Wersja Jasna)</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Deep dark background */
-            color: #e2e8f0; /* Light gray text */
-            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); /* Light background */
+            color: #1e293b; /* Dark slate text */
+            overflow-x: hidden;
         }
 
-        /* Custom scrollbar for a sleek look */
+        /* Custom scrollbar for a light look */
         ::-webkit-scrollbar {
             width: 8px;
         }
 
         ::-webkit-scrollbar-track {
-            background: #1e293b;
+            background: #e2e8f0;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #60a5fa;
+            background: #93c5fd;
             border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #3b82f6;
+            background: #60a5fa;
         }
 
-        /* Animated background elements */
+        /* Animated background elements - adjusted for light theme */
         .shape {
             position: absolute;
-            background: rgba(96, 165, 250, 0.1); /* Light blue, semi-transparent */
+            background: rgba(96, 165, 250, 0.15); /* Slightly more opaque blue */
             border-radius: 50%;
             animation: float 20s infinite ease-in-out alternate;
             z-index: 0;
-            filter: blur(50px);
-            opacity: 0.7;
+            filter: blur(60px);
+            opacity: 0.8;
         }
 
         .shape-1 { top: 10%; left: 5%; width: 150px; height: 150px; animation-duration: 25s; }
         .shape-2 { bottom: 20%; right: 10%; width: 200px; height: 200px; animation-duration: 22s; }
-        .shape-3 { top: 30%; right: 15%; width: 100px; height: 100px; animation-duration: 28s; background: rgba(251, 191, 36, 0.1); } /* Yellow */
-        .shape-4 { bottom: 5%; left: 20%; width: 180px; height: 180px; animation-duration: 30s; background: rgba(167, 139, 250, 0.1); } /* Purple */
+        .shape-3 { top: 30%; right: 15%; width: 100px; height: 100px; animation-duration: 28s; background: rgba(251, 191, 36, 0.15); } /* Yellow */
+        .shape-4 { bottom: 5%; left: 20%; width: 180px; height: 180px; animation-duration: 30s; background: rgba(167, 139, 250, 0.15); } /* Purple */
         .shape-5 { top: 60%; left: 30%; width: 120px; height: 120px; animation-duration: 20s; }
 
         @keyframes float {
@@ -66,21 +64,21 @@
 
         @keyframes blink-caret {
             from, to { border-color: transparent; }
-            50% { border-color: white; }
+            50% { border-color: #1e293b; }
         }
 
-        /* Glassmorphism effect for cards */
+        /* Glassmorphism effect for cards - light version */
         .glass-card {
-            background: rgba(30, 41, 59, 0.6); /* Slightly darker, semi-transparent */
+            background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(71, 85, 105, 0.3); /* Lighter border */
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(203, 213, 225, 0.5); /* Light border */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
         .glass-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.45);
+            box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.15);
         }
 
         /* Scroll reveal animations */
@@ -95,14 +93,14 @@
             transform: translateY(0);
         }
 
-        /* Modal styles */
+        /* Modal styles for light theme */
         .modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.5); /* Darker overlay for contrast */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -118,10 +116,10 @@
         }
 
         .modal-content {
-            background: #1e293b;
+            background: #ffffff;
             padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             max-width: 90%;
             max-height: 80%;
             overflow-y: auto;
@@ -142,14 +140,14 @@
             right: 1rem;
             background: none;
             border: none;
-            color: #e2e8f0;
+            color: #334155;
             font-size: 1.5rem;
             cursor: pointer;
         }
 
         /* Loading spinner */
         .spinner {
-            border: 4px solid rgba(255, 255, 255, 0.3);
+            border: 4px solid rgba(0, 0, 0, 0.1);
             border-top: 4px solid #60a5fa;
             border-radius: 50%;
             width: 30px;
@@ -162,10 +160,10 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* FAQ Accordion Styling */
+        /* FAQ Accordion Styling for light theme */
         .accordion-header {
-            background-color: rgba(30, 41, 59, 0.8);
-            color: #e2e8f0;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #1e293b;
             padding: 1.25rem 1.5rem;
             border-radius: 0.75rem;
             cursor: pointer;
@@ -176,11 +174,11 @@
             transition: background-color 0.3s ease;
         }
         .accordion-header:hover {
-            background-color: rgba(46, 60, 78, 0.8);
+            background-color: rgba(241, 245, 249, 0.9);
         }
         .accordion-content {
-            background-color: rgba(46, 60, 78, 0.6);
-            color: #cbd5e1;
+            background-color: rgba(241, 245, 249, 0.7);
+            color: #334155;
             padding: 0 1.5rem;
             max-height: 0;
             overflow: hidden;
@@ -188,7 +186,7 @@
             border-radius: 0 0 0.75rem 0.75rem;
         }
         .accordion-content.open {
-            max-height: 200px; /* Adjust based on content */
+            max-height: 200px;
             padding: 1rem 1.5rem 1.5rem;
         }
         .accordion-icon {
@@ -200,19 +198,17 @@
     </style>
 </head>
 <body class="relative min-h-screen">
-    <!-- Animated background shapes -->
     <div class="shape shape-1"></div>
     <div class="shape shape-2"></div>
     <div class="shape shape-3"></div>
     <div class="shape shape-4"></div>
     <div class="shape shape-5"></div>
 
-    <!-- Header / Hero Section -->
     <header class="relative z-10 py-20 md:py-32 flex flex-col items-center justify-center text-center overflow-hidden">
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-tight mb-4 animate-pulse">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-slate-800 leading-tight mb-4 animate-pulse">
             Twoja Widoczność
         </h1>
-        <p class="text-xl md:text-3xl text-blue-300 mb-8 typing-text max-w-2xl mx-auto px-4">
+        <p class="text-xl md:text-3xl text-blue-700 mb-8 typing-text max-w-2xl mx-auto px-4">
             Twoja Przyszłość w Sieci Zaczyna Się Tutaj!
         </p>
         <a href="#packages" class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
@@ -220,15 +216,14 @@
         </a>
     </header>
 
-    <!-- AI Website Idea Generator Section -->
     <section id="ai-idea-generator" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
-        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white">✨ Generator Pomysłów na Stronę ✨</h2>
-        <p class="text-lg md:text-xl text-blue-200 max-w-4xl mx-auto mb-8">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">✨ Generator Pomysłów na Stronę ✨</h2>
+        <p class="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto mb-8">
             Opisz swoją branżę, produkt lub usługę, a nasza sztuczna inteligencja wygeneruje unikalny pomysł na Twoją stronę internetową!
         </p>
         <div class="max-w-2xl mx-auto flex flex-col items-center">
             <textarea id="idea-input" rows="4" placeholder="Np. 'sklep z ręcznie robioną biżuterią', 'firma doradztwa finansowego', 'blog podróżniczy o Azji'"
-                      class="w-full p-4 rounded-lg bg-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:outline-none mb-6"></textarea>
+                      class="w-full p-4 rounded-lg bg-white text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:outline-none mb-6 border border-slate-300"></textarea>
             <button id="generate-idea-btn"
                     class="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105 flex items-center justify-center">
                 <span id="idea-btn-text">Generuj Pomysł!</span>
@@ -237,112 +232,107 @@
         </div>
     </section>
 
-    <!-- About Section - Expanded to build more trust -->
     <section id="about" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
-        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white">Dlaczego Wybrać Nas?</h2>
-        <p class="text-lg md:text-xl text-blue-200 max-w-4xl mx-auto mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Dlaczego Wybrać Nas?</h2>
+        <p class="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto mb-12">
             W Twojej Widoczności nie tylko tworzymy strony – budujemy cyfrowe fundamenty sukcesu. Nasze podejście opiera się na innowacji, transparentności i głębokim zrozumieniu potrzeb klienta. Z nami Twoja marka zabłyśnie w sieci!
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
-                <div class="text-5xl text-yellow-400 mb-4">✨</div>
-                <h3 class="text-2xl font-semibold mb-2 text-white">Kreatywny Design</h3>
-                <p class="text-blue-300">Unikalne i nowoczesne projekty, które wyróżnią Cię z tłumu i zapadną w pamięć.</p>
+                <div class="text-5xl text-yellow-500 mb-4">✨</div>
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Kreatywny Design</h3>
+                <p class="text-slate-600">Unikalne i nowoczesne projekty, które wyróżnią Cię z tłumu i zapadną w pamięć.</p>
             </div>
             <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
-                <div class="text-5xl text-green-400 mb-4">🚀</div>
-                <h3 class="text-2xl font-semibold mb-2 text-white">Szybkość i Optymalizacja</h3>
-                <p class="text-blue-300">Strony ładowane błyskawicznie, zoptymalizowane pod SEO, byś zawsze był na szczycie.</p>
+                <div class="text-5xl text-green-500 mb-4">🚀</div>
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Szybkość i Optymalizacja</h3>
+                <p class="text-slate-600">Strony ładowane błyskawicznie, zoptymalizowane pod SEO, byś zawsze był na szczycie.</p>
             </div>
             <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
-                <div class="text-5xl text-purple-400 mb-4">📱</div>
-                <h3 class="text-2xl font-semibold mb-2 text-white">Pełna Responsywność</h3>
-                <p class="text-blue-300">Doskonały wygląd i funkcjonalność na każdym urządzeniu i rozdzielczości ekranu.</p>
+                <div class="text-5xl text-purple-500 mb-4">📱</div>
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Pełna Responsywność</h3>
+                <p class="text-slate-600">Doskonały wygląd i funkcjonalność na każdym urządzeniu i rozdzielczości ekranu.</p>
             </div>
             <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
-                <div class="text-5xl text-red-400 mb-4">🤝</div>
-                <h3 class="text-2xl font-semibold mb-2 text-white">Transparentność</h3>
-                <p class="text-blue-300">Jasne zasady, brak ukrytych kosztów – wiesz, za co płacisz od początku do końca.</p>
+                <div class="text-5xl text-red-500 mb-4">🤝</div>
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Transparentność</h3>
+                <p class="text-slate-600">Jasne zasady, brak ukrytych kosztów – wiesz, za co płacisz od początku do końca.</p>
             </div>
             <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
-                <div class="text-5xl text-cyan-400 mb-4">💡</div>
-                <h3 class="text-2xl font-semibold mb-2 text-white">Wsparcie i Doradztwo</h3>
-                <p class="text-blue-300">Jesteśmy z Tobą na każdym etapie – od pomysłu po wsparcie po wdrożeniu.</p>
+                <div class="text-5xl text-cyan-500 mb-4">💡</div>
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Wsparcie i Doradztwo</h3>
+                <p class="text-slate-600">Jesteśmy z Tobą na każdym etapie – od pomysłu po wsparcie po wdrożeniu.</p>
             </div>
             <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
-                <div class="text-5xl text-orange-400 mb-4">📈</div>
-                <h3 class="text-2xl font-semibold mb-2 text-white">Koncentracja na Celach</h3>
-                <p class="text-blue-300">Tworzymy strony, które nie tylko wyglądają, ale przede wszystkim realizują Twoje cele biznesowe.</p>
+                <div class="text-5xl text-orange-500 mb-4">📈</div>
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Koncentracja na Celach</h3>
+                <p class="text-slate-600">Tworzymy strony, które nie tylko wyglądają, ale przede wszystkim realizują Twoje cele biznesowe.</p>
             </div>
         </div>
     </section>
 
-    <!-- How We Work Section - Process Outline -->
     <section id="how-we-work" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white">Jak Pracujemy? Nasz Sprawdzony Proces</h2>
+        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Jak Pracujemy? Nasz Sprawdzony Proces</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div class="glass-card p-6 rounded-xl flex flex-col items-center text-center">
-                <div class="text-6xl text-blue-400 mb-4">1.</div>
-                <h3 class="text-2xl font-semibold mb-2 text-white">Konsultacja i Planowanie</h3>
-                <p class="text-blue-300">Zaczynamy od zrozumienia Twoich potrzeb, celów i wizji. Określamy zakres projektu i harmonogram.</p>
+                <div class="text-6xl text-blue-500 mb-4">1.</div>
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Konsultacja i Planowanie</h3>
+                <p class="text-slate-600">Zaczynamy od zrozumienia Twoich potrzeb, celów i wizji. Określamy zakres projektu i harmonogram.</p>
             </div>
             <div class="glass-card p-6 rounded-xl flex flex-col items-center text-center">
-                <div class="text-6xl text-indigo-400 mb-4">2.</div>
-                <h3 class="text-2xl font-semibold mb-2 text-white">Projektowanie i Akceptacja</h3>
-                <p class="text-blue-300">Tworzymy unikalny projekt graficzny strony. Po Twojej akceptacji przechodzimy do kolejnego etapu.</p>
+                <div class="text-6xl text-indigo-500 mb-4">2.</div>
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Projektowanie i Akceptacja</h3>
+                <p class="text-slate-600">Tworzymy unikalny projekt graficzny strony. Po Twojej akceptacji przechodzimy do kolejnego etapu.</p>
             </div>
             <div class="glass-card p-6 rounded-xl flex flex-col items-center text-center">
-                <div class="text-6xl text-purple-400 mb-4">3.</div>
-                <h3 class="text-2xl font-semibold mb-2 text-white">Implementacja i Optymalizacja</h3>
-                <p class="text-blue-300">Kodujemy stronę, dbając o czystość kodu, responsywność i optymalizację pod SEO. Testujemy każdą funkcjonalność.</p>
+                <div class="text-6xl text-purple-500 mb-4">3.</div>
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Implementacja i Optymalizacja</h3>
+                <p class="text-slate-600">Kodujemy stronę, dbając o czystość kodu, responsywność i optymalizację pod SEO. Testujemy każdą funkcjonalność.</p>
             </div>
             <div class="glass-card p-6 rounded-xl flex flex-col items-center text-center">
-                <div class="text-6xl text-pink-400 mb-4">4.</div>
-                <h3 class="text-2xl font-semibold mb-2 text-white">Wdrożenie i Wsparcie</h3>
-                <p class="text-blue-300">Publikujemy Twoją stronę w sieci i zapewniamy wsparcie posprzedażowe, by działała bez zarzutu.</p>
+                <div class="text-6xl text-pink-500 mb-4">4.</div>
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Wdrożenie i Wsparcie</h3>
+                <p class="text-slate-600">Publikujemy Twoją stronę w sieci i zapewniamy wsparcie posprzedażowe, by działała bez zarzutu.</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section id="testimonials" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white">Co Mówią Nasi Zadowoleni Klienci?</h2>
+        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Co Mówią Nasi Zadowoleni Klienci?</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div class="glass-card p-8 rounded-xl text-left">
-                <p class="text-xl italic text-blue-200 mb-6">"Twoja Widoczność to strzał w dziesiątkę! Nasza nowa strona jest piękna, szybka i w końcu widać nas w Google. Obsługa klienta na najwyższym poziomie!"</p>
-                <p class="font-bold text-white text-lg">- Anna K., Właścicielka Kwiaciarni "Kwiatowy Zakątek"</p>
+                <p class="text-xl italic text-slate-600 mb-6">"Twoja Widoczność to strzał w dziesiątkę! Nasza nowa strona jest piękna, szybka i w końcu widać nas w Google. Obsługa klienta na najwyższym poziomie!"</p>
+                <p class="font-bold text-slate-800 text-lg">- Anna K., Właścicielka Kwiaciarni "Kwiatowy Zakątek"</p>
             </div>
             <div class="glass-card p-8 rounded-xl text-left">
-                <p class="text-xl italic text-blue-200 mb-6">"Profesjonalizm, kreatywność i terminowość. Strona dla mojej kancelarii wygląda nowocześnie i profesjonalnie. Polecam każdemu, kto szuka jakości!"</p>
-                <p class="font-bold text-white text-lg">- Mecenas Jan N., Kancelaria Prawna "Lex Perfecta"</p>
+                <p class="text-xl italic text-slate-600 mb-6">"Profesjonalizm, kreatywność i terminowość. Strona dla mojej kancelarii wygląda nowocześnie i profesjonalnie. Polecam każdemu, kto szuka jakości!"</p>
+                <p class="font-bold text-slate-800 text-lg">- Mecenas Jan N., Kancelaria Prawna "Lex Perfecta"</p>
             </div>
             <div class="glass-card p-8 rounded-xl text-left">
-                <p class="text-xl italic text-blue-200 mb-6">"Potrzebowaliśmy strony szybko i skutecznie. Twoja Widoczność przekroczyła nasze oczekiwania. Ruch na stronie wzrósł, a my zyskaliśmy nowych klientów. Dziękujemy!"</p>
-                <p class="font-bold text-white text-lg">- Piotr W., Manager "Smaki Świata - Catering"</p>
+                <p class="text-xl italic text-slate-600 mb-6">"Potrzebowaliśmy strony szybko i skutecznie. Twoja Widoczność przekroczyła nasze oczekiwania. Ruch na stronie wzrósł, a my zyskaliśmy nowych klientów. Dziękujemy!"</p>
+                <p class="font-bold text-slate-800 text-lg">- Piotr W., Manager "Smaki Świata - Catering"</p>
             </div>
             <div class="glass-card p-8 rounded-xl text-left">
-                <p class="text-xl italic text-blue-200 mb-6">"Genialne podejście do klienta i niesamowite umiejętności! Moja strona z rękodziełem to teraz prawdziwa perełka w internecie. Jestem zachwycona!"</p>
-                <p class="font-bold text-white text-lg">- Ewa S., Artystka i Twórczyni "Artystyczne Dusze"</p>
+                <p class="text-xl italic text-slate-600 mb-6">"Genialne podejście do klienta i niesamowite umiejętności! Moja strona z rękodziełem to teraz prawdziwa perełka w internecie. Jestem zachwycona!"</p>
+                <p class="font-bold text-slate-800 text-lg">- Ewa S., Artystka i Twórczyni "Artystyczne Dusze"</p>
             </div>
         </div>
     </section>
 
-    <!-- Packages Section -->
     <section id="packages" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white scroll-reveal">Nasze Pakiety Tworzenia Stron</h2>
+        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800 scroll-reveal">Nasze Pakiety Tworzenia Stron</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Package: Intro -->
             <div class="glass-card p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal">
                 <div>
-                    <h3 class="text-3xl font-bold text-blue-400 mb-4">Intro</h3>
-                    <p class="text-5xl font-extrabold text-white mb-6">799 zł</p>
-                    <ul class="text-blue-200 text-lg space-y-2 mb-8 text-left">
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Strona One-Page</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Responsywny Design</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Podstawowy Kontakt</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Galeria Zdjęć</li>
-                        <li class="flex items-center text-red-400"><span class="mr-2">✕</span> Optymalizacja SEO</li>
-                        <li class="flex items-center text-red-400"><span class="mr-2">✕</span> Blog/Aktualności</li>
+                    <h3 class="text-3xl font-bold text-blue-600 mb-4">Intro</h3>
+                    <p class="text-5xl font-extrabold text-slate-800 mb-6">799 zł</p>
+                    <ul class="text-slate-600 text-lg space-y-2 mb-8 text-left">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Strona One-Page</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Responsywny Design</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Podstawowy Kontakt</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Galeria Zdjęć</li>
+                        <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Optymalizacja SEO</li>
+                        <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Blog/Aktualności</li>
                     </ul>
                 </div>
                 <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">
@@ -350,18 +340,17 @@
                 </button>
             </div>
 
-            <!-- Package: Startup -->
             <div class="glass-card p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal">
                 <div>
-                    <h3 class="text-3xl font-bold text-indigo-400 mb-4">Startup</h3>
-                    <p class="text-5xl font-extrabold text-white mb-6">999 zł</p>
-                    <ul class="text-blue-200 text-lg space-y-2 mb-8 text-left">
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Do 5 Podstron</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Blog/Aktualności</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Formularz Kontaktowy</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Optymalizacja SEO</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Integracja z Social Media</li>
-                        <li class="flex items-center text-red-400"><span class="mr-2">✕</span> Wsparcie Priorytetowe</li>
+                    <h3 class="text-3xl font-bold text-indigo-600 mb-4">Startup</h3>
+                    <p class="text-5xl font-extrabold text-slate-800 mb-6">999 zł</p>
+                    <ul class="text-slate-600 text-lg space-y-2 mb-8 text-left">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Do 5 Podstron</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Blog/Aktualności</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Formularz Kontaktowy</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Optymalizacja SEO</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Integracja z Social Media</li>
+                        <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Wsparcie Priorytetowe</li>
                     </ul>
                 </div>
                 <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">
@@ -369,23 +358,21 @@
                 </button>
             </div>
 
-            <!-- Package: Widoczność -->
             <div class="glass-card p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal border-2 border-yellow-500 transform scale-105">
-                <!-- Highlighted package -->
                 <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-slate-900 text-sm font-bold px-4 py-1 rounded-full shadow-lg animate-bounce">
                     NAJLEPSZY WYBÓR!
                 </div>
                 <div>
-                    <h3 class="text-3xl font-bold text-yellow-400 mb-4">Widoczność</h3>
-                    <p class="text-5xl font-extrabold text-white mb-6">1799 zł</p>
-                    <ul class="text-blue-200 text-lg space-y-2 mb-8 text-left">
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Do 10 Podstron</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Rozbudowany Blog</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Zaawansowane SEO</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Integracja Google Analytics</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Mapa Strony (XML)</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Wsparcie Priorytetowe</li>
-                        <li class="flex items-center text-red-400"><span class="mr-2">✕</span> Sklep Internetowy</li>
+                    <h3 class="text-3xl font-bold text-yellow-500 mb-4">Widoczność</h3>
+                    <p class="text-5xl font-extrabold text-slate-800 mb-6">1799 zł</p>
+                    <ul class="text-slate-600 text-lg space-y-2 mb-8 text-left">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Do 10 Podstron</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Rozbudowany Blog</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Zaawansowane SEO</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Integracja Google Analytics</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Mapa Strony (XML)</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Wsparcie Priorytetowe</li>
+                        <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Sklep Internetowy</li>
                     </ul>
                 </div>
                 <button class="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold py-3 px-6 rounded-full transition duration-300 w-full">
@@ -393,57 +380,54 @@
                 </button>
             </div>
 
-            <!-- Package: MAX Widoczność -->
             <div class="glass-card p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal">
                 <div>
-                    <h3 class="text-3xl font-bold text-pink-400 mb-4">MAX Widoczność</h3>
-                    <p class="text-5xl font-extrabold text-white mb-6">2199 zł</p>
-                    <ul class="text-blue-200 text-lg space-y-2 mb-8 text-left">
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Nielimitowane Podstrony</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Sklep Internetowy (podstawowy)</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Pełna Optymalizacja SEO</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Kampanie Reklamowe (konsultacja)</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Comiesięczne Raporty</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Dedykowany Opiekun Projektu</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Roczny Hosting i Domena*</li>
+                    <h3 class="text-3xl font-bold text-pink-500 mb-4">MAX Widoczność</h3>
+                    <p class="text-5xl font-extrabold text-slate-800 mb-6">2199 zł</p>
+                    <ul class="text-slate-600 text-lg space-y-2 mb-8 text-left">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Nielimitowane Podstrony</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Sklep Internetowy (podstawowy)</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Pełna Optymalizacja SEO</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Kampanie Reklamowe (konsultacja)</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Comiesięczne Raporty</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Dedykowany Opiekun Projektu</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Roczny Hosting i Domena*</li>
                     </ul>
                 </div>
                 <button class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">
                     Wybierz MAX Widoczność
                 </button>
             </div>
-            <p class="text-sm text-blue-300 mt-4 col-span-full">*Szczegóły dotyczące hostingu i domeny w pakiecie MAX Widoczność dostępne po konsultacji.</p>
+            <p class="text-sm text-slate-500 mt-4 col-span-full">*Szczegóły dotyczące hostingu i domeny w pakiecie MAX Widoczność dostępne po konsultacji.</p>
         </div>
     </section>
 
-    <!-- Our Projects/Portfolio Section -->
     <section id="portfolio" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white">Nasze Realizacje</h2>
-        <p class="text-lg md:text-xl text-blue-200 max-w-4xl mx-auto mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Nasze Realizacje</h2>
+        <p class="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto mb-12">
             Poznaj projekty, które z dumą zrealizowaliśmy. Każda strona to dowód naszego zaangażowania w cyfrowy sukces naszych klientów.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="glass-card p-6 rounded-xl text-center">
-                <img src="https://placehold.co/600x400/1e293b/e2e8f0?text=Projekt+Sklepu+Online" alt="Projekt sklepu internetowego" class="rounded-lg mb-4 w-full h-auto object-cover">
-                <h3 class="text-2xl font-semibold mb-2 text-white">Sklep Online dla "Eko Smaki"</h3>
-                <p class="text-blue-300">Stworzyliśmy intuicyjny e-commerce dla lokalnego dostawcy zdrowej żywności, zwiększając sprzedaż o 40%.</p>
+                <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Projekt+Sklepu+Online" alt="Projekt sklepu internetowego" class="rounded-lg mb-4 w-full h-auto object-cover">
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Sklep Online dla "Eko Smaki"</h3>
+                <p class="text-slate-600">Stworzyliśmy intuicyjny e-commerce dla lokalnego dostawcy zdrowej żywności, zwiększając sprzedaż o 40%.</p>
             </div>
             <div class="glass-card p-6 rounded-xl text-center">
-                <img src="https://placehold.co/600x400/1e293b/e2e8f0?text=Strona+Firmowa+B2B" alt="Strona firmowa B2B" class="rounded-lg mb-4 w-full h-auto object-cover">
-                <h3 class="text-2xl font-semibold mb-2 text-white">Strona Korporacyjna dla "Tech Solutions"</h3>
-                <p class="text-blue-300">Elegancka i funkcjonalna strona B2B, która podkreśla innowacyjność firmy technologicznej.</p>
+                <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Strona+Firmowa+B2B" alt="Strona firmowa B2B" class="rounded-lg mb-4 w-full h-auto object-cover">
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Strona Korporacyjna dla "Tech Solutions"</h3>
+                <p class="text-slate-600">Elegancka i funkcjonalna strona B2B, która podkreśla innowacyjność firmy technologicznej.</p>
             </div>
             <div class="glass-card p-6 rounded-xl text-center">
-                <img src="https://placehold.co/600x400/1e293b/e2e8f0?text=Blog+Podróżniczy" alt="Blog podróżniczy" class="rounded-lg mb-4 w-full h-auto object-cover">
-                <h3 class="text-2xl font-semibold mb-2 text-white">Blog Podróżniczy "Świat w Obiektywie"</h3>
-                <p class="text-blue-300">Wizualnie porywający blog zoptymalizowany pod kątem szybkiego ładowania zdjęć i czytelności treści.</p>
+                <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Blog+Podróżniczy" alt="Blog podróżniczy" class="rounded-lg mb-4 w-full h-auto object-cover">
+                <h3 class="text-2xl font-semibold mb-2 text-slate-800">Blog Podróżniczy "Świat w Obiektywie"</h3>
+                <p class="text-slate-600">Wizualnie porywający blog zoptymalizowany pod kątem szybkiego ładowania zdjęć i czytelności treści.</p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section id="faq" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white">Najczęściej Zadawane Pytania</h2>
+        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Najczęściej Zadawane Pytania</h2>
         <div class="max-w-3xl mx-auto space-y-4 text-left">
             <div class="glass-card rounded-xl overflow-hidden">
                 <div class="accordion-header" data-accordion="1">
@@ -487,10 +471,9 @@
         </div>
     </section>
 
-    <!-- Call to Action / Contact Section -->
     <section id="contact" class="relative z-10 py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal">
-        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white">Gotowy na Cyfrową Rewolucję?</h2>
-        <p class="text-lg md:text-xl text-blue-200 max-w-3xl mx-auto mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Gotowy na Cyfrową Rewolucję?</h2>
+        <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-12">
             Skontaktuj się z nami, aby omówić Twój projekt. Stworzymy dla Ciebie stronę, która nie tylko będzie widoczna, ale i zachwyci każdego odwiedzającego!
         </p>
         <div class="flex flex-col md:flex-row justify-center items-center gap-6">
@@ -500,18 +483,16 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="relative z-10 bg-slate-900 py-8 px-4 text-center text-blue-300">
+    <footer class="relative z-10 bg-slate-100 py-8 px-4 text-center text-slate-600">
         <p>&copy; 2025 Twoja Widoczność. Wszelkie prawa zastrzeżone.</p>
         <p class="text-sm mt-2">Stworzono z pasją do widoczności w sieci.</p>
     </footer>
 
-    <!-- Universal Modal for AI Responses -->
     <div id="ai-response-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="modal-close-button" id="modal-close-btn">&times;</button>
-            <h3 id="modal-title" class="text-3xl font-bold text-white mb-4"></h3>
-            <div id="modal-body" class="text-blue-200 text-lg leading-relaxed whitespace-pre-wrap"></div>
+            <h3 id="modal-title" class="text-3xl font-bold text-slate-800 mb-4"></h3>
+            <div id="modal-body" class="text-slate-700 text-lg leading-relaxed whitespace-pre-wrap"></div>
         </div>
     </div>
 
@@ -539,31 +520,26 @@
                 charIndex++;
                 setTimeout(typeSlogan, 70); // Typing speed
             } else {
-                // Optional: Remove blinking cursor after typing is complete
                 sloganElement.classList.remove('typing-text');
             }
         }
-        window.addEventListener('load', typeSlogan); // Start typing on load
-
+        window.addEventListener('load', typeSlogan);
 
         // Scroll reveal animation
         const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
-
         const observerOptions = {
-            root: null, // relative to the viewport
+            root: null,
             rootMargin: '0px',
-            threshold: 0.1 // 10% of the element needs to be visible
+            threshold: 0.1
         };
-
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Stop observing once visible
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
-
         scrollRevealElements.forEach(el => {
             observer.observe(el);
         });
@@ -576,7 +552,7 @@
 
         function openModal(title, content) {
             modalTitle.textContent = title;
-            modalBody.innerHTML = content; // Use innerHTML for potential line breaks or basic formatting
+            modalBody.innerHTML = content;
             modalOverlay.classList.add('open');
         }
 
@@ -601,7 +577,6 @@
 
         generateIdeaBtn.addEventListener('click', async () => {
             const industry = ideaInput.value.trim();
-            console.log(industry)
             if (!industry) {
                 openModal('Błąd', 'Proszę wpisać opis branży lub pomysłu.');
                 return;
@@ -635,9 +610,7 @@ Formatuj odpowiedź jako czytelny tekst z nagłówkami dla każdego punktu.`;
                 });
                 const result = await response.json();
 
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
+                if (result.candidates && result.candidates[0].content && result.candidates[0].content.parts) {
                     const generatedText = result.candidates[0].content.parts[0].text;
                     openModal('Twój Pomysł na Stronę', generatedText);
                 } else {
@@ -659,7 +632,6 @@ Formatuj odpowiedź jako czytelny tekst z nagłówkami dla każdego punktu.`;
                 const content = document.getElementById(`accordion-content-${header.dataset.accordion}`);
                 const isActive = header.classList.contains('active');
 
-                // Close all other open accordions
                 document.querySelectorAll('.accordion-header.active').forEach(openHeader => {
                     if (openHeader !== header) {
                         openHeader.classList.remove('active');
@@ -667,7 +639,6 @@ Formatuj odpowiedź jako czytelny tekst z nagłówkami dla każdego punktu.`;
                     }
                 });
 
-                // Toggle current accordion
                 if (!isActive) {
                     header.classList.add('active');
                     content.classList.add('open');
