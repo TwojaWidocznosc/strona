@@ -1,1 +1,399 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakiet Intro - Twoja Widoczność</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); /* Light background */
+            color: #1e293b; /* Dark slate text */
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e2e8f0; }
+        ::-webkit-scrollbar-thumb { background: #93c5fd; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #60a5fa; }
+        .shape {
+            position: absolute;
+            background: rgba(96, 165, 250, 0.15);
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out alternate;
+            z-index: 0;
+            filter: blur(60px);
+            opacity: 0.8;
+        }
+        .shape-1 { top: 5%; left: 10%; width: 120px; height: 120px; animation-duration: 25s; }
+        .shape-2 { bottom: 10%; right: 5%; width: 180px; height: 180px; animation-duration: 22s; }
+        .shape-3 { top: 20%; right: 25%; width: 80px; height: 80px; animation-duration: 28s; background: rgba(251, 191, 36, 0.15); }
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(20px, 30px); }
+            100% { transform: translate(0, 0); }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(203, 213, 225, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.12);
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+            max-width: 90%;
+            max-height: 90%;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            animation: fadeInScale 0.3s forwards;
+        }
+        .modal-overlay.open .modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .modal-close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: #334155;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+        .modal-close-button:hover {
+            color: #ef4444;
+        }
+        .accordion-header {
+            background-color: rgba(255, 255, 255, 0.85);
+            color: #1e293b;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .accordion-header:hover {
+            background-color: rgba(241, 245, 249, 0.95);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+        .accordion-content {
+            background-color: rgba(241, 245, 249, 0.8);
+            color: #334155;
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+            border-radius: 0 0 0.75rem 0.75rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+        .accordion-content.open {
+            max-height: 300px;
+            padding: 1rem 1.5rem 1.5rem;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-header.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+
+    <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md z-50 py-4 px-6 md:px-8">
+        <div class="container mx-auto flex justify-between items-center max-w-7xl">
+            <a href="index.html" class="text-2xl font-extrabold text-blue-700 flex items-center">
+                <svg class="h-8 w-8 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1l-.75-3M3 13V6a2 2 0 012-2h14a2 2 0 012 2v7m-4 6l-4 2m0 0l-4-2m4 2v-6c0-1.1-0.9-2-2-2H9c-1.1 0-2 0.9-2 2v6m7 0h-4"></path>
+                </svg>
+                Twoja Widoczność
+            </a>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#ai-idea-generator" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Generator Pomysłów</a>
+                <a href="index.html#about" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Dlaczego My?</a>
+                <a href="index.html#packages" class="text-lg font-medium text-blue-600 font-bold transition-colors duration-200">Pakiety</a>
+                <a href="index.html#contact" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Kontakt</a>
+            </div>
+
+            <div class="md:hidden">
+                <a href="index.html" class="text-blue-600 text-lg font-bold">Powrót</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 pt-24"> <header class="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-indigo-50 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-blue-700 mb-4 animate-pulse">Pakiet Intro</h1>
+            <p class="text-4xl font-extrabold text-slate-800 mb-8">Tylko 799 zł</p>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto px-4">
+                Idealny start dla osób i małych firm, które potrzebują profesjonalnej wizytówki online, aby zaznaczyć swoją obecność w internecie. Szybko, efektywnie i estetycznie!
+            </p>
+        </header>
+
+        <section class="py-16 px-4 container mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Co Otrzymasz w Pakiecie Intro?</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="glass-card p-8 rounded-xl text-left">
+                    <h3 class="text-3xl font-bold text-blue-600 mb-6">Kluczowe Funkcjonalności</h3>
+                    <ul class="text-slate-700 text-lg space-y-4">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3 text-2xl"><i class="fas fa-check-circle"></i></span>
+                            <div>
+                                <strong class="block text-xl">Strona One-Page</strong>
+                                <p class="text-base">Zaprojektujemy jedną, spójną i estetyczną stronę, która efektywnie zaprezentuje Twoją firmę lub projekt. Idealna do szybkiego startu!</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3 text-2xl"><i class="fas fa-check-circle"></i></span>
+                            <div>
+                                <strong class="block text-xl">Responsywny Design</strong>
+                                <p class="text-base">Twoja strona będzie wyglądać doskonale na każdym urządzeniu – komputerze, tablecie czy smartfonie, zapewniając komfort użytkowania.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3 text-2xl"><i class="fas fa-check-circle"></i></span>
+                            <div>
+                                <strong class="block text-xl">Podstawowy Kontakt</strong>
+                                <p class="text-base">Umieścimy kluczowe dane kontaktowe (telefon, e-mail, adres) oraz interaktywną mapę, aby Twoi klienci łatwo Cię znaleźli.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3 text-2xl"><i class="fas fa-check-circle"></i></span>
+                            <div>
+                                <strong class="block text-xl">Galeria Zdjęć</strong>
+                                <p class="text-base">Zaprezentuj swoje produkty, usługi lub projekty w profesjonalnej, łatwej do przeglądania galerii zdjęć.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-red-500 mr-3 text-2xl"><i class="fas fa-times-circle"></i></span>
+                            <div>
+                                <strong class="block text-xl">Brak Zaawansowanego SEO</strong>
+                                <p class="text-base">Ten pakiet nie obejmuje zaawansowanej optymalizacji pod kątem wyszukiwarek. Jeśli zależy Ci na wysokiej pozycji w Google, rozważ wyższe pakiety.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-xl text-left flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-bold text-blue-600 mb-6">Dla Kogo Jest Ten Pakiet?</h3>
+                        <p class="text-lg text-slate-700 mb-6">
+                            Pakiet **Intro** jest idealnym rozwiązaniem dla:
+                        </p>
+                        <ul class="text-slate-700 text-lg space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <span class="text-purple-500 mr-3 text-2xl"><i class="fas fa-user-tie"></i></span>
+                                Mikroprzedsiębiorstw i freelancerów, którzy dopiero zaczynają swoją działalność online.
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-purple-500 mr-3 text-2xl"><i class="fas fa-briefcase"></i></span>
+                                Małych firm, które potrzebują szybkiej i eleganckiej wizytówki online bez skomplikowanych funkcji.
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-purple-500 mr-3 text-2xl"><i class="fas fa-store"></i></span>
+                                Punktów usługowych (np. salonów fryzjerskich, kosmetycznych, mechaników), chcących zaprezentować swoją ofertę i dane kontaktowe.
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-purple-500 mr-3 text-2xl"><i class="fas fa-pen-nib"></i></span>
+                                Artystów, fotografów, rzemieślników, którzy chcą pokazać swoje portfolio.
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('Zamów Pakiet Intro', 'Dziękujemy za zainteresowanie pakietem Intro! Aby kontynuować, prosimy o wypełnienie formularza kontaktowego, a my skontaktujemy się z Tobą w ciągu 24 godzin w celu omówienia szczegółów.<br><br>Możesz także zadzwonić pod numer: +48 123 456 789 lub napisać na: kontakt@twojawidocznosc.pl')"
+                            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105 w-full mt-auto">
+                        Zamów Pakiet Intro!
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 px-4 container mx-auto text-center bg-gradient-to-bl from-white to-green-50 rounded-xl my-12 shadow-inner">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Opinia Klienta</h2>
+            <div class="glass-card p-8 rounded-xl text-left max-w-3xl mx-auto">
+                <p class="text-xl italic text-slate-600 mb-6">"Potrzebowałem prostej, ale profesjonalnej strony-wizytówki dla mojego małego warsztatu. Pakiet Intro z "Twojej Widoczności" był strzałem w dziesiątkę! Szybko, bezproblemowo i dokładnie tak, jak chciałem. Polecam!"</p>
+                <p class="font-bold text-slate-800 text-lg">- Marek K., Właściciel "Auto Serwis Marek"</p>
+            </div>
+        </section>
+
+        <section class="py-16 px-4 container mx-auto text-center bg-gradient-to-br from-white to-blue-50 rounded-xl my-12 shadow-inner">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">FAQ dotyczące Pakietu Intro</h2>
+            <div class="max-w-3xl mx-auto space-y-4 text-left">
+                <div class="glass-card rounded-xl overflow-hidden">
+                    <div class="accordion-header" data-accordion="intro-faq-1">
+                        Czy w pakiecie Intro jest wliczony hosting i domena?
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content" id="accordion-content-intro-faq-1">
+                        Pakiet Intro obejmuje jedynie stworzenie strony. Hosting i domena to dodatkowe koszty, które możesz wykupić u nas lub u dowolnego dostawcy. Chętnie pomożemy Ci w konfiguracji.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl overflow-hidden">
+                    <div class="accordion-header" data-accordion="intro-faq-2">
+                        Jakie informacje muszę dostarczyć, abyście stworzyli moją stronę Intro?
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content" id="accordion-content-intro-faq-2">
+                        Będziemy potrzebować logo (jeśli posiadasz), teksty na stronę (o firmie, oferta, kontakt), zdjęcia, które chcesz umieścić w galerii, oraz wszelkie preferencje dotyczące kolorystyki czy stylu.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl overflow-hidden">
+                    <div class="accordion-header" data-accordion="intro-faq-3">
+                        Czy mogę rozbudować stronę z pakietu Intro w przyszłości?
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content" id="accordion-content-intro-faq-3">
+                        Tak, oczywiście! Zawsze możesz z nami skontaktować się w sprawie rozbudowy strony, np. do pakietu Startup czy Widoczność. Twoja strona będzie elastyczna i gotowa na rozwój.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 px-4 container mx-auto text-center bg-gradient-to-tr from-purple-50 to-pink-50 rounded-xl my-12 shadow-inner">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Gotowy na swoją pierwszą stronę online?</h2>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+                Wybierz pakiet Intro i zaznacz swoją obecność w sieci już dziś!
+            </p>
+            <button onclick="openModal('Zamów Pakiet Intro', 'Dziękujemy za zainteresowanie pakietem Intro! Aby kontynuować, prosimy o wypełnienie formularza kontaktowego, a my skontaktujemy się z Tobą w ciągu 24 godzin w celu omówienia szczegółów.<br><br>Możesz także zadzwonić pod numer: +48 123 456 789 lub napisać na: kontakt@twojawidocznosc.pl')"
+                    class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+                Zamów Pakiet Intro
+            </button>
+        </section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-slate-100 to-slate-200 py-10 px-4 text-center text-slate-600 shadow-inner">
+        <div class="max-w-7xl mx-auto">
+            <p>&copy; 2025 Twoja Widoczność. Wszelkie prawa zastrzeżone.</p>
+            <p class="text-sm mt-2">Stworzono z pasją do widoczności w sieci.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">Polityka Prywatności</a>
+                <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">Regulamin</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="universal-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-button" id="modal-close-btn">&times;</button>
+            <h3 id="modal-title" class="text-3xl font-bold text-slate-800 mb-4"></h3>
+            <div id="modal-body" class="text-slate-700 text-lg leading-relaxed whitespace-pre-wrap"></div>
+        </div>
+    </div>
+
+    <script>
+        // Universal Modal Logic (retained from main page)
+        const universalModal = document.getElementById('universal-modal');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+
+        function openModal(title, content) {
+            modalTitle.textContent = title;
+            modalBody.innerHTML = content;
+            universalModal.classList.add('open');
+        }
+
+        function closeModal() {
+            universalModal.classList.remove('open');
+            setTimeout(() => {
+                modalTitle.textContent = '';
+                modalBody.textContent = '';
+            }, 300);
+        }
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        universalModal.addEventListener('click', (e) => {
+            if (e.target === universalModal) {
+                closeModal();
+            }
+        });
+
+        // FAQ Accordion Logic (retained from main page)
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = document.getElementById(`accordion-content-${header.dataset.accordion}`);
+                const isActive = header.classList.contains('active');
+
+                document.querySelectorAll('.accordion-header.active').forEach(openHeader => {
+                    if (openHeader !== header) {
+                        openHeader.classList.remove('active');
+                        document.getElementById(`accordion-content-${openHeader.dataset.accordion}`).classList.remove('open');
+                    }
+                });
+
+                if (!isActive) {
+                    header.classList.add('active');
+                    content.classList.add('open');
+                } else {
+                    header.classList.remove('active');
+                    content.classList.remove('open');
+                }
+            });
+        });
+
+        // Smooth scrolling for navigation links within the sub-page
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const headerOffset = document.querySelector('nav').offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerOffset - 20;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
 
