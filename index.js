@@ -97,51 +97,34 @@
                 openModal('Błąd Wprowadzania', 'Proszę wpisać opis branży, produktu lub usługi, aby wygenerować pomysł.');
                 return;
             }
-
+        
             ideaBtnText.textContent = 'Generowanie...';
             ideaSpinner.classList.remove('hidden');
-            generateIdeaBtn.disabled = true; // Disable button during generation
-
-            const prompt = `Wygeneruj kreatywny i unikalny pomysł na stronę internetową dla firmy lub projektu z branży/o tematyce: "${industry}". W odpowiedzi podaj:
-                - Nazwę strony (polska i chwytliwa)
-                - Główny cel strony
-                - Docelową grupę odbiorców
-                - Kluczowe funkcjonalności (3-5 punktów, w tym co najmniej jeden interaktywny element np. kalkulator, quiz, konfigurator)
-                - Unikalny element, który wyróżni stronę na tle konkurencji (np. innowacyjna funkcja, specjalny design)
-                - Propozycję stylu wizualnego (np. kolorystyka, typografia, ogólny vibe, przykładowe elementy graficzne)
-                        
-                Formatuj odpowiedź jako czytelny tekst z nagłówkami dla każdego punktu.`;
-
-            let chatHistory = [];
-            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-            const payload = { contents: chatHistory };
-            const apiKey = "AIzaSyBSvrvgBjgsUoLHNG5XAK335W2NOnXaHIE"; // Canvas will provide this at runtime
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
+            generateIdeaBtn.disabled = true;
+        
             try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
+                const response = await fetch("https://api.twojawidocznosc.online", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ industry })  // tylko industry!
                 });
-                const result = await response.json();
-
-                if (result.candidates && result.candidates[0].content && result.candidates[0].content.parts && result.candidates[0].content.parts.length > 0) {
-                    const generatedText = result.candidates[0].content.parts[0].text;
-                    // Replace newlines with <br> for proper display in innerHTML
-                    const formattedText = generatedText.replace(/\n/g, '<br>');
+            
+                const data = await response.json();
+            
+                if (data && data.idea) {
+                    const formattedText = data.idea.replace(/\n/g, '<br>');
                     openModal('Twój Nowy Pomysł na Stronę!', formattedText);
                 } else {
-                    openModal('Błąd Generowania', 'Nie udało się wygenerować pomysłu. Spróbuj ponownie z innym opisem.');
-                    console.error('Gemini API response structure unexpected:', result);
+                    openModal('Błąd Generowania', 'Nie udało się wygenerować pomysłu. Spróbuj ponownie.');
                 }
+            
             } catch (error) {
-                console.error('Błąd podczas wywoływania Gemini API:', error);
-                openModal('Błąd Połączenia', 'Wystąpił problem z połączeniem z serwerem. Sprawdź swoje połączenie internetowe.');
+                console.error("Błąd połączenia z API:", error);
+                openModal('Błąd Połączenia', 'Wystąpił problem z serwerem. Spróbuj ponownie później.');
             } finally {
                 ideaBtnText.textContent = 'Generuj Pomysł!';
                 ideaSpinner.classList.add('hidden');
-                generateIdeaBtn.disabled = false; // Re-enable button
+                generateIdeaBtn.disabled = false;
             }
         });
 
