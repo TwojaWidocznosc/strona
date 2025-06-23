@@ -140,8 +140,6 @@
                 return;
             }
 
-            // In a real application, you would send this email to a backend service.
-            // For this example, we just show a success message.
             const res = await fetch('https://api.twojawidocznosc.online/newsletter', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
