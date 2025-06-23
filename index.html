@@ -63,7 +63,8 @@
         <a href="#contact" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Kontakt</a>
     </div>
 
-    <main class="relative z-10 pt-20"> <header class="py-20 md:py-32 flex flex-col items-center justify-center text-center overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50">
+    <main class="relative z-10 pt-20"> 
+        <header class="py-24 md:py-40 flex flex-col items-center justify-center text-center overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50">
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-slate-800 leading-tight mb-4 animate-pulse px-4">
                 Twoja Widoczność
             </h1>
@@ -75,12 +76,12 @@
             </a>
         </header>
 
-        <section id="ai-idea-generator" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-purple-gradient">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">✨ Generator Pomysłów na Stronę ✨</h2>
-            <p class="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto mb-8">
+        <section id="ai-idea-generator" class="py-20 md:py-32 text-center scroll-reveal">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8 text-slate-800 px-8">Potrzebujesz pomysłu na swoją stronę?</h2>
+            <p class="text-base md:text-xl text-slate-600 max-w-4xl mx-auto mb-8 px-4">
                 Opisz swoją branżę, produkt lub usługę, a nasza sztuczna inteligencja wygeneruje unikalny pomysł na Twoją stronę internetową!
             </p>
-            <div class="max-w-2xl mx-auto flex flex-col items-center">
+            <div class="max-w-2xl mx-auto flex flex-col items-center px-4">
                 <textarea id="idea-input" rows="4" placeholder="Np. 'sklep z ręcznie robioną biżuterią', 'firma doradztwa finansowego', 'blog podróżniczy o Azji'"
                           class="w-full p-4 rounded-lg bg-white text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:outline-none mb-6 border border-slate-300 shadow-sm"></textarea>
                 <button id="generate-idea-btn"
@@ -91,72 +92,165 @@
             </div>
         </section>
 
-        <section id="about" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-blue-gradient">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Dlaczego Wybrać Nas?</h2>
-            <p class="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto mb-12">
-                W Twojej Widoczności nie tylko tworzymy strony – budujemy cyfrowe fundamenty sukcesu. Nasze podejście opiera się na innowacji, transparentności i głębokim zrozumieniu potrzeb klienta. Z nami Twoja marka zabłyśnie w sieci!
+        <!-- <section id="about" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-blue-gradient"> -->
+        <section id="about" class="py-20 md:py-32 flex flex-col items-center justify-center text-center overflow-hidden shadow-inner section-black-gradient-180">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white px-4 scroll-reveal">Dlaczego Wybrać Nas?</h2>
+            <p class="text-base md:text-xl text-gray-300 max-w-4xl mx-auto mb-12 px-4 scroll-reveal">
+                W Twojej Widoczności nie tylko tworzymy strony – budujemy cyfrowe fundamenty sukcesu. Z nami Twoja marka zabłyśnie w sieci!
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 scroll-reveal">
+                <div class="glass-card-dark p-6 rounded-xl flex flex-col items-center justify-center">
                     <div class="text-5xl text-yellow-500 mb-4">✨</div>
-                    <h3 class="text-2xl font-semibold mb-2 text-slate-800">Kreatywny Design</h3>
-                    <p class="text-slate-600">Unikalne i nowoczesne projekty, które wyróżnią Cię z tłumu i zapadną w pamięć.</p>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Kreatywny Design</h3>
+                    <p class="text-gray-300">Unikalne i nowoczesne projekty, które wyróżnią Cię z tłumu i zapadną w pamięć.</p>
                 </div>
-                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+                <div class="glass-card-dark p-6 rounded-xl flex flex-col items-center justify-center">
                     <div class="text-5xl text-green-500 mb-4">🚀</div>
-                    <h3 class="text-2xl font-semibold mb-2 text-slate-800">Szybkość i Optymalizacja</h3>
-                    <p class="text-slate-600">Strony ładowane błyskawicznie, zoptymalizowane pod SEO, byś zawsze był na szczycie.</p>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Szybkość i Optymalizacja</h3>
+                    <p class="text-gray-300">Strony ładowane błyskawicznie, zoptymalizowane pod SEO, byś zawsze był na szczycie.</p>
                 </div>
-                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+                <div class="glass-card-dark p-6 rounded-xl flex flex-col items-center justify-center">
                     <div class="text-5xl text-purple-500 mb-4">📱</div>
-                    <h3 class="text-2xl font-semibold mb-2 text-slate-800">Pełna Responsywność</h3>
-                    <p class="text-slate-600">Doskonały wygląd i funkcjonalność na każdym urządzeniu i rozdzielczości ekranu.</p>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Pełna Responsywność</h3>
+                    <p class="text-gray-300">Doskonały wygląd i funkcjonalność na każdym urządzeniu i rozdzielczości ekranu.</p>
                 </div>
-                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+                <div class="glass-card-dark p-6 rounded-xl flex flex-col items-center justify-center">
                     <div class="text-5xl text-red-500 mb-4">🤝</div>
-                    <h3 class="text-2xl font-semibold mb-2 text-slate-800">Transparentność</h3>
-                    <p class="text-slate-600">Jasne zasady, brak ukrytych kosztów – wiesz, za co płacisz od początku do końca.</p>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Transparentność</h3>
+                    <p class="text-gray-300">Jasne zasady, brak ukrytych kosztów – wiesz, za co płacisz od początku do końca.</p>
                 </div>
-                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+                <div class="glass-card-dark p-6 rounded-xl flex flex-col items-center justify-center">
                     <div class="text-5xl text-cyan-500 mb-4">💡</div>
-                    <h3 class="text-2xl font-semibold mb-2 text-slate-800">Wsparcie i Doradztwo</h3>
-                    <p class="text-slate-600">Jesteśmy z Tobą na każdym etapie – od pomysłu po wsparcie po wdrożeniu.</p>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Wsparcie i Doradztwo</h3>
+                    <p class="text-gray-300">Jesteśmy z Tobą na każdym etapie – od pomysłu po wsparcie po wdrożeniu.</p>
                 </div>
-                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+                <div class="glass-card-dark p-6 rounded-xl flex flex-col items-center justify-center">
                     <div class="text-5xl text-orange-500 mb-4">📈</div>
-                    <h3 class="text-2xl font-semibold mb-2 text-slate-800">Koncentracja na Celach</h3>
-                    <p class="text-slate-600">Tworzymy strony, które nie tylko wyglądają, ale przede wszystkim realizują Twoje cele biznesowe.</p>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Koncentracja na Celach</h3>
+                    <p class="text-gray-300">Tworzymy strony, które nie tylko wyglądają, ale przede wszystkim realizują Twoje cele biznesowe.</p>
                 </div>
             </div>
         </section>
 
-        <section id="how-we-work" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-green-gradient">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Jak Pracujemy? Nasz Sprawdzony Proces</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <div class="glass-card p-6 rounded-xl flex flex-col items-center text-center">
+        <!-- <section id="how-we-work" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-green-gradient"> -->
+        <section id="how-we-work" class="py-20 md:py-32 flex flex-col items-center justify-center text-center overflow-hidden section-black-gradient-0">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white px-4 scroll-reveal">Jak Pracujemy?</h2>
+            <h2 class="text-lg md:text-5xl font-bold mb-12 text-gray-300 px-4 scroll-reveal">Nasz Sprawdzony Proces</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 scroll-reveal">
+                <div class="glass-card-dark p-6 rounded-xl flex flex-col items-center text-center">
                     <div class="text-6xl text-blue-500 mb-4">1.</div>
-                    <h3 class="text-2xl font-semibold mb-2 text-slate-800">Konsultacja i Planowanie</h3>
-                    <p class="text-slate-600">Zaczynamy od zrozumienia Twoich potrzeb, celów i wizji. Określamy zakres projektu i harmonogram.</p>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Konsultacja i Planowanie</h3>
+                    <p class="text-gray-300">Zaczynamy od zrozumienia Twoich potrzeb, celów i wizji. Określamy zakres projektu i harmonogram.</p>
                 </div>
-                <div class="glass-card p-6 rounded-xl flex flex-col items-center text-center">
+                <div class="glass-card-dark p-6 rounded-xl flex flex-col items-center text-center">
                     <div class="text-6xl text-indigo-500 mb-4">2.</div>
-                    <h3 class="text-2xl font-semibold mb-2 text-slate-800">Projektowanie i Akceptacja</h3>
-                    <p class="text-slate-600">Tworzymy unikalny projekt graficzny strony. Po Twojej akceptacji przechodzimy do kolejnego etapu.</p>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Projektowanie i Akceptacja</h3>
+                    <p class="text-gray-300">Tworzymy unikalny projekt graficzny strony. Po Twojej akceptacji przechodzimy do kolejnego etapu.</p>
                 </div>
-                <div class="glass-card p-6 rounded-xl flex flex-col items-center text-center">
+                <div class="glass-card-dark p-6 rounded-xl flex flex-col items-center text-center">
                     <div class="text-6xl text-purple-500 mb-4">3.</div>
-                    <h3 class="text-2xl font-semibold mb-2 text-slate-800">Implementacja i Optymalizacja</h3>
-                    <p class="text-slate-600">Kodujemy stronę, dbając o czystość kodu, responsywność i optymalizację pod SEO. Testujemy każdą funkcjonalność.</p>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Implementacja i Optymalizacja</h3>
+                    <p class="text-gray-300">Kodujemy stronę, dbając o czystość kodu, responsywność i optymalizację pod SEO. Testujemy każdą funkcjonalność.</p>
                 </div>
-                <div class="glass-card p-6 rounded-xl flex flex-col items-center text-center">
+                <div class="glass-card-dark p-6 rounded-xl flex flex-col items-center text-center">
                     <div class="text-6xl text-pink-500 mb-4">4.</div>
-                    <h3 class="text-2xl font-semibold mb-2 text-slate-800">Wdrożenie i Wsparcie</h3>
-                    <p class="text-slate-600">Publikujemy Twoją stronę w sieci i zapewniamy wsparcie posprzedażowe, by działała bez zarzutu.</p>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Wdrożenie i Wsparcie</h3>
+                    <p class="text-gray-300">Publikujemy Twoją stronę w sieci i zapewniamy wsparcie posprzedażowe, by działała bez zarzutu.</p>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-orange-gradient">
+
+
+        <section id="packages" class="py-20 md:py-32 flex flex-col items-center justify-center text-center overflow-hidden shadow-inner section-black-gradient-180">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white scroll-reveal">Nasze Pakiety Tworzenia Stron</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-screen-2xl mx-auto px-4">
+                <div class="glass-card-dark p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal">
+                    <div>
+                        <h3 class="text-3xl font-bold text-blue-600 mb-4">Intro</h3>
+                        <p class="text-5xl font-extrabold text-white mb-6">799 zł</p>
+                        <ul class="text-gray-300 text-lg space-y-2 mb-8 text-left">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Strona One-Page</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Statyczny Hosting</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Responsywny Design</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Podstawowy Kontakt</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Galeria Zdjęć</li>
+                            <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Optymalizacja SEO</li>
+                            <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Blog/Aktualności</li>
+                            <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Formularz Kontaktowy</li>
+                        </ul>
+                    </div>
+                    <button onclick="window.location.href='intro/'" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">
+                        Wybierz Intro
+                    </button>
+                </div>
+
+                <div class="glass-card-dark p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal">
+                    <div>
+                        <h3 class="text-3xl font-bold text-indigo-600 mb-4">Startup</h3>
+                        <p class="text-5xl font-extrabold text-white mb-6">999 zł</p>
+                        <ul class="text-gray-300 text-lg space-y-2 mb-8 text-left">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Do 2 Podstron</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Statyczny Hosting</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Podstawowe SEO</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Blog/Aktualności</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Formularz Kontaktowy</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Integracja z Social Media</li>
+                            <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Zaawansowane SEO</li>
+                            <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Hosting Dynamiczny</li>
+                        </ul>
+                    </div>
+                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">
+                        Wybierz Startup
+                    </button>
+                </div>
+
+                <div class="glass-card-dark p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal border-2 border-yellow-500 transform scale-105">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-slate-900 text-sm font-bold px-4 py-1 rounded-full shadow-lg animate-bounce">
+                        NAJLEPSZY WYBÓR!
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-yellow-500 mb-4">Widoczność</h3>
+                        <p class="text-5xl font-extrabold text-white mb-6">1799 zł</p>
+                        <ul class="text-gray-300 text-lg space-y-2 mb-8 text-left">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Do 6 Podstron</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Roczny Hosting i Domena*</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Zaawansowane SEO</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Design Indywidualny</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Animacje</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Szkolenie Klienta</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Wsparcie Priorytetowe</li>
+                            <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Chatbot AI</li>
+                        </ul>
+                    </div>
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold py-3 px-6 rounded-full transition duration-300 w-full">
+                        Wybierz Widoczność
+                    </button>
+                </div>
+
+                <div class="glass-card-dark p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal">
+                    <div>
+                        <h3 class="text-3xl font-bold text-pink-500 mb-4">MAX Widoczność</h3>
+                        <p class="text-5xl font-extrabold text-white mb-6">2199 zł</p>
+                        <ul class="text-gray-300 text-lg space-y-2 mb-8 text-left">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Do 10 Podstron</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Roczny Hosting i Domena*</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Pełna Optymalizacja SEO</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> 2 Wersje Językowe</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Chatbot AI</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> System Rezerwacji</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Wszystko Wymienione Wcześniej</li>
+                        </ul>
+                    </div>
+                    <button class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">
+                        Wybierz MAX Widoczność
+                    </button>
+                </div>
+                <p class="text-sm text-slate-500 mt-4 col-span-full">*Szczegóły dotyczące hostingu i domeny w pakietach Widoczność i MAX Widoczność dostępne po konsultacji.</p>
+            </div>
+        </section>
+
+        <!-- <section id="testimonials" class="py-20 md:py-32 px-4 mx-auto container text-center scroll-reveal">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Co Mówią Nasi Zadowoleni Klienci?</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
                 <div class="glass-card p-8 rounded-xl text-left">
@@ -166,90 +260,7 @@
             </div>
         </section>
 
-        <section id="packages" class="py-16 md:py-24 px-4 container mx-auto text-center rounded-xl my-12 shadow-inner section-blue-gradient">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800 scroll-reveal">Nasze Pakiety Tworzenia Stron</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <div class="glass-card p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal">
-                    <div>
-                        <h3 class="text-3xl font-bold text-blue-600 mb-4">Intro</h3>
-                        <p class="text-5xl font-extrabold text-slate-800 mb-6">799 zł</p>
-                        <ul class="text-slate-600 text-lg space-y-2 mb-8 text-left">
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Strona One-Page</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Responsywny Design</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Podstawowy Kontakt</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Galeria Zdjęć</li>
-                            <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Optymalizacja SEO</li>
-                            <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Blog/Aktualności</li>
-                        </ul>
-                    </div>
-                    <button onclick="window.location.href='intro/'" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">
-                        Wybierz Intro
-                    </button>
-                </div>
-
-                <div class="glass-card p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal">
-                    <div>
-                        <h3 class="text-3xl font-bold text-indigo-600 mb-4">Startup</h3>
-                        <p class="text-5xl font-extrabold text-slate-800 mb-6">999 zł</p>
-                        <ul class="text-slate-600 text-lg space-y-2 mb-8 text-left">
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Do 5 Podstron</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Blog/Aktualności</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Formularz Kontaktowy</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Optymalizacja SEO</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Integracja z Social Media</li>
-                            <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Wsparcie Priorytetowe</li>
-                        </ul>
-                    </div>
-                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">
-                        Wybierz Startup
-                    </button>
-                </div>
-
-                <div class="glass-card p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal border-2 border-yellow-500 transform scale-105">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-slate-900 text-sm font-bold px-4 py-1 rounded-full shadow-lg animate-bounce">
-                        NAJLEPSZY WYBÓR!
-                    </div>
-                    <div>
-                        <h3 class="text-3xl font-bold text-yellow-500 mb-4">Widoczność</h3>
-                        <p class="text-5xl font-extrabold text-slate-800 mb-6">1799 zł</p>
-                        <ul class="text-slate-600 text-lg space-y-2 mb-8 text-left">
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Do 10 Podstron</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Rozbudowany Blog</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Zaawansowane SEO</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Integracja Google Analytics</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Mapa Strony (XML)</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Wsparcie Priorytetowe</li>
-                            <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Sklep Internetowy</li>
-                        </ul>
-                    </div>
-                    <button class="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold py-3 px-6 rounded-full transition duration-300 w-full">
-                        Wybierz Widoczność
-                    </button>
-                </div>
-
-                <div class="glass-card p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal">
-                    <div>
-                        <h3 class="text-3xl font-bold text-pink-500 mb-4">MAX Widoczność</h3>
-                        <p class="text-5xl font-extrabold text-slate-800 mb-6">2199 zł</p>
-                        <ul class="text-slate-600 text-lg space-y-2 mb-8 text-left">
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Nielimitowane Podstrony</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Sklep Internetowy (podstawowy)</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Pełna Optymalizacja SEO</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Kampanie Reklamowe (konsultacja)</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Comiesięczne Raporty</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Dedykowany Opiekun Projektu</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Roczny Hosting i Domena*</li>
-                        </ul>
-                    </div>
-                    <button class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 w-full">
-                        Wybierz MAX Widoczność
-                    </button>
-                </div>
-                <p class="text-sm text-slate-500 mt-4 col-span-full">*Szczegóły dotyczące hostingu i domeny w pakiecie MAX Widoczność dostępne po konsultacji.</p>
-            </div>
-        </section>
-
-        <section id="portfolio" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-purple-gradient">
+        <section id="portfolio" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal my-12">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Nasze Realizacje</h2>
             <p class="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto mb-12">
                 Poznaj projekty, które z dumą zrealizowaliśmy. Każda strona to dowód naszego zaangażowania w cyfrowy sukces naszych klientów.
@@ -261,24 +272,9 @@
                     <p class="text-slate-600">Stworzyliśmy stronę internetową Twoja Widoczność, aby także wspierać własny biznes i widoczność w sieci.</p>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section id="newsletter" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-green-gradient">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Bądź na Bieżąco!</h2>
-            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                Zapisz się do naszego newslettera i otrzymuj najnowsze porady dotyczące widoczności online, aktualności branżowe i ekskluzywne oferty!
-            </p>
-            <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4 justify-center">
-                <input type="email" id="newsletter-email" placeholder="Wpisz swój adres e-mail"
-                       class="flex-grow p-4 rounded-lg bg-white text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:outline-none border border-slate-300 shadow-sm">
-                <button id="newsletter-signup-btn"
-                        class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
-                    Zapisz się!
-                </button>
-            </div>
-        </section>
-
-        <section id="faq" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-orange-gradient">
+        <section id="faq" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-white-gradient">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Najczęściej Zadawane Pytania</h2>
             <div class="max-w-3xl mx-auto space-y-4 text-left">
                 <div class="glass-card rounded-xl overflow-hidden">
@@ -297,7 +293,7 @@
                         <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
                     </div>
                     <div class="accordion-content" id="accordion-content-2">
-                        Czas realizacji zależy od wybranego pakietu i złożoności projektu. Strony typu "Intro" mogą być gotowe już w kilka dni, natomiast bardziej rozbudowane projekty wymagają od 2 do 4 tygodni. Zawsze informujemy o szacowanym czasie na początku współpracy.
+                        Czas realizacji zależy od wybranego pakietu i złożoności projektu. Strony typu "Intro" mogą być gotowe już w kilka dni, natomiast bardziej rozbudowane projekty wymagają od tygodnia do 2 tygodni. Zawsze informujemy o szacowanym czasie na początku współpracy.
                     </div>
                 </div>
 
@@ -313,17 +309,35 @@
 
                 <div class="glass-card rounded-xl overflow-hidden">
                     <div class="accordion-header" data-accordion="4">
-                        Czy oferujecie wsparcie po wdrożeniu strony?
+                        Jakie usługi są wliczone w pakiety?
                         <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
                     </div>
                     <div class="accordion-content" id="accordion-content-4">
-                        Absolutnie! W pakietach "Widoczność" i "MAX Widoczność" oferujemy priorytetowe wsparcie. Możesz także wykupić pakiety wsparcia technicznego lub abonamenty na aktualizacje i utrzymanie strony, aby Twoja witryna zawsze działała płynnie.
+                        Dokładne informacje o pakietach są dostępne w pliku oferty poglądowej poniżej,
+                        <br>
+                        <br>
+                        <a href="dokumenty/Oferta_www_pakiety_2025-06.pdf" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 text-white font-semibold rounded-xl shadow-md hover:bg-blue-600 transition duration-200">Oferta poglądowa</a> 
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-blue-gradient">
+        <section id="newsletter" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal my-12">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Bądź na Bieżąco!</h2>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+                Zapisz się do naszego newslettera i otrzymuj najnowsze porady dotyczące widoczności online, aktualności branżowe i ekskluzywne oferty!
+            </p>
+            <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4 justify-center">
+                <input type="email" id="newsletter-email" placeholder="Wpisz swój adres e-mail"
+                       class="flex-grow p-4 rounded-lg bg-white text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:outline-none border border-slate-300 shadow-sm">
+                <button id="newsletter-signup-btn"
+                        class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+                    Zapisz się!
+                </button>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal my-12">
             <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Gotowy na Cyfrową Rewolucję?</h2>
             <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-12">
                 Skontaktuj się z nami, aby omówić Twój projekt. Stworzymy dla Ciebie stronę, która nie tylko będzie widoczna, ale i zachwyci każdego odwiedzającego!
@@ -360,9 +374,9 @@
                     </form>
                 </div>
 
-                <div class="glass-card p-8 rounded-xl text-left flex flex-col justify-center">
+                <div class="glass-card p-8 rounded-xl text-left flex flex-col justify-center" style="height: fit-content;">
                     <h3 class="text-3xl font-bold text-slate-800 mb-6">Nasze Dane Kontaktowe</h3>
-                    <div class="space-y-6 text-lg text-slate-700">
+                    <div class="space-y-6 text-base text-slate-700">
                         <p class="flex items-center">
                             <i class="fas fa-envelope text-blue-500 mr-3 text-2xl"></i>
                             <a href="mailto:kontakt@twojawidocznosc.pl" class="hover:text-blue-600 transition-colors">kontakt@twojawidocznosc.online</a>
@@ -371,10 +385,10 @@
                             <i class="fas fa-phone-alt text-blue-500 mr-3 text-2xl"></i>
                             +48 604 175 360
                         </p>
-                        <p class="flex items-center">
+                        <!-- <p class="flex items-center">
                             <i class="fas fa-map-marker-alt text-blue-500 mr-3 text-2xl"></i>
-                            ul. Nie ma, Polska
-                        </p>
+                            ul. , Polska
+                        </p> -->
                         <div class="pt-4">
                             <h4 class="text-xl font-semibold text-slate-800 mb-3">Znajdź nas w mediach społecznościowych:</h4>
                             <div class="flex space-x-6 justify-center lg:justify-start">

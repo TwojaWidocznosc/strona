@@ -103,7 +103,7 @@
             generateIdeaBtn.disabled = true;
         
             try {
-                const response = await fetch("https://api.twojawidocznosc.online", {
+                const response = await fetch("https://api.twojawidocznosc.online/ai", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ industry })  // tylko industry!
@@ -113,7 +113,8 @@
             
                 if (data && data.idea) {
                     const formattedText = data.idea.replace(/\n/g, '<br>');
-                    openModal('Twój Nowy Pomysł na Stronę!', formattedText);
+                    const cleaned = data.idea.replace(/```html|```/g, '').trim();
+                    openModal('Twój Nowy Pomysł na Stronę!', cleaned);
                 } else {
                     openModal('Błąd Generowania', 'Nie udało się wygenerować pomysłu. Spróbuj ponownie.');
                 }
@@ -132,7 +133,7 @@
         const newsletterSignupBtn = document.getElementById('newsletter-signup-btn');
         const newsletterEmailInput = document.getElementById('newsletter-email');
 
-        newsletterSignupBtn.addEventListener('click', () => {
+        newsletterSignupBtn.addEventListener('click', async () => {
             const email = newsletterEmailInput.value.trim();
             if (!email || !/\S+@\S+\.\S+/.test(email)) {
                 openModal('Błąd', 'Proszę wpisać poprawny adres e-mail.');
@@ -141,14 +142,24 @@
 
             // In a real application, you would send this email to a backend service.
             // For this example, we just show a success message.
-            openModal('Sukces!', `Dziękujemy za zapisanie się do newslettera, ${email}! Wkrótce otrzymasz od nas pierwsze wiadomości.`);
-            newsletterEmailInput.value = ''; // Clear input field
+            const res = await fetch('https://api.twojawidocznosc.online/newsletter', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email })
+            });
+
+            if (res.ok) {
+                openModal('Sukces!', `Dziękujemy za zapisanie się do newslettera, ${email}! Wkrótce otrzymasz od nas pierwsze wiadomości.`);
+                newsletterEmailInput.value = ''; // Clear input field
+            } else {
+                openModal('Błąd', `Nie udało się zapisać do newslettera, spróbuj ponownie`);
+            }
         });
 
         // Contact Form Submission Logic
         const contactForm = document.getElementById('contact-form');
 
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault(); // Prevent default form submission
 
             const name = document.getElementById('contact-name').value.trim();
@@ -166,12 +177,28 @@
                 return;
             }
 
-            // In a real application, you would send this data to a backend service.
-            // For this example, we just show a success message.
-            openModal('Wiadomość Wysłana!', `Dziękujemy, ${name}! Twoja wiadomość została do nas wysłana i skontaktujemy się z Tobą wkrótce.`);
+            const payload = {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            };
 
-            // Clear form fields
-            contactForm.reset();
+            const res = await fetch('https://api.twojawidocznosc.online/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+        
+            if (res.ok) {
+                openModal('Wiadomość Wysłana!', `Dziękujemy, ${name}! Twoja wiadomość została do nas wysłana i skontaktujemy się z Tobą wkrótce.`);
+                // Clear form fields
+                contactForm.reset();
+            } else {
+                openModal('Błąd', `Wiadomość nie została wysłana, spróbuj ponownie lub rozważ komunikację mailową, przepraszamy.`);
+            }
+
+
         });
 
 
@@ -225,3 +252,5 @@
                 closeMobileMenu();
             }
         });
+
+        
