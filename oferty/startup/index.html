@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/./icons/favicon-round-128px.ico" type="image/x-icon" />
+    <title>Twoja Widoczność - Pakiet Startup</title>
+    <meta name="description" content="Szczegóły pakietu Startup: Do 2 Podstron, Statyczny Hosting, Podstawowe SEO, Blog/Aktualności, Formularz Kontaktowy, Integracja z Social Media.">
+    <link rel="canonical" href="https://twojawidocznosc.online/oferty/startup/" />
+
+    <meta property="og:title" content="Twoja Widoczność - Pakiet Startup" />
+    <meta property="og:description" content="Szczegóły pakietu Startup: Do 2 Podstron, Statyczny Hosting, Podstawowe SEO, Blog/Aktualności, Formularz Kontaktowy, Integracja z Social Media." />
+    <meta property="og:url" content="https://twojawidocznosc.online/oferty/startup/" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Preload and load Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" media="all">
+    
+    <!-- Preload and load custom CSS -->
+    <link rel="preload" href="/./style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/./style.css"></noscript>
+    <!-- Tailwind CSS is assumed to be loaded or compiled -->
+    <link rel="stylesheet" href="/./tailwind.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); /* Light background */
+            color: #1e293b; /* Dark slate text */
+            overflow-x: hidden; /* Prevent horizontal scroll due to shapes */
+        }
+        /* Header image responsiveness */
+        .header-logo {
+            max-height: 50px; /* Adjust as needed */
+            width: auto;
+        }
+        @media (min-width: 768px) {
+            .header-logo {
+                max-height: 60px; /* Larger on desktop */
+            }
+        }
+
+        /* Ensure mobile menu is full height */
+        .mobile-nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; /* Full viewport height */
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            z-index: 40;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-nav-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen">
+    <!-- Animated background shapes, copied from index.html -->
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <div class="shape shape-5"></div>
+    <div class="shape shape-6"></div>
+    <div class="shape shape-7"></div>
+
+    <!-- Navigation Bar, adapted from index.html to link back -->
+    <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md z-50 py-4 px-6 md:px-8">
+        <div class="container mx-auto flex justify-between items-center max-w-7xl">
+            <a href="/./" class="text-2xl font-extrabold text-blue-700 flex items-center">
+                <img style="height: 48px; width: 122px;" class="header-logo" src="/./images/Logo_TW_nobg_RGB_122px_48px.webp" alt="Twoja Widoczność Logo" loading="lazy">
+            </a>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#ai-idea-generator" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Generator Pomysłów</a>
+                <a href="index.html#about" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Dlaczego My?</a>
+                <a href="index.html#how-we-work" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Jak Pracujemy?</a>
+                <a href="index.html#packages" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Pakiety</a>
+                <a href="index.html#portfolio" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Portfolio</a>
+                <a href="index.html#faq" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">FAQ</a>
+                <a href="index.html#contact" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Kontakt</a>
+            </div>
+
+            <div class="md:hidden">
+                <div class="hamburger" id="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Menu, adapted to link back -->
+    <div class="mobile-nav-menu" id="mobile-nav-menu">
+        <a href="index.html#ai-idea-generator" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Generator Pomysłów</a>
+        <a href="index.html#about" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Dlaczego My?</a>
+        <a href="index.html#how-we-work" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Jak Pracujemy?</a>
+        <a href="index.html#packages" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Pakiety</a>
+        <a href="index.html#portfolio" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Portfolio</a>
+        <a href="index.html#faq" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">FAQ</a>
+        <a href="index.html#contact" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Kontakt</a>
+    </div>
+
+    <main class="relative z-10 pt-20"> 
+        <header class="py-24 md:py-40 flex flex-col items-center justify-center text-center overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-slate-800 leading-tight mb-4 animate-pulse px-4">
+                Pakiet Startup
+            </h1>
+            <p class="text-base md:text-3xl text-indigo-600 typing-text mb-8 max-w-3xl mx-auto px-4">
+                Idealne rozwiązanie na start!
+            </p>
+            <a href="#contact" class="bg-gradient-to-r from-indigo-600 to-indigo-600 hover:from-indigo-700 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+                Skontaktuj Się i Zamów
+            </a>
+        </header>
+
+        <section id="intro-details" class="py-20 md:py-32 flex flex-col items-center justify-center text-center overflow-hidden shadow-inner section-black-gradient-180">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white scroll-reveal">Co Otrzymujesz w Pakiecie Startup?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-2xl mx-auto px-4">
+                <div class="glass-card-dark p-8 rounded-xl flex flex-col justify-start gap-2 items-center text-center scroll-reveal">
+                    <h3 class="text-3xl font-bold text-blue-600 mb-4">Cena</h3>
+                    <p class="text-5xl font-extrabold text-white mb-6">999 zł</p>
+                </div>
+
+                <div class="glass-card-dark p-8 rounded-xl flex flex-col justify-start gap-2 items-center text-center scroll-reveal">
+                    <h3 class="text-3xl font-bold text-indigo-600 mb-4">Główne Cechy</h3>
+                    <ul class="text-gray-300 text-lg space-y-2 mb-8 text-left w-full">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Do 2 Podstron</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Statyczny Hosting</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Podstawowe SEO</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Blog/Aktualności</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Formularz Kontaktowy</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Integracja z Social Media</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card-dark p-8 rounded-xl flex flex-col justify-start gap-2 items-center text-center scroll-reveal">
+                    <h3 class="text-3xl font-bold text-red-500 mb-4">Czego Nie Obejmuje</h3>
+                    <ul class="text-gray-300 text-lg space-y-2 mb-8 text-left w-full">
+                        <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Zaawansowane SEO</li>
+                        <li class="flex items-center text-red-500"><span class="mr-2">✕</span> Hosting Dynamiczny</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card-dark p-8 rounded-xl flex flex-col justify-between items-center text-center scroll-reveal col-span-full">
+                    <h3 class="text-3xl font-bold text-yellow-500 mb-4">Dla Kogo Jest Ten Pakiet?</h3>
+                    <p class="text-gray-300 text-lg mb-6"> 
+                        <strong>Pakiet „Startup”</strong> to rozbudowana wersja strony internetowej, stworzona z myślą o małych firmach, rozwijających się działalnościach oraz osobach prywatnych, które potrzebują czegoś więcej niż klasyczna strona-wizytówka. To rozwiązanie idealne dla tych, którzy chcą wyróżnić się na tle konkurencji, zaprezentować swoją ofertę w atrakcyjnej i funkcjonalnej formie oraz zbudować wiarygodność w oczach klientów. 
+                    </p> 
+                    <p class="text-gray-300 text-lg"> 
+                        W ramach pakietu otrzymujesz nowoczesną, w pełni responsywną stronę z wieloma podstronami – np. ofertą, galerią realizacji, sekcją „o nas”, referencjami i formularzem kontaktowym. Strona może zawierać także podstawową optymalizację pod kątem SEO, co zwiększa Twoją widoczność w wyszukiwarkach. To świetny wybór dla tych, którzy są gotowi zainwestować w swój wizerunek online i szukają rozwiązania elastycznego, które można rozwijać w przyszłości. 
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12 mx-auto flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-gradient-to-r from-indigo-600 to-indigo-600 hover:from-indigo-700 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+                    Jestem Zainteresowany Pakietem Startup!
+                </a>
+                <a href="/./#packages" class="mr-8 ml-8 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+                    Zobacz Inne Pakiety
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ Section - copied from index.html -->
+        <section id="faq" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-white-gradient">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Najczęściej Zadawane Pytania</h2>
+            <div class="max-w-3xl mx-auto space-y-4 text-left">
+                <div class="glass-card rounded-xl overflow-hidden">
+                    <div class="accordion-header" data-accordion="1">
+                        Czy oferujecie pomoc w wyborze pakietu?
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content" id="accordion-content-1">
+                        Oczywiście! Skontaktuj się z nami, a chętnie pomożemy Ci wybrać pakiet idealnie dopasowany do Twoich potrzeb i budżetu.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl overflow-hidden">
+                    <div class="accordion-header" data-accordion="2">
+                        Jak długo trwa stworzenie strony internetowej?
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content" id="accordion-content-2">
+                        Czas realizacji zależy od wybranego pakietu i złożoności projektu. Strony typu "Intro" mogą być gotowe już w kilka dni, natomiast bardziej rozbudowane projekty wymagają od tygodnia do 2 tygodni. Zawsze informujemy o szacowanym czasie na początku współpracy.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl overflow-hidden">
+                    <div class="accordion-header" data-accordion="3">
+                        Czy mogę samodzielnie edytować stronę po jej stworzeniu?
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content" id="accordion-content-3">
+                        Tak, większość naszych stron budujemy w oparciu o intuicyjne systemy zarządzania treścią (CMS), które pozwalają na łatwe dodawanie i edytowanie treści, zdjęć czy wpisów blogowych, nawet bez znajomości kodowania. Zapewniamy szkolenie podstawowe.
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl overflow-hidden">
+                    <div class="accordion-header" data-accordion="4">
+                        Jakie usługi są wliczone w pakiet Startup?
+                        <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content" id="accordion-content-4">
+                        Dokładne informacje o wszystkich pakietach są dostępne w pliku oferty poglądowej poniżej,
+                        <br>
+                        <br>
+                        <a href="dokumenty/Oferta_www_pakiety_2025-06.pdf" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 text-white font-semibold rounded-xl shadow-md hover:bg-blue-600 transition duration-200">Oferta poglądowa</a> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="newsletter" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal my-12">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Bądź na Bieżąco!</h2>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+                Zapisz się do naszego newslettera i otrzymuj najnowsze porady dotyczące widoczności online, aktualności branżowe i ekskluzywne oferty!
+            </p>
+            <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4 justify-center">
+                <input type="email" id="newsletter-email" placeholder="Wpisz swój adres e-mail"
+                       class="flex-grow p-4 rounded-lg bg-white text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:outline-none border border-slate-300 shadow-sm">
+                <button id="newsletter-signup-btn"
+                        class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+                    Zapisz się!
+                </button>
+            </div>
+        </section>
+        <!-- Contact Section - copied from index.html -->
+        <section id="contact" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal my-12">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Gotowy na Cyfrową Rewolucję?</h2>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-12">
+                Skontaktuj się z nami, aby omówić Twój projekt. Stworzymy dla Ciebie stronę, która nie tylko będzie widoczna, ale i zachwyci każdego odwiedzającego!
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="glass-card p-8 rounded-xl text-left">
+                    <h3 class="text-3xl font-bold text-slate-800 mb-6">Wyślij nam Wiadomość</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="contact-name" class="block text-slate-700 text-lg font-medium mb-2">Twoje Imię:</label>
+                            <input type="text" id="contact-name" name="name" required
+                                   class="w-full p-3 rounded-lg bg-white text-slate-800 border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm">
+                        </div>
+                        <div>
+                            <label for="contact-email" class="block text-slate-700 text-lg font-medium mb-2">Twój Adres E-mail:</label>
+                            <input type="email" id="contact-email" name="email" required
+                                   class="w-full p-3 rounded-lg bg-white text-slate-800 border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm">
+                        </div>
+                        <div>
+                            <label for="contact-subject" class="block text-slate-700 text-lg font-medium mb-2">Temat:</label>
+                            <input type="text" id="contact-subject" name="subject" required
+                                   class="w-full p-3 rounded-lg bg-white text-slate-800 border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm">
+                        </div>
+                        <div>
+                            <label for="contact-message" class="block text-slate-700 text-lg font-medium mb-2">Twoja Wiadomość:</label>
+                            <textarea id="contact-message" name="message" rows="5" required
+                                      class="w-full p-3 rounded-lg bg-white text-slate-800 border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm"></textarea>
+                        </div>
+                        <button type="submit"
+                                class="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105 w-full">
+                            Wyślij Wiadomość
+                        </button>
+                    </form>
+                </div>
+
+                <div class="glass-card p-8 rounded-xl text-left flex flex-col justify-center" style="height: fit-content;">
+                    <h3 class="text-3xl font-bold text-slate-800 mb-6">Nasze Dane Kontaktowe</h3>
+                    <div class="space-y-6 text-base text-slate-700">
+                        <p class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2b7fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail text-blue-500 mr-3 text-2xl"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                            <a href="mailto:kontakt@twojawidocznosc.pl" class="hover:text-blue-600 transition-colors">kontakt@twojawidocznosc.online</a>
+                        </p>
+                        <p class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2b7fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone text-blue-500 mr-3 text-2xl"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                            +48 604 175 360
+                        </p>
+                        <div class="pt-4">
+                            <h4 class="text-xl font-semibold text-slate-800 mb-3">Znajdź nas w mediach społecznościowych:</h4>
+                            <div class="flex space-x-6 justify-center lg:justify-start">
+                                <a href="https://www.facebook.com/twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="Facebook Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
+                                    <img style="height: 24px; width: 24px;" src="/./icons/facebook.svg" alt="Facebook Twoja Widoczność">
+                                </a>
+                                <a href="https://www.youtube.com/@twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="Youtube Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
+                                    <img style="height: 24px; width: 24px;" src="/./icons/youtube.svg" alt="Youtube Twoja Widoczność">
+                                </a>
+                                <a href="https://www.tiktok.com/@twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="TikTok Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
+                                    <img style="height: 24px; width: 24px;" src="/./icons/tiktok.svg" alt="TikTok Twoja Widoczność">
+                                </a>
+                                <a href="https://www.instagram.com/twoja.widocznosc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
+                                    <img style="height: 24px; width: 24px;" src="/./icons/instagram.svg" alt="Instagram Twoja Widoczność">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - copied from index.html -->
+    <footer class="bg-gradient-to-r from-slate-100 to-slate-200 py-10 px-4 text-center text-slate-600 shadow-inner">
+        <div class="max-w-7xl mx-auto">
+            <p>© 2025 Twoja Widoczność. Wszelkie prawa zastrzeżone.</p>
+            <p class="text-sm mt-2">Stworzono z pasją do widoczności w sieci.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">Polityka Prywatności</a>
+                <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">Regulamin</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Universal Modal - copied from index.html -->
+    <div id="universal-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-button" id="modal-close-btn">×</button>
+            <h3 id="modal-title" class="text-3xl font-bold text-slate-800 mb-4"></h3>
+            <div id="modal-body" class="text-slate-700 text-lg leading-relaxed whitespace-pre-wrap"></div>
+        </div>
+    </div>
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Twoja Widoczność",
+          "url": "https://twojawidocznosc.online",
+          "image": "https://twojawidocznosc.online/images/Logo_TW_full_BG_RGB_2160px.png",
+          "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+48 604 175 360",
+              "contactType": "customer service",
+              "email": "kontakt@twojawidocznosc.online"
+            },
+          "sameAs": [
+            "https://www.facebook.com/twoja.widocznosc",
+            "https://www.youtube.com/@twoja.widocznosc",
+            "https://www.tiktok.com/@twoja.widocznosc",
+            "https://www.instagram.com/twoja.widocznosc/"
+          ],
+           "description": "Profesjonalne tworzenie nowoczesnych stron internetowych i kompleksowe usługi SEO dla firm w Polsce."
+        }
+    </script>
+    <!-- JavaScript for modal and hamburger menu, needs to be external to avoid CSP issues -->
+    <script src="index.js" defer></script>
+</body>
+</html>

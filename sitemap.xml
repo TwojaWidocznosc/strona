@@ -5,7 +5,19 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://twojawidocznosc.online/intro</loc>
+    <loc>https://twojawidocznosc.online/oferty/intro/</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://twojawidocznosc.online/oferty/startup/</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://twojawidocznosc.online/oferty/widocznosc/</loc>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://twojawidocznosc.online/oferty/max-widocznosc/</loc>
+    <priority>0.3</priority>
   </url>
 </urlset>
