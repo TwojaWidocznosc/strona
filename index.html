@@ -39,6 +39,22 @@
             max-height: 50px; /* Adjust as needed */
             width: auto;
         }
+        .mobile-nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            z-index: 40;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body class="relative min-h-screen">
