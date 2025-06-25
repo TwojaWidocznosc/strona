@@ -327,17 +327,90 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // You can add logic for other marketing/tracking scripts here
         // For example, if you have Facebook Pixel or other marketing scripts
+        // ======== META PIXEL (Marketing Consent) ========
+        // ======== GOOGLE ADS (Marketing Consent) ========
         if (consent.marketing) {
-            // Example: Load Facebook Pixel (replace with your actual pixel code)
-            // console.log('Marketing trackers loaded.');
-            // !function(f,b,e,v,n,t,s) {
-            // if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            // if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-            // t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-            // fbq('init', 'YOUR_PIXEL_ID');
-            // fbq('track', 'PageView');
+            // Usuń istniejące skrypty Facebook Pixel, aby uniknąć duplikatów
+            document.querySelectorAll('script[src*="connect.facebook.net/en_US/fbevents.js"]').forEach(script => script.remove());
+            document.querySelectorAll('script').forEach(script => {
+                if (script.textContent.includes("fbq('init'")) {
+                    script.remove();
+                }
+            });
+        
+            // Kod Meta Pixel
+            // Pamiętaj: Użyj swojego prawdziwego ID Pixela!
+            !function(f,b,e,v,n,t,s) {
+                if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '1263416628463015');
+                fbq('track', 'PageView');
+            console.log('Meta Pixel loaded.');
+                
+                
+            // ======== GOOGLE ADS (Marketing Consent) ========
+            // Google Ads często używa tej samej biblioteki gtag.js co Google Analytics.
+            // Jeśli już masz zainicjalizowane gtag.js dla GA (w bloku analytics),
+            // wystarczy dodać konfigurację dla Google Ads.
+            // Jeśli Google Ads ma osobny skrypt, dodaj go poniżej.
+            // Pamiętaj: Użyj swojego prawdziwego ID konwersji Google Ads!
+                
+            // Jeśli gtag.js jest już załadowany (np. przez Google Analytics), wystarczy tylko config
+            if (typeof gtag === 'function') {
+                gtag('config', 'AW-YOUR_CONVERSION_ID'); // Zmień na swój ID konwersji Google Ads
+                console.log('Google Ads loaded (via gtag).');
+            } else {
+                // Jeśli gtag.js nie jest jeszcze załadowane (mniej prawdopodobne, jeśli używasz GA)
+                // Możesz załadować je tutaj ponownie lub upewnić się, że ładowanie GA jest wyżej
+                // i zawsze następuje przed próbą konfigurowania Google Ads.
+                // Dla pewności, można użyć podobnej logiki ładowania skryptu jak dla GA,
+                // ale najlepiej jest, aby oba Gtagi były obsługiwane przez jedną instancję.
+                const adsScript = document.createElement('script');
+                adsScript.async = true;
+                adsScript.src = "https://www.googletagmanager.com/gtag/js?id=AW-YOUR_CONVERSION_ID"; // Zmień na swój ID konwersji Google Ads
+                document.head.appendChild(adsScript);
+                adsScript.onload = () => {
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'AW-YOUR_CONVERSION_ID'); // Zmień na swój ID konwersji Google Ads
+                    console.log('Google Ads loaded (separate gtag).');
+                };
+            }
+        
+            // Jeśli masz konkretne zdarzenia konwersji Google Ads (np. po wysłaniu formularza),
+            // możesz je również umieścić tutaj lub w odpowiednich miejscach w kodzie JS,
+            // otoczone tym samym warunkiem `if (consent.marketing)`.
+            // Przykładowo:
+            // if (typeof gtag === 'function') {
+            //     gtag('event', 'conversion', { 'send_to': 'AW-YOUR_CONVERSION_ID/YOUR_CONVERSION_LABEL' });
+            // }
+        
+        
         } else {
-            // console.log('Marketing trackers disabled.');
+            // Jeśli marketing nie jest akceptowany, upewnij się, że Meta Pixel i Google Ads są wyłączone/niezaładowane
+            // Dla Meta Pixela, wystarczy nie ładować skryptu i nie wywoływać fbq
+            if (typeof fbq === 'function') {
+                console.log('Meta Pixel disabled/not loaded.');
+                // Nie ma prostego sposobu na "wyłączenie" raz załadowanego Pixela bez ponownego ładowania strony.
+                // Najlepszą praktyką jest jego warunkowe ładowanie, co już robimy.
+            }
+        
+            // Dla Google Ads (jeśli korzysta z gtag), można użyć podobnego mechanizmu wyłączenia jak dla GA
+            // Pamiętaj: Użyj swojego prawdziwego ID konwersji Google Ads!
+            if (window['ga-disable-AW-YOUR_CONVERSION_ID'] !== undefined) { // Sprawdź, czy flaga wyłączenia istnieje
+                 window['ga-disable-AW-YOUR_CONVERSION_ID'] = true;
+                 console.log('Google Ads disabled.');
+            } else {
+                 window['ga-disable-AW-YOUR_CONVERSION_ID'] = true; // Ustaw flagę, nawet jeśli gtag jeszcze nie ma
+                 console.log('Google Ads disabled.');
+            }
+        
+            console.log('Marketing trackers disabled/not loaded.');
         }
     }
     // Initialize consent state
