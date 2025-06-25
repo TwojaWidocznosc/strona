@@ -79,15 +79,13 @@
     <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md z-50 py-4 px-6 md:px-8">
         <div class="container mx-auto flex justify-between items-center max-w-7xl">
             <a href="#" class="text-2xl font-extrabold text-blue-700 flex items-center">
-                <img style="height: 48px; width: 122px;" class="header-logo" src="images/Logo_TW_nobg_RGB_122px_48px.webp" alt="Twoja Widoczność Logo" loading="lazy">
+                <img style="height: 48px; width: 122px; min-width: 122px;" class="header-logo" src="images/Logo_TW_nobg_RGB_122px_48px.webp" alt="Twoja Widoczność Logo" loading="lazy">
             </a>
 
             <div class="hidden md:flex space-x-8">
-                <a href="#ai-idea-generator" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Generator Pomysłów</a>
                 <a href="#about" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Dlaczego My?</a>
                 <a href="#how-we-work" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Jak Pracujemy?</a>
                 <a href="#packages" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Pakiety</a>
-                <a href="#portfolio" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Portfolio</a>
                 <a href="#faq" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">FAQ</a>
                 <a href="#contact" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Kontakt</a>
             </div>
@@ -103,11 +101,15 @@
     </nav>
 
     <div class="mobile-nav-menu" id="mobile-nav-menu">
-        <a href="#ai-idea-generator" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Generator Pomysłów</a>
+        <!-- <a href="#ai-idea-generator" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Generator Pomysłów</a> -->
         <a href="#about" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Dlaczego My?</a>
         <a href="#how-we-work" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Jak Pracujemy?</a>
         <a href="#packages" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Pakiety</a>
-        <a href="#portfolio" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Portfolio</a>
+        <a href="oferty/intro/" class="text-3xl font-medium text-blue-600 hover:text-blue-700 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Intro</a>
+        <a href="oferty/startup/" class="text-3xl font-medium text-indigo-600 hover:text-indigo-700 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Startup</a>
+        <a href="oferty/widocznosc/" class="text-3xl font-medium text-yellow-500 hover:text-yellow-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Widoczność</a>
+        <a href="oferty/max-widocznosc/" class="text-3xl font-medium text-pink-500 hover:text-pink-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">MAX Widoczność</a>
+        <!-- <a href="#portfolio" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Portfolio</a> -->
         <a href="#faq" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">FAQ</a>
         <a href="#contact" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Kontakt</a>
     </div>
@@ -141,7 +143,6 @@
             </div>
         </section>
 
-        <!-- <section id="about" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-blue-gradient"> -->
         <section id="about" class="py-20 md:py-32 flex flex-col items-center justify-center text-center overflow-hidden shadow-inner section-black-gradient-180">
             <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white px-4 scroll-reveal">Dlaczego Wybrać Nas?</h2>
             <p class="text-base md:text-xl text-gray-300 max-w-4xl mx-auto mb-12 px-4 scroll-reveal">
@@ -181,7 +182,6 @@
             </div>
         </section>
 
-        <!-- <section id="how-we-work" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-green-gradient"> -->
         <section id="how-we-work" class="py-20 md:py-32 flex flex-col items-center justify-center text-center overflow-hidden section-black-gradient-0">
             <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white px-4 scroll-reveal">Jak Pracujemy?</h2>
             <h2 class="text-lg md:text-5xl font-bold mb-12 text-gray-300 px-4 scroll-reveal">Nasz Sprawdzony Proces</h2>
@@ -384,6 +384,12 @@
                     Zapisz się!
                 </button>
             </div>
+            <div class="mt-4 flex items-center justify-center">
+                <input type="checkbox" id="newsletter-rules-accept" class="form-checkbox h-4 w-4 text-blue-600">
+                <label for="newsletter-rules-accept" class="ml-2 text-slate-600 text-sm">
+                    Akceptuję <a href="dokumenty/Polityka_prywatności_2025-06.pdf" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">regulamin i politykę prywatności</a>
+                </label>
+            </div>
         </section>
 
         <section id="contact" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal my-12">
@@ -467,8 +473,8 @@
             <p>© 2025 Twoja Widoczność. Wszelkie prawa zastrzeżone.</p>
             <p class="text-sm mt-2">Stworzono z pasją do widoczności w sieci.</p>
             <div class="flex justify-center space-x-4 mt-4">
-                <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">Polityka Prywatności</a>
-                <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">Regulamin</a>
+                <a href="dokumenty/Polityka_prywatności_2025-06.pdf" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">Polityka Prywatności</a>
+                <a href="dokumenty/Regulamin_2025-06.pdf" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Regulamin Twoja Widoczność">Regulamin</a>
                 <a href="https://g.co/kgs/p25Lt7P" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Wizytówka Google Twoja Widoczność">Wiztyówka Google</a>
             </div>
         </div>
@@ -482,15 +488,64 @@
         </div>
     </div>
 
-        <!-- Google tag (gtag.js) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TNWGGYCWS"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-slate-800 text-white p-4 shadow-lg z-50 transform translate-y-full transition-transform duration-500 ease-out">
+        <div class="mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm md:text-base mb-2 md:mb-0">
+                Używamy plików cookie, aby zapewnić najlepszą jakość korzystania z naszej witryny. Umożliwiają one personalizację treści i reklam, analizę ruchu oraz prawidłowe funkcjonowanie strony. Aby uzyskać więcej informacji, zapoznaj się z naszą <a href="dokumenty/Polityka_prywatności_2025-06.pdf" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">Polityka Prywatności</a>.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3" style="width: -webkit-fill-available;">
+                <button id="accept-all-cookies" class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105 text-sm whitespace-nowrap">
+                    Akceptuj wszystkie
+                </button>
+                <button id="reject-all-cookies" class="bg-white text-slate-800 font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105 text-sm whitespace-nowrap border border-slate-300">
+                    Odrzuć wszystkie
+                </button>
+                <button id="manage-cookies-btn" class="bg-slate-600 hover:bg-slate-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105 text-sm whitespace-nowrap">
+                    Zarządzaj zgodami
+                </button>
+            </div>
+        </div>
+    </div>
 
-      gtag('config', 'G-5TNWGGYCWS');
-    </script> -->
+    <div id="cookie-preferences-modal" class="fixed inset-0 bg-slate-900-05 bg-opacity-75 flex items-center justify-center p-4 z-[100] opacity-0 pointer-events-none transition-opacity duration-300 ease-out" style="backdrop-filter: blur(10px);">
+        <div class="bg-white rounded-lg p-6 w-full max-w-md shadow-xl transform scale-95 transition-transform duration-300 ease-out">
+            <h3 class="text-2xl font-bold mb-4 text-slate-800">Zarządzaj swoimi zgodami na pliki cookie</h3>
+            <p class="text-slate-600 text-sm mb-6">Możesz zmienić swoje preferencje dotyczące plików cookie w dowolnym momencie. Zmiany wejdą w życie po odświeżeniu strony.</p>
+
+            <div class="mb-4">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="cookie-necessary" class="form-checkbox h-5 w-5 text-blue-600" checked disabled>
+                    <span class="ml-3 text-lg font-medium text-slate-700">Niezbędne pliki cookie</span>
+                </label>
+                <p class="text-slate-500 text-sm ml-8">Te pliki cookie są kluczowe dla prawidłowego funkcjonowania strony i nie mogą być wyłączone.</p>
+            </div>
+
+            <div class="mb-4">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="cookie-analytics" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-3 text-lg font-medium text-slate-700">Analityczne pliki cookie</span>
+                </label>
+                <p class="text-slate-500 text-sm ml-8">Pozwalają nam analizować ruch na stronie i poprawiać jej działanie.</p>
+            </div>
+
+            <div class="mb-6">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="cookie-marketing" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-3 text-lg font-medium text-slate-700">Marketingowe pliki cookie</span>
+                </label>
+                <p class="text-slate-500 text-sm ml-8">Służą do wyświetlania spersonalizowanych reklam i treści.</p>
+            </div>
+
+            <div class="flex justify-end gap-3">
+                <button id="save-cookie-preferences" class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105">
+                    Zapisz preferencje
+                </button>
+                <button id="close-cookie-preferences" class="bg-slate-300 hover:bg-slate-400 text-slate-800 font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105">
+                    Anuluj
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script type="application/ld+json">
         {
