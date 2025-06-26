@@ -469,7 +469,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setCookie(CONSENT_KEY, JSON.stringify(consent), 365); // Consent for 1 year
         loadTrackers(consent);
         hideBanner();
-        alert('Zgody na pliki cookie zostały zaakceptowane.'); // User feedback
     });
     rejectAllButton.addEventListener('click', () => {
         const consent = {
@@ -480,7 +479,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setCookie(CONSENT_KEY, JSON.stringify(consent), 365);
         loadTrackers(consent); // Disable trackers
         hideBanner();
-        alert('Zgody na pliki cookie zostały odrzucone (z wyjątkiem niezbędnych).'); // User feedback
     });
     manageCookiesBtn.addEventListener('click', () => {
         hideBanner(); // Hide main banner when managing preferences
@@ -502,7 +500,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setCookie(CONSENT_KEY, JSON.stringify(consent), 365);
         loadTrackers(consent);
         hidePreferencesModal();
-        alert('Twoje preferencje dotyczące plików cookie zostały zapisane.'); // User feedback
         // Reload page to ensure all scripts are correctly loaded/unloaded based on new consent
         location.reload();
     });

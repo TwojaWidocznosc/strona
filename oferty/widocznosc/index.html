@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/./icons/favicon-round-128px.ico" type="image/x-icon" />
+
+    <link rel="icon" href="/./icons/favicons/favicon-96px.ico" sizes="96x96" type="image/x-icon" />
+    <!-- <link rel="icon" href="/./icons/favicons/favicon-48px.ico" sizes="48x48" type="image/x-icon" /> -->
+    <link rel="icon" href="/./icons/favicons/favicon-144px.ico" sizes="144x144" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/./icons/favicons/favicon-144px.ico" type="image/x-icon" />
+
     <title>Twoja Widoczność - Pakiet Widoczność</title>
     <meta name="description" content="Szczegóły pakietu Widoczność: Do 6 Podstron, Roczny Hosting i Domena, Zaawansowane SEO, Desgin Indywidualny, Animacje, Szkolenie Klienta, Wsparcie Priorytetowe.">
-    <link rel="canonical" href="https://twojawidocznosc.online/oferty/widocznosc/" />
+    <link rel="canonical" href="https://twojawidocznosc.online/oferty/widocznosc" />
 
     <meta property="og:title" content="Twoja Widoczność - Pakiet Widoczność" />
     <meta property="og:description" content="Szczegóły pakietu Widoczność: Do 6 Podstron, Roczny Hosting i Domena, Zaawansowane SEO, Desgin Indywidualny, Animacje, Szkolenie Klienta, Wsparcie Priorytetowe." />
-    <meta property="og:url" content="https://twojawidocznosc.online/oferty/widocznosc/" />
+    <meta property="og:url" content="https://twojawidocznosc.online/oferty/widocznosc" />
+    <meta property="og:image" content="/./oferty/widocznosc/og_image_Widocznosc.jpg" />
     <meta property="og:type" content="website" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Preload and load Inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" media="all">
     
-    <!-- Preload and load custom CSS -->
     <link rel="preload" href="/./style.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/./style.css"></noscript>
-    <!-- Tailwind CSS is assumed to be loaded or compiled -->
-    <link rel="stylesheet" href="/./tailwind.css">
+    <link rel="stylesheet" href="/./tailwind.css?v=2">
 
     <style>
         body {
@@ -67,7 +70,6 @@
     </style>
 </head>
 <body class="relative min-h-screen">
-    <!-- Animated background shapes, copied from index.html -->
     <div class="shape shape-1"></div>
     <div class="shape shape-2"></div>
     <div class="shape shape-3"></div>
@@ -76,21 +78,16 @@
     <div class="shape shape-6"></div>
     <div class="shape shape-7"></div>
 
-    <!-- Navigation Bar, adapted from index.html to link back -->
     <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md z-50 py-4 px-6 md:px-8">
-        <div class="container mx-auto flex justify-between items-center max-w-7xl">
-            <a href="/./" class="text-2xl font-extrabold text-blue-700 flex items-center">
-                <img style="height: 48px; width: 122px;" class="header-logo" src="/./images/Logo_TW_nobg_RGB_122px_48px.webp" alt="Twoja Widoczność Logo" loading="lazy">
+        <div class="container mx-auto flex justify-between items-center max-w-7xl" >
+            <a href="/./" class="text-2xl font-extrabold text-blue-700 flex items-center" rel="noopener noreferrer" aria-label="Strona Głowna Twoja Widoczność">
+                <img style="height: 48px; width: 122px; min-width: 122px;" class="header-logo" src="/./images/Logo_TW_nobg_RGB_244px_96px.webp" alt="Twoja Widoczność Logo" loading="lazy">
             </a>
 
             <div class="hidden md:flex space-x-8">
-                <a href="index.html#ai-idea-generator" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Generator Pomysłów</a>
-                <a href="index.html#about" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Dlaczego My?</a>
-                <a href="index.html#how-we-work" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Jak Pracujemy?</a>
-                <a href="index.html#packages" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Pakiety</a>
-                <a href="index.html#portfolio" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Portfolio</a>
-                <a href="index.html#faq" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">FAQ</a>
-                <a href="index.html#contact" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200">Kontakt</a>
+                <a href="/./#packages" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="Oferta Twoja Widoczność">Oferta</a>
+                <a href="/./#faq" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="FAQ">FAQ</a>
+                <a href="/./#contact" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="Kontakt Twoja Widoczność">Kontakt</a>
             </div>
 
             <div class="md:hidden">
@@ -103,15 +100,16 @@
         </div>
     </nav>
 
-    <!-- Mobile Navigation Menu, adapted to link back -->
     <div class="mobile-nav-menu" id="mobile-nav-menu">
-        <a href="index.html#ai-idea-generator" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Generator Pomysłów</a>
-        <a href="index.html#about" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Dlaczego My?</a>
-        <a href="index.html#how-we-work" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Jak Pracujemy?</a>
-        <a href="index.html#packages" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Pakiety</a>
-        <a href="index.html#portfolio" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Portfolio</a>
-        <a href="index.html#faq" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">FAQ</a>
-        <a href="index.html#contact" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()">Kontakt</a>
+        <a href="/./#about" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Dlaczego My?">Dlaczego My?</a>
+        <a href="/./#how-we-work" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Jak Pracujemy?">Jak Pracujemy?</a>
+        <a href="/./#packages" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Oferta Twoja Widoczność">Oferta</a>
+        <a href="/./oferty/intro/" class="text-3xl font-medium text-blue-600 hover:text-blue-700 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Pakiet Intro">Intro</a>
+        <a href="/./oferty/startup/" class="text-3xl font-medium text-indigo-600 hover:text-indigo-700 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Pakiet Startup">Startup</a>
+        <a href="/./oferty/widocznosc/" class="text-3xl font-medium text-yellow-500 hover:text-yellow-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Pakiet Widoczność">Widoczność</a>
+        <a href="/./oferty/max-widocznosc/" class="text-3xl font-medium text-pink-500 hover:text-pink-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Pakiet MAX Widoczność">MAX Widoczność</a>
+        <a href="#faq" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="FAQ">FAQ</a>
+        <a href="#contact" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Kontakt Twoja Widoczność">Kontakt</a>
     </div>
 
     <main class="relative z-10 pt-20"> 
@@ -176,7 +174,6 @@
             </div>
         </section>
 
-        <!-- FAQ Section - copied from index.html -->
         <section id="faq" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-white-gradient">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Najczęściej Zadawane Pytania</h2>
             <div class="max-w-3xl mx-auto space-y-4 text-left">
@@ -224,6 +221,7 @@
                 </div>
             </div>
         </section>
+
         <section id="newsletter" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal my-12">
             <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Bądź na Bieżąco!</h2>
             <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
@@ -237,8 +235,14 @@
                     Zapisz się!
                 </button>
             </div>
+            <div class="mt-4 flex items-center justify-center">
+                <input type="checkbox" id="newsletter-rules-accept" class="form-checkbox h-4 w-4 text-blue-600">
+                <label for="newsletter-rules-accept" class="ml-2 text-slate-600 text-sm">
+                    Akceptuję <a href="/./dokumenty/Polityka_prywatności_2025-06.pdf" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">regulamin i politykę prywatności</a>
+                </label>
+            </div>
         </section>
-        <!-- Contact Section - copied from index.html -->
+        
         <section id="contact" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal my-12">
             <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Gotowy na Cyfrową Rewolucję?</h2>
             <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-12">
@@ -310,19 +314,18 @@
         </section>
     </main>
 
-    <!-- Footer - copied from index.html -->
     <footer class="bg-gradient-to-r from-slate-100 to-slate-200 py-10 px-4 text-center text-slate-600 shadow-inner">
         <div class="max-w-7xl mx-auto">
             <p>© 2025 Twoja Widoczność. Wszelkie prawa zastrzeżone.</p>
             <p class="text-sm mt-2">Stworzono z pasją do widoczności w sieci.</p>
             <div class="flex justify-center space-x-4 mt-4">
-                <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">Polityka Prywatności</a>
-                <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">Regulamin</a>
+                <a href="/./dokumenty/Polityka_prywatności_2025-06.pdf" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">Polityka Prywatności</a>
+                <a href="/./dokumenty/Regulamin_2025-06.pdf" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Regulamin Twoja Widoczność">Regulamin</a>
+                <a href="https://g.co/kgs/p25Lt7P" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Wizytówka Google Twoja Widoczność">Wiztyówka Google</a>
             </div>
         </div>
     </footer>
 
-    <!-- Universal Modal - copied from index.html -->
     <div id="universal-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="modal-close-button" id="modal-close-btn">×</button>
@@ -330,14 +333,74 @@
             <div id="modal-body" class="text-slate-700 text-lg leading-relaxed whitespace-pre-wrap"></div>
         </div>
     </div>
+
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-slate-800 text-white p-4 shadow-lg z-50 transform translate-y-full transition-transform duration-500 ease-out">
+        <div class="mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm md:text-base mb-2 md:mb-0">
+                Używamy plików cookie, aby zapewnić najlepszą jakość korzystania z naszej witryny. Umożliwiają one personalizację treści i reklam, analizę ruchu oraz prawidłowe funkcjonowanie strony. Aby uzyskać więcej informacji, zapoznaj się z naszą <a href="dokumenty/Polityka_prywatności_2025-06.pdf" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">Polityka Prywatności</a>.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3" style="width: -webkit-fill-available;">
+                <button id="accept-all-cookies" class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105 text-sm whitespace-nowrap">
+                    Akceptuj wszystkie
+                </button>
+                <button id="reject-all-cookies" class="bg-white text-slate-800 font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105 text-sm whitespace-nowrap border border-slate-300">
+                    Odrzuć wszystkie
+                </button>
+                <button id="manage-cookies-btn" class="bg-slate-600 hover:bg-slate-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105 text-sm whitespace-nowrap">
+                    Zarządzaj zgodami
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-preferences-modal" class="fixed inset-0 bg-slate-900-05 bg-opacity-75 flex items-center justify-center p-4 z-[100] opacity-0 pointer-events-none transition-opacity duration-300 ease-out" style="backdrop-filter: blur(10px);">
+        <div class="bg-white rounded-lg p-6 w-full max-w-md shadow-xl transform scale-95 transition-transform duration-300 ease-out">
+            <h3 class="text-2xl font-bold mb-4 text-slate-800">Zarządzaj swoimi zgodami na pliki cookie</h3>
+            <p class="text-slate-600 text-sm mb-6">Możesz zmienić swoje preferencje dotyczące plików cookie w dowolnym momencie. Zmiany wejdą w życie po odświeżeniu strony.</p>
+
+            <div class="mb-4">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="cookie-necessary" class="form-checkbox h-5 w-5 text-blue-600" checked disabled>
+                    <span class="ml-3 text-lg font-medium text-slate-700">Niezbędne pliki cookie</span>
+                </label>
+                <p class="text-slate-500 text-sm ml-8">Te pliki cookie są kluczowe dla prawidłowego funkcjonowania strony i nie mogą być wyłączone.</p>
+            </div>
+
+            <div class="mb-4">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="cookie-analytics" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-3 text-lg font-medium text-slate-700">Analityczne pliki cookie</span>
+                </label>
+                <p class="text-slate-500 text-sm ml-8">Pozwalają nam analizować ruch na stronie i poprawiać jej działanie.</p>
+            </div>
+
+            <div class="mb-6">
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="cookie-marketing" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-3 text-lg font-medium text-slate-700">Marketingowe pliki cookie</span>
+                </label>
+                <p class="text-slate-500 text-sm ml-8">Służą do wyświetlania spersonalizowanych reklam i treści.</p>
+            </div>
+
+            <div class="flex justify-end gap-3">
+                <button id="save-cookie-preferences" class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105">
+                    Zapisz preferencje
+                </button>
+                <button id="close-cookie-preferences" class="bg-slate-300 hover:bg-slate-400 text-slate-800 font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105">
+                    Anuluj
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script type="application/ld+json">
         {
-          "@id": "https://twojawidocznosc.online/oferty/widocznosc/",
+          "@id": "https://twojawidocznosc.online/oferty/widocznosc",
           "@context": "http://schema.org",
           "@type": "LocalBusiness",
           "name": "Pakiet Widoczność",
-          "url": "https://twojawidocznosc.online/oferty/widocznosc/",
-          "image": "https://twojawidocznosc.online/icons/favicon-round-128px.ico",
+          "url": "https://twojawidocznosc.online/oferty/widocznosc",
+          "image": "https://twojawidocznosc.online/icons/favicons/favicon-144px.ico",
           "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+48 604 175 360",
@@ -353,7 +416,6 @@
            "description": "Szczegóły pakietu Widoczność: Do 6 Podstron, Roczny Hosting i Domena, Zaawansowane SEO, Desgin Indywidualny, Animacje, Szkolenie Klienta, Wsparcie Priorytetowe."
         }
     </script>
-    <!-- JavaScript for modal and hamburger menu, needs to be external to avoid CSP issues -->
-    <script src="index.js" defer></script>
+    <script src="/./oferty/index.js?v=2" defer></script>
 </body>
 </html>
