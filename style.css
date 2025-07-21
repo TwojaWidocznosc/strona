@@ -1,4 +1,18 @@
 /* Custom scrollbar for a light look */
+:root, :host {
+    --tw_blue: #1386d7;
+    --tw_blue-dark: #165e92;
+    --tw_blue-hover: #1266a1;
+    --tw_blue-dark-hover: #124a72;
+    --tw_gradient-90: linear-gradient(90deg, var(--tw_blue), var(--tw_blue-dark));
+    --tw_gradient-45: linear-gradient(45deg, var(--tw_blue), var(--tw_blue-dark));
+    --tw_gradient-0: linear-gradient(var(--tw_blue), var(--tw_blue-dark));
+    --tw_gradient_dark-90: linear-gradient(90deg, var(--tw_blue-hover), var(--tw_blue-dark-hover));
+    --tw_gradient_dark-45: linear-gradient(45deg, var(--tw_blue-hover), var(--tw_blue-dark-hover));
+    --tw_gradient_dark-0: linear-gradient(var(--tw_blue-hover), var(--tw_blue-dark-hover));
+    
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }

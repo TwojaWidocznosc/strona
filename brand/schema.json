@@ -1,0 +1,58 @@
+[
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "Twoja Widoczność",
+      "url": "https://twojawidocznosc.online/"
+    },
+
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Twoja Widoczność",
+        "url": "https://twojawidocznosc.online/",
+        "logo": "https://twojawidocznosc.online/image/brand/logo/android-chrome-512x512.png",
+        "description": "Profesjonalne tworzenie nowoczesnych stron internetowych i kompleksowe usługi SEO dla firm w Polsce.",
+        "sameAs": [
+            "https://www.facebook.com/twoja.widocznosc",
+            "https://www.youtube.com/@twoja.widocznosc",
+            "https://www.tiktok.com/@twoja.widocznosc",
+            "https://www.instagram.com/twoja.widocznosc",
+            "https://g.co/kgs/NUQ6RMx"
+        ],
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+48-604-175-360",
+                "contactType": "customer service",
+                "areaServed": "PL",
+                "availableLanguage": "pl"
+            },
+            {
+                "@type": "ContactPoint",
+                "email": "kontakt@twojawidocznosc.online",
+                "contactType": "customer service",
+                "areaServed": "PL",
+                "availableLanguage": "pl"
+            }
+        ],
+        "aggregateRating": { 
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "3"
+        }
+    },
+
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona Główna",
+          "item": "https://twojawidocznosc.online/"
+        }
+      ]
+    }
+]
