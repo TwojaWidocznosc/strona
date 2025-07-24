@@ -1,0 +1,186 @@
+body {
+    background-color: white;
+}
+.hero-restaurant {
+    margin-top: 82px;
+    /* background-color: white; */
+}
+
+#service-description {
+    background-image: url('../image/brand/pattern/bg-circle-pattern.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.glass-card.active {
+    /* cursor: pointer; */
+}
+.glass-card.active::before {
+    border-radius: 100px;
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scale(.65);
+    transition: .35s;
+    z-index: -1;
+}
+.glass-card.active:hover::before {
+    border-radius: 10px;
+    background: rgba(229, 232, 235, 0.5);
+    transform: scale(1);
+}
+
+
+@media (max-width: 768px) {
+    .image-pattern {
+        height: 800px;
+        max-width: none;
+    }
+    #pattern-a.image-pattern {
+        left: -400px !important;
+        bottom: 20px !important;
+    }
+}
+
+/* Custom styles for the Timeline Stepper */
+.image-pattern {
+    position: absolute;
+    height: 600px;
+}
+#pattern-a.image-pattern {
+    left: -50px;    
+    bottom: 20px;
+}
+
+.process-timeline-line {
+    height: 100%;
+    width: 4px;
+
+    background: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(0deg, white 0%, rgba(0,0,0,0.1) 10% 90%, white 100%);
+
+    /* margin-left: 13px; */
+
+    overflow: hidden;
+}
+.process-timeline-line-active {
+    position: absolute;
+    background: linear-gradient(0deg, transparent 0%, var(--tw_blue) 10% 90%, transparent 100%);
+    top: 0%;
+    height: 50%;
+    width: 4px;
+}
+
+.process-timeline-item-point {
+    height: 60px;
+    width: 60px;
+    
+    background: white;
+    z-index: 10;
+}
+.process-timeline-item-point div {
+    height: 30px;
+    width: 30px;
+    
+    transition: background-color 0.2s;
+    background: rgba(0, 0, 0, 0.1);
+}
+.process-timeline-item-icon {
+    height: 80px;
+    width: 80px;
+    min-width: 80px;
+    
+    background: #3b83f621;
+    fill: rgba(0, 0, 0, 0.1);
+    stroke: rgba(0, 0, 0, 0.1);
+    transition: fill 0.2s, stroke 0.2s;
+}
+
+.process-timeline-item.active .process-timeline-item-point {
+    height: 60px;
+    width: 60px;
+
+    background: white;
+    z-index: 10;
+}
+.process-timeline-item.active .process-timeline-item-point div {
+    height: 30px;
+    width: 30px;
+
+    background: var(--tw_blue);
+}
+.process-timeline-item.active .process-timeline-item-icon {
+    height: 80px;
+    width: 80px;
+    min-width: 80px;
+
+    background: #3b83f621;
+    fill: #3b82f6;
+    stroke: #3b82f6;
+}
+
+.benefits-tile svg{
+    fill: var(--tw_blue);
+}
+
+#hero-text-typing {
+    color: var(--tw_blue);
+    position: relative;
+    display: inline-block;
+    min-width: 10px;
+}
+
+#hero-text-typing::after {
+    content: '|';
+    position: absolute;
+    right: -10px;
+    color: var(--color-slate-800);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+#hero-text-typing:empty::after,
+#hero-text-typing:not(:empty)::after {
+    display: inline;
+}
+
+.hero-cta-btn {
+    border: 1px solid var(--color-slate-800);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.hero-header {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 750;
+}
+.pricing-price-range {
+    color: var(--tw_blue);
+    font-weight: 750;
+}
+#pricing {
+    background-image: url('../image/background/dollar_sign.webp');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.hero-restaurant-background-mobile {
+    max-width: none;
+    width: 130%;
+    left: -25%;
+    overflow: hidden;
+}
+
+footer {
+    max-width: 100vw; 
+    box-shadow: 0px -8px 16px 0px rgba(0,0,0,0.025)
+}

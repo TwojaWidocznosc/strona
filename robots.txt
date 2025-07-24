@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /brand/
+Disallow: /save/
 Allow: /
 
 Sitemap: https://twojawidocznosc.online/sitemap.xml

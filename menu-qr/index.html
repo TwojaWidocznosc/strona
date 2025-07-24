@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- IKONY  -->
+
+    <!-- Favicony -->
+    <link rel="icon" href="../image/brand/logo/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="../image/brand/logo/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="shortcut icon" href="../image/brand/logo/favicon.ico"/>   
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="../image/brand/logo/apple-touch-icon.png" sizes="180x180"/>  
+    <!-- Android / Manifest -->
+    <link rel="manifest" href="../image/brand/logo/site.webmanifest">
+    <!-- Microsoft -->
+    <meta name="msapplication-TileImage" content="../image/brand/logo/mstile-150x150.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- IKONY  -->
+
+    <!-- RESULT -->
+    <title>Menu QR dla Twojej Restauracji | Twoja Widoczność</title>
+    <meta name="description" content="Cyfrowe menu na stronie internetowej z kodem QR. Klienci zeskanują kod i od razu zobaczą Twoje pełne menu na smartfonie.">
+    <meta name="keywords" content="menu qr, menu online, cyfrowe menu, menu restauracja, strona menu qr, twoja widoczność, strony internetowe, strony www, strona">
+    <link rel="canonical" href="https://twojawidocznosc.online/menu-qr/" />
+    <!-- RESULT -->
+
+    <!-- LINK -->
+    <meta property="og:title" content="Menu QR dla Twojej Restauracji | Twoja Widoczność" />
+    <meta property="og:description" content="Cyfrowe menu na stronie internetowej z kodem QR. Klienci zeskanują kod i od razu zobaczą Twoje pełne menu na smartfonie." />
+    <meta property="og:image" content="https://twojawidocznosc.online/image/og/menu-qr_og_image.jpg" />
+    <meta property="og:url" content="https://twojawidocznosc.online/menu-qr/" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <!-- LINK -->
+
+    <!-- FONTS -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   
+    <!-- FONTS -->
+    
+    <!-- CSS -->
+    <link rel="preload" href="../style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../style.css"></noscript>
+    <link rel="stylesheet" href="../tailwind.css?v=2">
+    <link rel="stylesheet" href="style.css?v=2">
+
+    <!-- premade -->
+    <link rel="stylesheet" href="../brand/css/nav.css?v=2">
+    <link rel="stylesheet" href="../brand/css/brand.css?v=2">
+    <!-- CSS -->
+
+    <!-- JS -->
+    <!-- JS -->
+</head>
+<body class="relative min-h-screen">
+
+    <!-- NAV -->    
+    <nav class="fixed top-0 left-0 w-full z-50 py-4 px-6 md:px-8 backdrop-blur-lg bg-white" >
+        <div class="flex justify-between items-center" style="width: 100%;">
+            <div class="hidden md:flex space-x-4" style="width: 300px; height: 100%;">
+                <!-- Dropdown dla "Produkty" -->
+                <div class="nav-dropdown-container" style="height: 100%;">
+                    <a href="index.html#packages" class="text-lg font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="Oferta Twoja Widoczność">
+                        Produkty
+                    </a>
+                    <div class="nav-dropdown-menu" >
+                        <!-- <a href="restauracje.html" class="nav-dropdown-menu-item text-lg font-medium" rel="noopener noreferrer" aria-label="Strony dla Restauracji">
+                            <div class="nav-dropdown-menu-item-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512"><path d="M50.7 58.5L0 160l208 0 0-128L93.7 32C75.5 32 58.9 42.3 50.7 58.5zM240 160l208 0L397.3 58.5C389.1 42.3 372.5 32 354.3 32L240 32l0 128zm208 32L0 192 0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-224z"/></svg>
+                                Pakiety Stron
+                            </div>
+                            <div style="background-image: url('../image/nav/dropdown-menu_packages.webp');" class="nav-dropdown-menu-item-image"></div>
+                        </a> -->
+                        <a href="#" class="nav-dropdown-menu-item text-lg font-medium" rel="noopener noreferrer" aria-label="Portfolio">
+                            <div class="nav-dropdown-menu-item-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512"><path d="M416 0C400 0 288 32 288 176l0 112c0 35.3 28.7 64 64 64l32 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-128 0-112 0-208c0-17.7-14.3-32-32-32zM64 16C64 7.8 57.9 1 49.7 .1S34.2 4.6 32.4 12.5L2.1 148.8C.7 155.1 0 161.5 0 167.9c0 45.9 35.1 83.6 80 87.7L80 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224.4c44.9-4.1 80-41.8 80-87.7c0-6.4-.7-12.8-2.1-19.1L191.6 12.5c-1.8-8-9.3-13.3-17.4-12.4S160 7.8 160 16l0 134.2c0 5.4-4.4 9.8-9.8 9.8c-5.1 0-9.3-3.9-9.8-9L127.9 14.6C127.2 6.3 120.3 0 112 0s-15.2 6.3-15.9 14.6L83.7 151c-.5 5.1-4.7 9-9.8 9c-5.4 0-9.8-4.4-9.8-9.8L64 16zm48.3 152l-.3 0-.3 0 .3-.7 .3 .7z"/></svg>
+                                QR Menu
+                            </div>
+                            <div style="background-image: url('../image/nav/dropdown-menu_digital-menu.webp');" class="nav-dropdown-menu-item-image"></div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Dropdown dla "Produkty" -->
+                <div class="nav-dropdown-container">
+                    <a href="#contact-form-section" class="text-lg font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="FAQ">
+                        Kontakt
+                    </a>
+                </div>
+                <!-- Dropdown dla "Blog" -->
+                <!-- <div class="nav-dropdown-container">
+                    <a href="index.html#packages" class="text-lg font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="Oferta Twoja Widoczność">
+                        Blog
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="../o-nas" class="nav-dropdown-menu-item text-lg font-medium" rel="noopener noreferrer" aria-label="Strony dla Restauracji">
+                            <div class="nav-dropdown-menu-item-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 576 512"><path d="M512 80c8.8 0 16 7.2 16 16l0 320c0 8.8-7.2 16-16 16L64 432c-8.8 0-16-7.2-16-16L48 96c0-8.8 7.2-16 16-16l448 0zM64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16l192 0c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80l-64 0zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l80 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-80 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l80 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-80 0z"/></svg>
+                                O nas
+                            </div>
+                            <div style="background-image: url('../image/nav/dropdown-menu_o-nas.webp');" class="nav-dropdown-menu-item-image"></div>
+                        </a>
+                        <a href="../FAQ" class="nav-dropdown-menu-item text-lg font-medium" rel="noopener noreferrer" aria-label="Portfolio">
+                            <div class="nav-dropdown-menu-item-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 320 512"><path d="M80 160c0-35.3 28.7-64 64-64l32 0c35.3 0 64 28.7 64 64l0 3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74l0 1.4c0 17.7 14.3 32 32 32s32-14.3 32-32l0-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7l0-3.6c0-70.7-57.3-128-128-128l-32 0C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+                                FAQ
+                            </div>
+                            <div style="background-image: url('../image/nav/dropdown-menu_faq.webp');" class="nav-dropdown-menu-item-image"></div>
+                        </a>
+                        <a href="../nowe-wpisy" class="nav-dropdown-menu-item text-lg font-medium" rel="noopener noreferrer" aria-label="Inne Usługi">
+                            <div class="nav-dropdown-menu-item-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"/></svg>
+                                Nowe wpisy
+                            </div>
+                            <div style="background-image: url('../image/nav/dropdown-menu_nowe-wpisy.webp');" class="nav-dropdown-menu-item-image"></div>
+                        </a>
+                    </div>
+                </div> -->
+                <!-- Dropdown dla "Blog" -->
+            </div>
+            
+            <a class="nav-logo" href="../">
+                <img style="height: 50px; min-height: 50px; width: 174px; max-width: 174px;" class="nav-logo" src="../image/brand/logotype/TW_full.png" alt="Twoja Widoczność Logo" loading="lazy">
+            </a>
+            
+            
+            <div class="hidden md:flex" style="width: 300px; justify-content: end;">
+                <a href="#contact-form-section" class="btn-primary">
+                    Napisz do nas!
+                </a>
+            </div>
+            
+            <div class="md:hidden">
+                <div class="hamburger" id="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- NAV -->
+
+    <div class="mobile-nav-menu" id="mobile-nav-menu" style="height: 100vh; padding-top: 82px;">
+        <a href="../menu-qr/" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Dlaczego My?">Menu QR</a>
+        <a href="#contact-form-section" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Kontakt">Kontakt</a>
+    </div>
+
+    <main class="relative z-10">
+        <img class="hidden md:flex hero-restaurant-background absolute w-full" src="../image/background/restauracja-hero_background.webp" alt="" style="z-index: -1; max-height: 1200px;">
+        <img class="md:hidden hero-restaurant-background-mobile absolute" src="../image/background/restauracja-hero_background-mobile.webp" alt="" style="z-index: -1; max-height: 1200px;">
+
+
+        <header class="hero-restaurant py-24 md:py-40 flex flex-col items-center justify-center text-center overflow-hidden mb-12 md:mb-30">
+            <h1 class="hero-header max-w-6xl text-4xl md:text-7xl lg:text-8xl leading-tight mb-4 px-4 text-slate-800">
+                Z nami Twoja restauracja będzie
+            </h1>
+   
+            <p id="hero-text-typing" class="text-4xl md:text-7xl mb-8 max-w-3xl mx-auto px-4">
+                    Nowoczesna
+            </p>
+            <div class="pt-4">
+                <a href="#contact-form-section" class="btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M36.4 353.2c4.1-14.6 11.8-27.9 22.6-38.7l181.2-181.2 33.9-33.9c16.6 16.6 51.3 51.3 104 104l33.9 33.9-33.9 33.9-181.2 181.2c-10.7 10.7-24.1 18.5-38.7 22.6L30.4 510.6c-8.3 2.3-17.3 0-23.4-6.2S-1.4 489.3 .9 481L36.4 353.2zm55.6-3.7c-4.4 4.7-7.6 10.4-9.3 16.6l-24.1 86.9 86.9-24.1c6.4-1.8 12.2-5.1 17-9.7L91.9 349.5zm354-146.1c-16.6-16.6-51.3-51.3-104-104L308 65.5C334.5 39 349.4 24.1 352.9 20.6 366.4 7 384.8-.6 404-.6S441.6 7 455.1 20.6l35.7 35.7C504.4 69.9 512 88.3 512 107.4s-7.6 37.6-21.2 51.1c-3.5 3.5-18.4 18.4-44.9 44.9z"/></svg>
+                    Uzyskaj darmowy szkic
+                </a>
+            </div>
+            
+        </header>
+
+        <section id="service-description" class="py-20 md:py-32 text-center">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="lg:order-2 text-left lg:text-right">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-slate-800">
+                        Przenieś swoje menu do smartfona
+                    </h2>
+                    <p class="text-base md:text-xl text-slate-600 mb-12">
+                        Menu w formie strony internetowej w twojej restauracji, kawiarni lub barze.
+                        Twoi klienci zeskanują kod QR i natychmiast zobaczą Twoje pełne menu na swoich smartfonach.
+                    </p>
+                </div>
+                <div class="unselectable lg:order-1 flex justify-center items-center">
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="service-description-card glass-card active p-4 md:p-6 rounded-xl flex flex-col items-center justify-center text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1386d7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-qr-code mb-4"><rect width="8" height="8" x="2" y="2" rx="1"/><rect width="8" height="8" x="14" y="2" rx="1"/><rect width="8" height="8" x="2" y="14" rx="1"/><path d="M7 7h.01"/><path d="M11 7h.01"/><path d="M15 7h.01"/><path d="M7 11h.01"/><path d="M11 11h.01"/><path d="M15 11h.01"/><path d="M7 15h.01"/><path d="M11 15h.01"/><path d="M15 15h.01"/></svg>
+                            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-slate-800">Szybki Dostęp</h3>
+                            <p class="text-sm md:text-base text-slate-600">Klienci skanują kod QR i natychmiast przeglądają menu na swoim telefonie</p>
+                        </div>
+                        <div class="service-description-card glass-card active p-4 md:p-6 rounded-xl flex flex-col items-center justify-center text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1386d7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit mb-4"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4Z"/></svg>
+                            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-slate-800">Łatwa Edycja</h3>
+                            <p class="text-sm md:text-base text-slate-600">Prosta i szybka edycja pozycji, cen i opisów całego menu w dowolnym momencie</p>
+                        </div>
+                        <div class="service-description-card glass-card active p-4 md:p-6 rounded-xl flex flex-col items-center justify-center text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"  viewBox="0 0 640 640" fill="none" stroke="#1386d7" stroke-width="45" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit mb-4"><path d="M416.9 85.2L372 130.1L509.9 268L554.8 223.1C568.4 209.6 576 191.2 576 172C576 152.8 568.4 134.4 554.8 120.9L519.1 85.2C505.6 71.6 487.2 64 468 64C448.8 64 430.4 71.6 416.9 85.2zM338.1 164L122.9 379.1C112.2 389.8 104.4 403.2 100.3 417.8L64.9 545.6C62.6 553.9 64.9 562.9 71.1 569C77.3 575.1 86.2 577.5 94.5 575.2L222.3 539.7C236.9 535.6 250.2 527.9 261 517.1L476 301.9L338.1 164z"/></svg>
+                            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-slate-800">Darmowy szkic</h3>
+                            <p class="text-sm md:text-base text-slate-600">Zrobimy dla ciebie wstępny szkic za darmo, żebyś nie musiał się martwić o efekt końcowy.</p>
+                        </div>
+                        <div class="service-description-card glass-card active p-4 md:p-6 rounded-xl flex flex-col items-center justify-center text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-25 -25 612 612"  fill="none" stroke="#1386d7" stroke-width="45" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit mb-4"><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2l0 64-112 0C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96l96 0 0 64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/></svg>
+                            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-slate-800">Udostepnianie</h3>
+                            <p class="text-sm md:text-base text-slate-600">Klienci mogą szybko dzielić się menu między sobą, wybierając restauracje</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="py-20 md:py-48 text-center w-full md:px-8">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-slate-800 scroll-reveal">
+                    Cena dopasowana do twojego budżetu
+                </h2>
+                <p class="text-base md:text-xl text-slate-600 mb-12 scroll-reveal">
+                    Wyceniamy indywidualnie według twoich wymagań i potrzeb, 
+                    aby zapewnić miejsce dla każdego, niezależnie od budżetu.
+                </p>
+                <h3 class="pricing-price-range text-4xl md:text-7xl font-bold mb-4">
+                    <span class="price-animate" data-target="500">0</span> zł - <span class="price-animate" data-target="1500">0</span> zł
+                </h3>
+                <div class="pt-4">
+                    <a href="#contact-form-section" class="btn-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M136 24c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 56 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-114.9 0c-24.9 0-45.1 20.2-45.1 45.1 0 22.5 16.5 41.5 38.7 44.7l91.6 13.1c53.8 7.7 93.7 53.7 93.7 108 0 60.3-48.9 109.1-109.1 109.1l-10.9 0 0 40c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-40-72 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l130.9 0c24.9 0 45.1-20.2 45.1-45.1 0-22.5-16.5-41.5-38.7-44.7l-91.6-13.1C55.9 273.5 16 227.4 16 173.1 16 112.9 64.9 64 125.1 64l10.9 0 0-40z"/></svg>
+                        Uzyskaj wycenę
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="process-timeline" class="process-timeline relative py-20 md:py-32 w-full md:px-8">
+            <img id="pattern-a" class="image-pattern" src="../image/brand/pattern/bg-circle-pattern.webp" alt="">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="lg:order-2 text-left lg:text-right scroll-reveal">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-slate-800">
+                        Jak będzie wyglądała nasza współpraca?
+                    </h2>
+                    <p class="text-base md:text-xl text-slate-600 mb-12">
+                        Nasz sprawdzony proces przeprowadzania klienta od wiadomości aż po realizację.
+                    </p>
+                </div>
+                <div class="relative ">
+                    <div id="process-timeline-item-first" class="process-timeline-item active flex flex-row gap-8 md:gap-12 items-center pt-20 pb-20">
+                        <div class="process-timeline-item-point rounded-full text-white flex justify-center items-center">
+                            <div class="rounded-full flex justify-center items-center font-bold">1</div>
+                        </div>
+                        <div class="process-timeline-item-icon rounded-full flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512"><path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></svg>
+                        </div>
+                        <div class="max-w-2xl scroll-reveal">
+                            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-slate-800">Początek naszej współpracy</h3>
+                            <p class="text-sm md:text-base text-slate-600">Piszesz do nas wiadomość, a my odpowiadamy na nią w ciągu 12h i ustalamy szczegóły.</p>
+                        </div>
+                    </div>
+                    <div class="process-timeline-item flex flex-row gap-8 md:gap-12 items-center pt-20 pb-20">
+                        <div class="process-timeline-item-point rounded-full text-white flex justify-center items-center">
+                            <div class="rounded-full flex justify-center items-center font-bold">2</div>
+                        </div>
+                        <div class="process-timeline-item-icon rounded-full flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4Z"/></svg>
+                        </div>
+                        <div class="max-w-2xl scroll-reveal">
+                            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-slate-800">Stworzenie szkicu</h3>
+                            <p class="text-sm md:text-base text-slate-600">Analizujemy i zapoznajemy się z twoją marką, aby stworzyć dla ciebie wstępny zarys projektu. Wysyłamy do ciebie zarys w ciągu 48 godzin od rozpoczęcia naszej współpracy.</p>
+                        </div>
+                    </div>
+                    <div class="process-timeline-item flex flex-row gap-8 md:gap-12 items-center pt-20 pb-20 ">
+                        <div class="process-timeline-item-point rounded-full text-white flex justify-center items-center">
+                            <div class="rounded-full flex justify-center items-center font-bold">3</div>
+                        </div>
+                        <div class="process-timeline-item-icon rounded-full flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"  width="40" height="40" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+                        </div>
+                        <div class="max-w-2xl scroll-reveal">
+                            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-slate-800">Zmiany i akceptacja</h3>
+                            <p class="text-sm md:text-base text-slate-600">Wskazujesz nam co chciałbyś zmienić w projekcie przed rozpoczęciem pracy, a my po akceptacji przechodzimy od razu do realizacji zamówienia.</p>
+                        </div>
+                    </div>
+                    <div class="process-timeline-item flex flex-row gap-8 md:gap-12 items-center pt-20 pb-20">
+                        <div class="process-timeline-item-point rounded-full text-white flex justify-center items-center">
+                            <div class="rounded-full flex justify-center items-center font-bold">4</div>
+                        </div>
+                        <div class="process-timeline-item-icon rounded-full flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512"><path d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6l0 242.9c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4L0 134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1 0-188L288 246.6l0 188z"/></svg>
+                        </div>
+                        <div class="max-w-2xl scroll-reveal">
+                            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-slate-800">Gotowy Projekt</h3>
+                            <p class="text-sm md:text-base text-slate-600">Realizujemy dla ciebie projekt i dostarczamy go maksymalnie w ciągu 7 dni.</p>
+                        </div>
+                    </div>
+                    <div class="process-timeline-item flex flex-row gap-8 md:gap-12 items-center pt-20 pb-20">
+                        <div class="process-timeline-item-point rounded-full text-white flex justify-center items-center">
+                            <div class="rounded-full flex justify-center items-center font-bold">5</div>
+                        </div>
+                        <div class="process-timeline-item-icon rounded-full flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 448 512"><path d="M416 0C400 0 288 32 288 176l0 112c0 35.3 28.7 64 64 64l32 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-128 0-112 0-208c0-17.7-14.3-32-32-32zM64 16C64 7.8 57.9 1 49.7 .1S34.2 4.6 32.4 12.5L2.1 148.8C.7 155.1 0 161.5 0 167.9c0 45.9 35.1 83.6 80 87.7L80 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224.4c44.9-4.1 80-41.8 80-87.7c0-6.4-.7-12.8-2.1-19.1L191.6 12.5c-1.8-8-9.3-13.3-17.4-12.4S160 7.8 160 16l0 134.2c0 5.4-4.4 9.8-9.8 9.8c-5.1 0-9.3-3.9-9.8-9L127.9 14.6C127.2 6.3 120.3 0 112 0s-15.2 6.3-15.9 14.6L83.7 151c-.5 5.1-4.7 9-9.8 9c-5.4 0-9.8-4.4-9.8-9.8L64 16zm48.3 152l-.3 0-.3 0 .3-.7 .3 .7z"/></svg>
+                        </div>
+                        <div class="max-w-2xl scroll-reveal">
+                            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-slate-800">Ciesz się produktem</h3>
+                            <p class="text-sm md:text-base text-slate-600">Rozwieś kody QR w swojej restauracji, ciesz się zwiększoną sprzedażą i zadowoleniem klientów.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-timeline-line absolute top-0 ml-12-5p md:ml-27-5">
+                        <div class="process-timeline-line-active"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact-form-section" class="py-20 md:py-32 w-full md:px-8">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="lg:order-2 text-center lg:text-center scroll-reveal">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8 text-slate-800">Zdecydowałeś albo masz pytanie?</h2>
+                    <p class="text-base md:text-xl text-slate-600 mb-12">
+                        Wyślij nam wiadomość, a my skontaktujemy się z tobą i pomożemy ci ze wszystkim.
+                    </p>
+                </div>
+                <div class="max-w-2xl flex justify-center items-center gap-12 mx-auto md:px-32">
+                    <div class="glass-card p-8 rounded-xl text-left w-full">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label id="contact-form-input-first" for="contact-email" class="block text-slate-700 text-lg font-medium mb-2">Twój Adres E-mail:</label>
+                                <input placeholder="example@mail.com" type="email" id="contact-email" name="email" required
+                                       class="w-full p-3 rounded-lg bg-white text-slate-800 border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm">
+                            </div>
+                            <div>
+                                <label id="contact-form-input-second" for="contact-message" class="block text-slate-700 text-lg font-medium mb-2">Wiadomość:</label>
+                                <textarea placeholder="Czego chciałbyś się dowiedzieć od nas?" id="contact-message" name="message" rows="2" required
+                                          class="w-full p-3 rounded-lg bg-white text-slate-800 border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm"></textarea>
+                            </div>
+                            <div class="flex w-full justify-center">
+                                <button type="submit" class="btn-primary" style="padding-inline: 60px;">
+                                    Wyślij wiadomość
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="w-full px-4 text-center scroll-reveal pb-20">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-slate-800">Zapisz się do newslettera!</h2>
+            <p class="text-lg md:text-base text-slate-600 max-w-3xl mx-auto mb-3">
+                Będziesz otrzymywał od nas porady dotyczące widoczności twojej firmy w sieci i zwiększaniu sprzedaży.
+            </p>
+            <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4 justify-center">
+                <input type="email" id="newsletter-email" placeholder="Wpisz swój adres e-mail"
+                       class="flex-grow p-4 rounded-lg bg-white text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:outline-none border border-slate-300 shadow-sm">
+                <button id="newsletter-signup-btn" class="btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M36.4 353.2c4.1-14.6 11.8-27.9 22.6-38.7l181.2-181.2 33.9-33.9c16.6 16.6 51.3 51.3 104 104l33.9 33.9-33.9 33.9-181.2 181.2c-10.7 10.7-24.1 18.5-38.7 22.6L30.4 510.6c-8.3 2.3-17.3 0-23.4-6.2S-1.4 489.3 .9 481L36.4 353.2zm55.6-3.7c-4.4 4.7-7.6 10.4-9.3 16.6l-24.1 86.9 86.9-24.1c6.4-1.8 12.2-5.1 17-9.7L91.9 349.5zm354-146.1c-16.6-16.6-51.3-51.3-104-104L308 65.5C334.5 39 349.4 24.1 352.9 20.6 366.4 7 384.8-.6 404-.6S441.6 7 455.1 20.6l35.7 35.7C504.4 69.9 512 88.3 512 107.4s-7.6 37.6-21.2 51.1c-3.5 3.5-18.4 18.4-44.9 44.9z"/></svg>
+                    Zapisz się!
+                </button>
+            </div>
+            <div class="mt-4 flex items-center justify-center">
+                <input type="checkbox" id="newsletter-rules-accept" class="form-checkbox h-4 w-4 text-blue-600">
+                <label for="newsletter-rules-accept" class="ml-2 text-slate-600 text-sm">
+                    Akceptuję 
+                    <a href="../dokumenty/Regulamin_2025-07.pdf" class="document-link" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">regulamin </a>
+                    i
+                    <a href="../dokumenty/Polityka_prywatności_2025-06.pdf" class="document-link" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">politykę prywatności</a>
+                </label>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-10 px-4 text-center text-slate-600">
+        <div id="footer-container" class="w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-12 px-20">
+            <div class="pt-4">
+                <h4 class="text-xl font-semibold text-slate-800 mb-3">Znajdź nas w mediach społecznościowych:</h4>
+                <div class="flex space-x-6 justify-center lg:justify-start w-full">
+                    <a href="https://www.facebook.com/twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="Facebook Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
+                        <img style="height: 24px; width: 24px;" src="../icons/facebook.svg" alt="Facebook Twoja Widoczność">
+                    </a>
+                    <a href="https://www.youtube.com/@twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="Youtube Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
+                        <img style="height: 24px; width: 24px;" src="../icons/youtube.svg" alt="Youtube Twoja Widoczność">
+                    </a>
+                    <a href="https://www.tiktok.com/@twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="TikTok Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
+                        <img style="height: 24px; width: 24px;" src="../icons/tiktok.svg" alt="TikTok Twoja Widoczność">
+                    </a>
+                    <a href="https://www.instagram.com/twoja.widocznosc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
+                        <img style="height: 24px; width: 24px;" src="../icons/instagram.svg" alt="Instagram Twoja Widoczność">
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center space-x-4 gap-2">
+                <a href="../dokumenty/Polityka_prywatności_2025-06.pdf" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">Polityka Prywatności</a>
+                <a href="../dokumenty/Regulamin_2025-06.pdf" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Regulamin Twoja Widoczność">Regulamin</a>
+                <a href="https://g.co/kgs/p25Lt7P" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Wizytówka Google Twoja Widoczność">Wizytówka Google</a>
+            </div>    
+        </div>
+    </footer>
+    <!-- FOOTER -->
+
+    <div id="universal-modal" class="modal-overlay">
+        <div class="modal-content max-w-xl">
+            <button class="modal-close-button" id="modal-close-btn">×</button>
+            <h3 id="modal-title" class="text-5xl font-bold text-slate-800 mb-8 text-center"></h3>
+            <div id="modal-body" class="text-slate-700 text-xl leading-relaxed whitespace-pre-wrap text-center"></div>
+        </div>
+    </div>
+
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 text-white p-4 shadow-lg z-50 transform translate-y-full transition-transform duration-500 ease-out w-full" style="background: var(--tw_gradient_dark-90); max-width: 100vw;">
+        <div class="mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm md:text-base mb-2 md:mb-0 max-w-3xl">
+                Używamy plików cookie, aby zapewnić najlepszą jakość korzystania z naszej witryny. Umożliwiają one personalizację treści i reklam, analizę ruchu oraz prawidłowe funkcjonowanie strony. Aby uzyskać więcej informacji, zapoznaj się z naszą <a href="../dokumenty/Polityka_prywatności_2025-06.pdf" class="document-link" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">Polityka Prywatności</a>.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <button id="accept-all-cookies" class="btn-primary">
+                    Akceptuj wszystkie
+                </button>
+                <button id="reject-all-cookies" class="btn-secondary" style="background: white;">
+                    Odrzuć wszystkie
+                </button>
+                <button id="manage-cookies-btn" class="btn-secondary">
+                    Zarządzaj zgodami
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-preferences-modal" class="max-w-6xl fixed inset-0 p-4 bg-slate-900-05 bg-opacity-75 flex items-center justify-center z-[100] opacity-0 pointer-events-none transition-opacity duration-300 ease-out" style="backdrop-filter: blur(6px); max-width: 100vw;">
+        <div class="bg-white rounded-lg px-6 py-10 md:px-20 md:py-12 max-w-md shadow-xl transform scale-95 transition-transform duration-300 ease-out flex flex-col items-center">
+            <h3 class="text-3xl md:text-5xl text-center font-bold mb-4 text-slate-800">Zarządzaj swoimi zgodami na pliki cookie</h3>
+            <p class="max-w-3xl text-slate-600 text-center text-sm md:text-xl mb-4 md:mb-8">Możesz zmienić swoje preferencje dotyczące plików cookie w dowolnym momencie. Zmiany wejdą w życie po odświeżeniu strony.</p>
+
+            <div class="py-4 md:py-12">
+                <div class="mb-4">
+                    <label class="inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="cookie-necessary" class="form-checkbox h-5 w-5 text-blue-600" checked disabled>
+                        <span class="ml-3 text-lg font-medium text-slate-700">Niezbędne pliki cookie</span>
+                    </label>
+                    <p class="text-slate-500 text-sm ml-8">Te pliki cookie są kluczowe dla prawidłowego funkcjonowania strony i nie mogą być wyłączone.</p>
+                </div>
+    
+                <div class="mb-4">
+                    <label class="inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="cookie-analytics" class="form-checkbox h-5 w-5 text-blue-600">
+                        <span class="ml-3 text-lg font-medium text-slate-700">Analityczne pliki cookie</span>
+                    </label>
+                    <p class="text-slate-500 text-sm ml-8">Pozwalają nam analizować ruch na stronie i poprawiać jej działanie.</p>
+                </div>
+    
+                <div class="mb-6">
+                    <label class="inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="cookie-marketing" class="form-checkbox h-5 w-5 text-blue-600">
+                        <span class="ml-3 text-lg font-medium text-slate-700">Marketingowe pliki cookie</span>
+                    </label>
+                    <p class="text-slate-500 text-sm ml-8">Służą do wyświetlania spersonalizowanych reklam i treści.</p>
+                </div>
+            </div>
+
+            <div class="flex justify-end gap-3">
+                <button id="save-cookie-preferences" class="btn-primary">
+                    Zapisz preferencje
+                </button>
+                <button id="close-cookie-preferences" class="btn-secondary">
+                    Anuluj
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skrypty - używamy Twojego istniejącego index.js -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://twojawidocznosc.online/menu-qr/",
+              "url": "https://twojawidocznosc.online/menu-qr/",
+              "name": "Menu QR dla Twojej Restauracji | Twoja Widoczność",
+              "description": "Cyfrowe menu na stronie internetowej z kodem QR. Klienci zeskanują kod i od razu zobaczą Twoje pełne menu na smartfonie.",
+              "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Strona Główna",
+                    "item": "https://twojawidocznosc.online/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Menu QR"
+                  }
+                ]
+              },
+              "isPartOf": {
+                "@id": "https://twojawidocznosc.online/"
+              }
+            },
+            {
+              "@type": "Service",
+              "name": "Strona z Menu QR dla Restauracji",
+              "serviceType": "Tworzenie stron internetowych z kodem QR",
+              "provider": {
+                "@type": "Organization",
+                "name": "Twoja Widoczność",
+                "url": "https://twojawidocznosc.online",
+                "logo": "https://twojawidocznosc.online/image/brand/logo/android-chrome-512x512.png",
+                "contactPoint": [
+                  {
+                    "@type": "ContactPoint",
+                    "contactType": "customer service",
+                    "areaServed": "PL",
+                    "availableLanguage": "pl",
+                    "email": "kontakt@twojawidocznosc.online"
+                  },
+                  {
+                    "@type": "ContactPoint",
+                    "telephone": "+48-604-175-360",
+                    "contactType": "customer service",
+                    "areaServed": "PL",
+                    "availableLanguage": "pl"
+                  }
+                ],
+                "sameAs": [
+                  "https://www.facebook.com/twoja.widocznosc",
+                  "https://www.youtube.com/@twoja.widocznosc",
+                  "https://www.tiktok.com/@twoja.widocznosc",
+                  "https://www.instagram.com/twoja.widocznosc",
+                  "https://g.co/kgs/NUQ6RMx"
+                ]
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Polska"
+              },
+              "availableChannel": {
+                  "@type": "ServiceChannel",
+                  "serviceUrl": "https://twojawidocznosc.online/menu-qr/",
+                  "availableLanguage": "pl",
+                  "servicePhone": {
+                    "@type": "ContactPoint",
+                    "telephone": "+48-604-175-360"
+                  },
+                  "serviceSmsNumber": {
+                    "@type": "ContactPoint",
+                    "telephone": "+48-604-175-360"
+                  },
+                  "serviceEmail": {
+                    "@type": "ContactPoint",
+                    "email": "kontakt@twojawidocznosc.online"
+                  }
+                },
+              "description": "Strona internetowa z menu i kodem QR dla Twojej restauracji. Szybki dostęp dla klientów, łatwa edycja treści, atrakcyjna prezentacja dań i wyższa sprzedaż.",
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "PLN",
+                "lowPrice": 500,
+                "highPrice": 1500,
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "priceCurrency": "PLN",
+                  "price": 500,
+                  "priceValidUntil": "2025-08-10"
+                },
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Darmowy szkic",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Bezpłatny szkic strony",
+                        "description": "Darmowy szkic graficzny strony internetowej z menu QR."
+                      },
+                      "price": "0",
+                      "priceCurrency": "PLN"
+                    }
+                  ]
+                }
+                "availability": "https://schema.org/InStock",
+                "url": "https://twojawidocznosc.online/menu-qr/"
+              }
+            }
+          ]
+        }
+    </script>
+    <script src="index.js?v=2" defer></script>
+    <script>
+        // Nowy Intersection Observer dla tekstu w sekcji benefits
+        // Nowy Intersection Observer dla kafelków w sekcji benefits
+        document.addEventListener('DOMContentLoaded', () => {
+            const benefitsTilesContainer = document.querySelector('.benefits-tiles-animation-wrapper');
+            const benefitsSection = document.getElementById('benefits');
+
+            if (benefitsTilesContainer && benefitsSection) {
+                const handleScroll = () => {
+                    const sectionRect = benefitsSection.getBoundingClientRect();
+                    const viewportHeight = window.innerHeight;
+
+                    // Punkt startowy animacji: gdy góra sekcji jest na dole viewportu (sekcja zaczyna wchodzić)
+                    const animationStartPoint = viewportHeight;
+                    // Punkt końcowy animacji: gdy góra sekcji jest na 20% wysokości viewportu (sekcja jest dobrze widoczna)
+                    const animationEndPoint = viewportHeight * 0.4;
+
+                    // Oblicz aktualną pozycję góry sekcji względem viewportu
+                    const currentSectionTop = sectionRect.top;
+
+                    // Oblicz postęp animacji (od 0 do 1)
+                    // progress = 0, gdy sekcja jest całkowicie poniżej punktu startowego animacji
+                    // progress = 1, gdy sekcja osiągnie punkt końcowy animacji lub jest wyżej
+                    let progress = 1 - (currentSectionTop - animationEndPoint) / (animationStartPoint - animationEndPoint);
+
+                    // Ogranicz postęp do zakresu od 0 do 1, aby uniknąć niepożądanych wartości
+                    progress = Math.max(0, Math.min(1, progress));
+
+                    // Zastosuj transformację translateX i opacity w oparciu o postęp
+                    // translateX: od 50px (ukryte w prawo) do 0px (widoczne)
+                    const translateX = 600 * (1 - progress);
+                    // opacity: od 0 (niewidoczne) do 1 (widoczne)
+                    const opacity = progress ;
+
+                    benefitsTilesContainer.style.transform = `translateX(${translateX}px)`;
+                    benefitsTilesContainer.style.opacity = opacity;
+                };
+
+                // Wywołaj funkcję raz na początku, aby ustawić początkowy stan elementu
+                handleScroll();
+                // Dodaj nasłuchiwanie na zdarzenie scrollowania, aby animacja była ciągła
+                window.addEventListener('scroll', handleScroll);
+            }
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const ipadMockup = document.getElementById('ipad-mockup');
+            const sampleMenuSection = document.getElementById('sample-menu');
+
+            if (ipadMockup && sampleMenuSection) {
+                const handleScrollAnimation = () => {
+                    // Pobierz aktualne wymiary i pozycję sekcji
+                    const sectionRect = sampleMenuSection.getBoundingClientRect();
+                    const viewportHeight = window.innerHeight;
+
+                    // Określ zakres przewijania dla animacji
+                    // Animacja zaczyna się, gdy dół sekcji wchodzi w viewport
+                    const animationStartScroll = sectionRect.top + sectionRect.height;
+                    // Animacja kończy się, gdy góra sekcji osiąga środek viewportu (lub inny punkt, dostosuj)
+                    const animationEndPoint = viewportHeight / 5; // Możesz dostosować ten punkt
+
+                    // Oblicz postęp animacji (wartość od 0 do 1)
+                    // Gdy sekcja jest poniżej punktu startowego, progress = 0
+                    // Gdy sekcja osiągnie punkt końcowy, progress = 1
+                    let progress = 1 - (animationStartScroll - viewportHeight) / (animationStartScroll - animationEndPoint);
+
+                    // Ogranicz postęp do zakresu od 0 do 1
+                    progress = Math.max(0, Math.min(1, progress));
+
+                    // Interpoluj właściwości transformacji na podstawie postępu
+                    // rotateX: od 45deg (przekrzywiony) do 0deg (wyprostowany)
+                    const rotateX = 90 * (1 - progress);
+                    // rotateY: od -20deg (przekrzywiony) do 0deg (wyprostowany)
+                    const rotateY = -90 * (1 - progress);
+                    // scale: od 0.7 (mniejszy) do 1 (większy)
+                    const scale = 0.7 + (1 - 0.7) * progress;
+                    // translateY: aby przesunąć go w górę, gdy się prostuje (dostosuj wartość)
+                    const translateY = 50 * (1 - progress); // Przesuwa się z offsetu 50px do 0px
+
+                    // Zastosuj transformacje i przezroczystość
+                    ipadMockup.style.transform = `translateY(${translateY}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`;
+                    // ipadMockup.style.opacity = progress; // Stopniowe pojawianie się
+                };
+
+                // Wywołaj funkcję raz na początku, aby ustawić początkowy stan elementu
+                handleScrollAnimation();
+                // Dodaj nasłuchiwanie na zdarzenie scrollowania, aby animacja była ciągła
+                window.addEventListener('scroll', handleScrollAnimation);
+            }
+        });
+    </script>
+</body>
+</html>
