@@ -255,3 +255,6 @@
         transform: scale(1.05);
     }
 }
+.benefits-tile svg{
+    fill: var(--tw_blue);
+}

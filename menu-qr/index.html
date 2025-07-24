@@ -41,32 +41,159 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
    
     <!-- FONTS -->
     
-    <!-- CSS -->
-    <link rel="preload" href="../style.css?v=2" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../style.css?v=2"></noscript>
-    
+    <!-- CSS -->    
     <link rel="preload" href="../tailwind.css?v=3" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="../tailwind.css?v=3"></noscript>
-
-    <link rel="preload" href="style.css?v=2" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css?v=2"></noscript>
     
     <!-- premade -->
-    <link rel="preload" href="../brand/css/nav.css?v=2" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../brand/css/nav.css?v=2"></noscript>
-
     <link rel="preload" href="../brand/css/brand.css?v=2" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="../brand/css/brand.css?v=2"></noscript>
     <!-- CSS -->
 
     <!-- JS -->
     <!-- JS -->
+    <style>
+        body { background-color: white; }
+        .hero-restaurant { margin-top: 82px; }
+
+        #service-description { background-image: url('../image/brand/pattern/bg-circle-pattern.webp'); background-size: cover; background-position: center; }
+
+
+        @media (max-width: 768px) {
+            .image-pattern {
+                height: 800px;
+                max-width: none;
+            }
+            #pattern-a.image-pattern {
+                left: -400px !important;
+                bottom: 20px !important;
+            }
+        }
+
+        .image-pattern {
+            position: absolute;
+            height: 600px;
+        }
+        #pattern-a.image-pattern {
+            left: -50px;    
+            bottom: 20px;
+        }
+
+        .process-timeline-line {
+            height: 100%;
+            width: 4px;
+            background: rgba(0, 0, 0, 0.1);
+            background: linear-gradient(0deg, white 0%, rgba(0,0,0,0.1) 10% 90%, white 100%);
+            overflow: hidden;
+        }
+        .process-timeline-line-active {
+            position: absolute;
+            background: linear-gradient(0deg, transparent 0%, var(--tw_blue) 10% 90%, transparent 100%);
+            top: 0%;
+            height: 50%;
+            width: 4px;
+        }
+
+        .process-timeline-item-point {
+            height: 60px;
+            width: 60px;
+            background: white;
+            z-index: 10;
+        }
+        .process-timeline-item-point div {
+            height: 30px;
+            width: 30px;
+            transition: background-color 0.2s;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        .process-timeline-item-icon {
+            height: 80px;
+            width: 80px;
+            min-width: 80px;
+            background: #3b83f621;
+            fill: rgba(0, 0, 0, 0.1);
+            stroke: rgba(0, 0, 0, 0.1);
+            transition: fill 0.2s, stroke 0.2s;
+        }
+
+        .process-timeline-item.active .process-timeline-item-point {
+            height: 60px;
+            width: 60px;
+            background: white;
+            z-index: 10;
+        }
+        .process-timeline-item.active .process-timeline-item-point div {
+            height: 30px;
+            width: 30px;
+            background: var(--tw_blue);
+        }
+        .process-timeline-item.active .process-timeline-item-icon {
+            height: 80px;
+            width: 80px;
+            min-width: 80px;
+            background: #3b83f621;
+            fill: #3b82f6;
+            stroke: #3b82f6;
+        }
+
+        #hero-text-typing {
+            color: var(--tw_blue);
+            position: relative;
+            display: inline-block;
+            min-width: 10px;
+        }
+
+        #hero-text-typing::after {
+            content: '|';
+            position: absolute;
+            right: -10px;
+            color: var(--color-slate-800);
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        #hero-text-typing:empty::after,
+        #hero-text-typing:not(:empty)::after { display: inline; }
+
+        .hero-cta-btn {
+            border: 1px solid var(--color-slate-800);
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .hero-header {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 750;
+        }
+        .pricing-price-range {
+            color: var(--tw_blue);
+            font-weight: 750;
+        }
+        #pricing {
+            background-image: url('../image/background/dollar_sign.webp');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        footer {
+            max-width: 100vw; 
+            box-shadow: 0px -8px 16px 0px rgba(0,0,0,0.025)
+        }
+    </style>
 </head>
 <body class="relative min-h-screen" style="max-width: 100vw;">
 
@@ -162,8 +289,17 @@
     </div>
 
     <main class="relative z-10">
-        <img class="hidden md:flex hero-restaurant-background absolute w-full" fetchpriority="high" src="../image/background/restauracja-hero_background.webp" alt="" style="z-index: -1; max-height: 1200px;">
-        <img class="md:hidden hero-restaurant-background-mobile absolute" fetchpriority="high" src="../image/background/restauracja-hero_background-mobile.webp" alt="" style="z-index: -1; max-height: 1200px;">
+        <picture>
+            <source srcset="../image/background/restauracja-hero_background-mobile.webp" media="(max-width: 768px)" />
+            <source srcset="../image/background/restauracja-hero_background.webp" media="(min-width: 769px)" />
+            <img
+              src="../image/background/restauracja-hero_background.webp"
+              alt="Tło restauracji"
+              fetchpriority="high"
+              class="absolute w-full hero-restaurant-background"
+              style="z-index: -1; max-height: 1200px;"
+            />
+        </picture>
 
 
         <header class="hero-restaurant py-24 md:py-40 flex flex-col items-center justify-center text-center overflow-hidden mb-12 md:mb-30">
@@ -418,7 +554,7 @@
         </div>
     </div>
 
-    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 text-white p-4 shadow-lg z-50 transform translate-y-full transition-transform duration-500 ease-out w-full" style="background: var(--tw_gradient_dark-90); max-width: 100vw;">
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 text-white p-4 shadow-lg z-50 transform translate-y-full transition-transform duration-500 ease-out w-full" style="background: var(--tw_gradient_dark-90); max-width: 100vw; min-height: 100px;">
         <div class="mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <p class="text-sm md:text-base mb-2 md:mb-0 max-w-3xl">
                 Używamy plików cookie, aby zapewnić najlepszą jakość korzystania z naszej witryny. Umożliwiają one personalizację treści i reklam, analizę ruchu oraz prawidłowe funkcjonowanie strony. Aby uzyskać więcej informacji, zapoznaj się z naszą <a href="../dokumenty/Polityka_prywatności_2025-06.pdf" class="document-link" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">Polityka Prywatności</a>.
