@@ -46,7 +46,7 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
    
     <!-- FONTS -->
-    
+    <link rel="preload" as="image" href="../image/brand/pattern/bg-circle-pattern.webp" fetchpriority="high" />
     <!-- CSS -->    
     <link rel="preload" href="../tailwind.css?v=3" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="../tailwind.css?v=3"></noscript>
@@ -319,7 +319,7 @@
             
         </header>
 
-        <section id="service-description" class="py-20 md:py-32 text-center">
+        <section id="service-description" class="py-20 md:py-32 text-center" fetch>
             <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="lg:order-2 text-left lg:text-right">
                     <h2 class="text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-slate-800">
@@ -735,7 +735,7 @@
           ]
         }
     </script>
-    <script src="index.js?v=2" defer></script>
+    <script src="index.js?v=3" defer></script>
     <script>
         // Nowy Intersection Observer dla tekstu w sekcji benefits
         // Nowy Intersection Observer dla kafelków w sekcji benefits
