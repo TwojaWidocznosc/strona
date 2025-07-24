@@ -43,25 +43,32 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
    
     <!-- FONTS -->
     
     <!-- CSS -->
-    <link rel="preload" href="../style.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../style.css"></noscript>
-    <link rel="stylesheet" href="../tailwind.css?v=3">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="preload" href="../style.css?v=2" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../style.css?v=2"></noscript>
+    
+    <link rel="preload" href="../tailwind.css?v=3" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../tailwind.css?v=3"></noscript>
 
+    <link rel="preload" href="style.css?v=2" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css?v=2"></noscript>
+    
     <!-- premade -->
-    <link rel="stylesheet" href="../brand/css/nav.css?v=2">
-    <link rel="stylesheet" href="../brand/css/brand.css?v=2">
+    <link rel="preload" href="../brand/css/nav.css?v=2" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../brand/css/nav.css?v=2"></noscript>
+
+    <link rel="preload" href="../brand/css/brand.css?v=2" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../brand/css/brand.css?v=2"></noscript>
     <!-- CSS -->
 
     <!-- JS -->
     <!-- JS -->
 </head>
-<body class="relative min-h-screen" style="max-width: 100vw; overflow: hidden;">
+<body class="relative min-h-screen" style="max-width: 100vw;">
 
     <!-- NAV -->    
     <nav class="fixed top-0 left-0 w-full z-50 py-4 px-6 md:px-8 backdrop-blur-lg bg-white" >
@@ -128,7 +135,7 @@
             </div>
             
             <a class="nav-logo" href="../">
-                <img style="height: 50px; min-height: 50px; width: 174px; max-width: 174px;" class="nav-logo" src="../image/brand/logotype/TW_full.png" alt="Twoja Widoczność Logo" loading="lazy">
+                <img style="height: 50px; min-height: 50px; width: 174px; max-width: 174px;" fetchpriority="high" class="nav-logo" src="../image/brand/logotype/TW_full.webp" alt="Twoja Widoczność Logo">
             </a>
             
             
@@ -155,8 +162,8 @@
     </div>
 
     <main class="relative z-10">
-        <img class="hidden md:flex hero-restaurant-background absolute w-full" src="../image/background/restauracja-hero_background.webp" alt="" style="z-index: -1; max-height: 1200px;">
-        <img class="md:hidden hero-restaurant-background-mobile absolute" src="../image/background/restauracja-hero_background-mobile.webp" alt="" style="z-index: -1; max-height: 1200px;">
+        <img class="hidden md:flex hero-restaurant-background absolute w-full" fetchpriority="high" src="../image/background/restauracja-hero_background.webp" alt="" style="z-index: -1; max-height: 1200px;">
+        <img class="md:hidden hero-restaurant-background-mobile absolute" fetchpriority="high" src="../image/background/restauracja-hero_background-mobile.webp" alt="" style="z-index: -1; max-height: 1200px;">
 
 
         <header class="hero-restaurant py-24 md:py-40 flex flex-col items-center justify-center text-center overflow-hidden mb-12 md:mb-30">
@@ -236,7 +243,7 @@
         </section>
 
         <section id="process-timeline" class="process-timeline relative py-20 md:py-32 w-full md:px-8">
-            <img id="pattern-a" class="image-pattern" src="../image/brand/pattern/bg-circle-pattern.webp" alt="">
+            <img id="pattern-a" class="image-pattern" src="../image/brand/pattern/bg-circle-pattern.webp" alt="" loading="lazy">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="lg:order-2 text-left lg:text-right scroll-reveal">
                     <h2 class="text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-slate-800">
@@ -378,19 +385,19 @@
     <footer class="py-10 px-4 text-center text-slate-600">
         <div id="footer-container" class="w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-12 px-20">
             <div class="pt-4">
-                <h4 class="text-xl font-semibold text-slate-800 mb-3">Znajdź nas w mediach społecznościowych:</h4>
+                <p class="text-xl font-semibold text-slate-800 mb-3">Znajdź nas w mediach społecznościowych:</p>
                 <div class="flex space-x-6 justify-center lg:justify-start w-full">
                     <a href="https://www.facebook.com/twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="Facebook Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
-                        <img style="height: 24px; width: 24px;" src="../icons/facebook.svg" alt="Facebook Twoja Widoczność">
+                        <img style="height: 24px; width: 24px;" src="../icons/facebook.svg" alt="Facebook Twoja Widoczność" loading="lazy">
                     </a>
-                    <a href="https://www.youtube.com/@twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="Youtube Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
-                        <img style="height: 24px; width: 24px;" src="../icons/youtube.svg" alt="Youtube Twoja Widoczność">
+                    <a href="https://www.youtube.com/@twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="Youtube Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl" >
+                        <img style="height: 24px; width: 24px;" src="../icons/youtube.svg" alt="Youtube Twoja Widoczność" loading="lazy">
                     </a>
                     <a href="https://www.tiktok.com/@twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="TikTok Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
-                        <img style="height: 24px; width: 24px;" src="../icons/tiktok.svg" alt="TikTok Twoja Widoczność">
+                        <img style="height: 24px; width: 24px;" src="../icons/tiktok.svg" alt="TikTok Twoja Widoczność" loading="lazy">
                     </a>
                     <a href="https://www.instagram.com/twoja.widocznosc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
-                        <img style="height: 24px; width: 24px;" src="../icons/instagram.svg" alt="Instagram Twoja Widoczność">
+                        <img style="height: 24px; width: 24px;" src="../icons/instagram.svg" alt="Instagram Twoja Widoczność" loading="lazy">
                     </a>
                 </div>
             </div>

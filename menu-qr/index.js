@@ -429,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add "Zarządzaj zgodami na pliki cookie" link to the footer
     const footer = document.querySelector('#footer-container'); // Assuming you have a footer element
     if (footer) {
-        const manageConsentLink = document.createElement('li'); // Or a div, depending on your footer structure
+        const manageConsentLink = document.createElement('div'); // Or a div, depending on your footer structure
         manageConsentLink.innerHTML = `
             <a href="#" id="open-cookie-preferences-footer" class="text-slate-400 hover:text-white transition duration-300">
                 Zarządzaj zgodami na pliki cookie
