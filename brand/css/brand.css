@@ -401,6 +401,7 @@ input[type="checkbox" i] {
     transition: .35s;
     z-index: -1;
 }
+
 .glass-card.active:hover::before {
     border-radius: 10px;
     background: rgba(229, 232, 235, 0.5);
