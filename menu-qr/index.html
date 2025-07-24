@@ -289,17 +289,21 @@
     </div>
 
     <main class="relative z-10">
-        <picture>
-            <source srcset="../image/background/restauracja-hero_background-mobile.webp" media="(max-width: 768px)" />
-            <source srcset="../image/background/restauracja-hero_background.webp" media="(min-width: 769px)" />
-            <img
-              src="../image/background/restauracja-hero_background.webp"
-              alt="Tło restauracji"
-              fetchpriority="high"
-              class="absolute w-full hero-restaurant-background"
-              style="z-index: -1; max-height: 1200px;"
-            />
-        </picture>
+        <div class="absolute w-full aspect-[9/16] md:aspect-[16/9]" style="z-index: -1;">
+            <picture>
+                <source srcset="../image/background/restauracja-hero_background-mobile.webp" media="(max-width: 768px)" />
+                <source srcset="../image/background/restauracja-hero_background.webp" media="(min-width: 769px)" />
+                <img
+                  src="../image/background/restauracja-hero_background.webp"
+                  alt="Tło restauracji"
+                  fetchpriority="high"
+                  width="1920"
+                  height="1080"
+                  class="absolute inset-0 w-full h-full object-cover"
+                  style="z-index: -1;"
+                />
+            </picture>
+        </div>
 
 
         <header class="hero-restaurant py-24 md:py-40 flex flex-col items-center justify-center text-center overflow-hidden mb-12 md:mb-30">
@@ -541,7 +545,10 @@
                 <a href="../dokumenty/Polityka_prywatności_2025-06.pdf" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">Polityka Prywatności</a>
                 <a href="../dokumenty/Regulamin_2025-06.pdf" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Regulamin Twoja Widoczność">Regulamin</a>
                 <a href="https://g.co/kgs/p25Lt7P" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Wizytówka Google Twoja Widoczność">Wizytówka Google</a>
-            </div>    
+            </div>
+            <a href="" id="open-cookie-preferences-footer" class="text-slate-400 hover:text-white transition duration-300">
+                Zarządzaj zgodami na pliki cookie
+            </a>    
         </div>
     </footer>
     <!-- FOOTER -->

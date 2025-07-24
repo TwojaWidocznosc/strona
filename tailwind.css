@@ -436,6 +436,12 @@
   .h-full {
     height: 100%;
   }
+  .aspect-\[9\/16\] {
+    aspect-ratio: 9/16;
+  }
+  .object-cover {
+    object-fit: cover;
+  }
   .min-h-\[600px\] {
     min-height: 600px;
   }
@@ -454,7 +460,7 @@
   .max-w-3xl {
     max-width: var(--container-3xl);
   }
-  
+
   .max-w-4xl {
     max-width: var(--container-4xl);
   }
@@ -1166,6 +1172,11 @@
   .sm\:flex-row {
     @media (width >= 40rem) {
       flex-direction: row;
+    }
+  }
+  .md\:aspect-\[16\/9\] {
+    @media (width >= 48rem) {
+      aspect-ratio: 16/9;
     }
   }
   .md\:flex {
