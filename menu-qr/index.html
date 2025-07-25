@@ -168,6 +168,12 @@
 
         #hero-text-typing:empty::after,
         #hero-text-typing:not(:empty)::after { display: inline; }
+        #hero-text-typing::after {
+          content: "Oszczędna";
+          visibility: hidden;
+          display: block;
+          height: 0;
+        }
 
         .hero-cta-btn {
             border: 1px solid var(--color-slate-800);
@@ -195,7 +201,7 @@
         }
     </style>
 </head>
-<body class="">
+<body class="min-h-screen" style="overflow-x: hidden;">
 
     <!-- NAV -->    
     <nav class="fixed top-0 left-0 w-full z-50 py-4 px-6 md:px-8 backdrop-blur-lg bg-white" >
@@ -302,7 +308,7 @@
                       fetchpriority="high"
                       width="1920"
                       height="1080"
-                      class="absolute inset-0 w-full h-full object-cover"
+                      class="inset-0 w-full h-full object-cover"
                       style="z-index: -1;"
                     />
                 </picture>
