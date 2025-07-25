@@ -46,7 +46,7 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
    
     <!-- FONTS -->
-    <link rel="preload" as="image" href="../image/brand/pattern/bg-circle-pattern.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="../image/brand/pattern/bg-circle-pattern.webp?v=2" fetchpriority="high" />
     <!-- CSS -->    
     <link rel="preload" href="../tailwind.css?v=4" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="../tailwind.css?v=4"></noscript>
@@ -183,7 +183,7 @@
             font-weight: 750;
         }
         #pricing {
-            background-image: url('../image/background/dollar_sign.webp');
+            background-image: url('../image/background/dollar_sign.webp?v=2');
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -289,24 +289,25 @@
     </div>
 
     <main class="relative z-10">
-        <div class="absolute w-full aspect-[9/16] md:aspect-[16/9]" style="z-index: -1;">
-            <picture>
-                <source srcset="../image/background/restauracja-hero_background-mobile.webp" media="(max-width: 768px)" />
-                <source srcset="../image/background/restauracja-hero_background.webp" media="(min-width: 769px)" />
-                <img
-                  src="../image/background/restauracja-hero_background.webp"
-                  alt="Tło restauracji"
-                  fetchpriority="high"
-                  width="1920"
-                  height="1080"
-                  class="absolute inset-0 w-full h-full object-cover"
-                  style="z-index: -1;"
-                />
-            </picture>
-        </div>
-
 
         <header class="hero-restaurant py-24 md:py-40 flex flex-col items-center justify-center text-center overflow-hidden mb-12 md:mb-30">
+
+            <div class="absolute w-full aspect-[9/16] md:aspect-[16/9]" style="z-index: -1; top: 0;">
+                <picture>
+                    <source srcset="../image/background/restauracja-hero_background-mobile.webp?v=2" media="(max-width: 768px)" />
+                    <source srcset="../image/background/restauracja-hero_background.webp?v=2" media="(min-width: 769px)" />
+                    <img
+                      src="../image/background/restauracja-hero_background.webp"
+                      alt="Tło restauracji"
+                      fetchpriority="high"
+                      width="1920"
+                      height="1080"
+                      class="absolute inset-0 w-full h-full object-cover"
+                      style="z-index: -1;"
+                    />
+                </picture>
+            </div>
+
             <h1 class="hero-header max-w-6xl text-4xl md:text-7xl lg:text-8xl leading-tight mb-4 px-4 text-slate-800">
                 Z nami Twoja restauracja będzie
             </h1>
