@@ -506,22 +506,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize consent state on page load
     initializeConsent();
     // Add "Zarządzaj zgodami na pliki cookie" link to the footer
-    const footer = document.querySelector('footer'); // Assuming you have a footer element
-    if (footer) {
-        const manageConsentLink = document.createElement('li'); // Or a div, depending on your footer structure
-        manageConsentLink.innerHTML = `
-            <a href="#" id="open-cookie-preferences-footer" class="text-slate-400 hover:text-white transition duration-300">
-                Zarządzaj zgodami na pliki cookie
-            </a>
-        `;
-        // Append to an existing ul/nav if available, or directly to footer
-        const footerNav = footer.querySelector('ul') || footer; // Try to find a ul, else append to footer directly
-        footerNav.appendChild(manageConsentLink);
-        document.getElementById('open-cookie-preferences-footer').addEventListener('click', (e) => {
-            e.preventDefault();
-            showPreferencesModal();
-        });
-    }
+    document.getElementById('open-cookie-preferences-footer').addEventListener('click', (e) => {
+        e.preventDefault();
+        showPreferencesModal();
+    });
 });
-
         

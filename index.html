@@ -4,36 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="icons/favicons/favicon-96px.ico" sizes="96x96" type="image/x-icon" />
-    <!-- <link rel="icon" href="icons/favicons/favicon-48px.ico" sizes="48x48" type="image/x-icon" /> -->
-    <link rel="icon" href="icons/favicons/favicon-144px.ico" sizes="144x144" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="icons/favicons/favicon-144px.ico" type="image/x-icon" />
+    <!-- IKONY  -->
 
-    <title>Twoja Widoczność - Profesjonalne Tworzenie Stron WWW i SEO | Polska</title>
-    <meta name="description" content="Profesjonalne tworzenie nowoczesnych stron internetowych i kompleksowe usługi SEO dla firm w Polsce. Zwiększ swoją widoczność online z Twoja Widoczność!">
-    <link rel="canonical" href="https://twojawidocznosc.online" />
+    <!-- Favicony -->
+    <link rel="icon" href="../image/brand/logo/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="../image/brand/logo/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="shortcut icon" href="../image/brand/logo/favicon.ico"/>   
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="../image/brand/logo/apple-touch-icon.png" sizes="180x180"/>  
+    <!-- Android / Manifest -->
+    <link rel="manifest" href="../image/brand/logo/site.webmanifest">
+    <!-- Microsoft -->
+    <meta name="msapplication-TileImage" content="../image/brand/logo/mstile-150x150.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- IKONY  -->
 
-    <meta property="og:title" content="Twoja Widoczność – Strony Internetowe i SEO" />
-    <meta property="og:description" content="Tworzymy nowoczesne strony internetowe dla firm w Polsce. Skutecznie zwiększamy widoczność w Internecie." />
-    <meta property="og:url" content="https://twojawidocznosc.online" />
-    <meta property="og:image" content="https://twojawidocznosc.online/images/og_image_TwojaWidocznosc.jpg" />
+    <!-- RESULT -->
+    <title>Strona Główna | Twoja Widoczność</title>
+    <meta name="description" content="Tworzymy strony internetowe, które zwiększają widoczność Twojej firmy w sieci. Oferujemy nowoczesny design, responsywność i rozwiązania dopasowane do Twoich potrzeb.">
+    <meta name="keywords" content="menu qr, menu online, cyfrowe menu, menu restauracja, strona menu qr, twoja widoczność, strony internetowe, strony www, strona">
+    <link rel="canonical" href="https://twojawidocznosc.online/" />
+    <!-- RESULT -->
+
+    <!-- LINK -->
+    <meta property="og:title" content="Strona Główna | Twoja Widoczność" />
+    <meta property="og:description" content="Tworzymy strony internetowe, które zwiększają widoczność Twojej firmy w sieci. Oferujemy nowoczesny design, responsywność i rozwiązania dopasowane do Twoich potrzeb." />
+    <meta property="og:image" content="https://twojawidocznosc.online/image/og/menu-qr_og_image.jpg" />
+    <meta property="og:url" content="https://twojawidocznosc.online/" />
     <meta property="og:type" content="website" />
     <meta name="robots" content="index, follow" />
+    <!-- LINK -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- FONTS -->
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+   
+    <!-- FONTS -->
+    <link rel="preload" as="image" href="../image/brand/pattern/bg-circle-pattern.webp?v=2" fetchpriority="high" />
+    <!-- CSS -->    
+    <link rel="stylesheet" href="../tailwind.css?v=4">
+    
+    <!-- premade -->
+    <link rel="preload" href="../brand/css/brand.css?v=3" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../brand/css/brand.css?v=3"></noscript>
+    <!-- CSS -->
 
-    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
-    <link rel="stylesheet" href="tailwind.css?v=2">
+    <!-- JS -->
+    <!-- JS -->
 
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); /* Light background */
-            color: #1e293b; /* Dark slate text */
+            /* font-family: 'Inter', sans-serif; */
+            background: white;
+            color: var(--color-slate-800); /* Dark slate text */
             overflow-x: hidden; /* Prevent horizontal scroll due to shapes */
         }
 
@@ -61,28 +87,45 @@
     </style>
 </head>
 <body class="relative min-h-screen">
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
-    <div class="shape shape-4"></div>
-    <div class="shape shape-5"></div>
-    <div class="shape shape-6"></div>
-    <div class="shape shape-7"></div>
 
-    <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md z-50 py-4 px-6 md:px-8">
-        <div class="container mx-auto flex justify-between items-center max-w-7xl">
-            <a href="#" class="text-2xl font-extrabold text-blue-700 flex items-center">
-                <img style="height: 48px; width: 122px; min-width: 122px;" class="header-logo" src="images/Logo_TW_nobg_RGB_244px_96px.webp" alt="Twoja Widoczność Logo" loading="lazy">
-            </a>
-
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="Dlaczego My?">Dlaczego My?</a>
-                <a href="#how-we-work" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="Jak Pracujemy?">Jak Pracujemy?</a>
-                <a href="#packages" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="Oferta Twoja Widoczność">Oferta</a>
-                <a href="#faq" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="FAQ">FAQ</a>
-                <a href="#contact" class="text-lg font-medium text-slate-700 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="Kontakt Twoja Widoczność">Kontakt</a>
+    <!-- NAV -->    
+    <nav class="fixed top-0 left-0 w-full z-50 py-4 px-6 md:px-8 backdrop-blur-lg bg-white" >
+        <div class="flex justify-between items-center" style="width: 100%;">
+            <div class="hidden md:flex space-x-4" style="width: 300px; height: 100%;">
+                <!-- Dropdown dla "Produkty" -->
+                <div class="nav-dropdown-container" style="height: 100%;">
+                    <a href="index.html#packages" class="text-lg font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="Oferta Twoja Widoczność">
+                        Produkty
+                    </a>
+                    <div class="nav-dropdown-menu" >
+                        <a href="../menu-qr/" class="nav-dropdown-menu-item text-lg font-medium" rel="noopener noreferrer" aria-label="Portfolio">
+                            <div class="nav-dropdown-menu-item-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512"><path d="M416 0C400 0 288 32 288 176l0 112c0 35.3 28.7 64 64 64l32 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-128 0-112 0-208c0-17.7-14.3-32-32-32zM64 16C64 7.8 57.9 1 49.7 .1S34.2 4.6 32.4 12.5L2.1 148.8C.7 155.1 0 161.5 0 167.9c0 45.9 35.1 83.6 80 87.7L80 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224.4c44.9-4.1 80-41.8 80-87.7c0-6.4-.7-12.8-2.1-19.1L191.6 12.5c-1.8-8-9.3-13.3-17.4-12.4S160 7.8 160 16l0 134.2c0 5.4-4.4 9.8-9.8 9.8c-5.1 0-9.3-3.9-9.8-9L127.9 14.6C127.2 6.3 120.3 0 112 0s-15.2 6.3-15.9 14.6L83.7 151c-.5 5.1-4.7 9-9.8 9c-5.4 0-9.8-4.4-9.8-9.8L64 16zm48.3 152l-.3 0-.3 0 .3-.7 .3 .7z"/></svg>
+                                QR Menu
+                            </div>
+                            <div style="background-image: url('../image/nav/dropdown-menu_digital-menu.webp');" class="nav-dropdown-menu-item-image"></div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Dropdown dla "Produkty" -->
+                <div class="nav-dropdown-container">
+                    <a href="#contact-form-section" class="text-lg font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200" rel="noopener noreferrer" aria-label="FAQ">
+                        Kontakt
+                    </a>
+                </div>
             </div>
-
+            
+            <a class="nav-logo" href="../">
+                <img style="height: 50px; min-height: 50px; width: 174px; max-width: 174px;" fetchpriority="high" class="nav-logo" src="../image/brand/logotype/TW_full.webp" alt="Twoja Widoczność Logo">
+            </a>
+            
+            
+            <div class="hidden md:flex" style="width: 300px; justify-content: end;">
+                <a href="#contact-form-section" class="btn-primary">
+                    Napisz do nas!
+                </a>
+            </div>
+            
             <div class="md:hidden">
                 <div class="hamburger" id="hamburger-menu">
                     <span></span>
@@ -92,18 +135,14 @@
             </div>
         </div>
     </nav>
+    <!-- NAV -->
 
-    <div class="mobile-nav-menu" id="mobile-nav-menu">
-        <a href="#about" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Dlaczego My?">Dlaczego My?</a>
-        <a href="#how-we-work" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Jak Pracujemy?">Jak Pracujemy?</a>
-        <a href="#packages" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Oferta Twoja Widoczność">Oferta</a>
-        <a href="oferty/intro/" class="text-3xl font-medium text-blue-600 hover:text-blue-700 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Pakiet Intro">Intro</a>
-        <a href="oferty/startup/" class="text-3xl font-medium text-indigo-600 hover:text-indigo-700 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Pakiet Startup">Startup</a>
-        <a href="oferty/widocznosc/" class="text-3xl font-medium text-yellow-500 hover:text-yellow-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()"  rel="noopener noreferrer" aria-label="Pakiet Widoczność">Widoczność</a>
-        <a href="oferty/max-widocznosc/" class="text-3xl font-medium text-pink-500 hover:text-pink-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Pakiet MAX Widoczność">MAX Widoczność</a>
-        <a href="#faq" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="FAQ">FAQ</a>
-        <a href="#contact" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Kontakt Twoja Widoczność">Kontakt</a>
+    <div class="mobile-nav-menu" id="mobile-nav-menu" style="height: 100vh; padding-top: 82px; max-width: 100vw;">
+        <a href="../menu-qr/" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Menu QR">Menu QR</a>
+        <a href="#contact-form-section" class="text-3xl font-medium text-slate-800 hover:text-blue-600 transition-colors duration-200 py-4" onclick="closeMobileMenu()" rel="noopener noreferrer" aria-label="Kontakt">Kontakt</a>
     </div>
+
+
 
     <main class="relative z-10 pt-20"> 
         <header class="py-24 md:py-40 flex flex-col items-center justify-center text-center overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50">
@@ -290,30 +329,6 @@
             </div>
         </section>
 
-        <!-- <section id="testimonials" class="py-20 md:py-32 px-4 mx-auto container text-center scroll-reveal">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Co Mówią Nasi Zadowoleni Klienci?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-                <div class="glass-card p-8 rounded-xl text-left">
-                    <p class="text-xl italic text-slate-600 mb-6">"Nic nie mówimy, bo narazie nas nie ma"</p>
-                    <p class="font-bold text-slate-800 text-lg">- Anna K., Właścicielka Kwiaciarni</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal my-12">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Nasze Realizacje</h2>
-            <p class="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto mb-12">
-                Poznaj projekty, które z dumą zrealizowaliśmy. Każda strona to dowód naszego zaangażowania w cyfrowy sukces naszych klientów.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <div class="glass-card p-6 rounded-xl text-center">
-                    <img src="images/Logo_TW_full_BG_RGB_2160px.jpg" alt="Projekt strony Twoja Widoczność" class="rounded-lg mb-4 w-full h-auto object-cover shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/1e293b?text=Image+Error';">
-                    <h3 class="text-2xl font-semibold mb-2 text-slate-800">Strona internetowa dla "Twoja Widoczność"</h3>
-                    <p class="text-slate-600">Stworzyliśmy stronę internetową Twoja Widoczność, aby także wspierać własny biznes i widoczność w sieci.</p>
-                </div>
-            </div>
-        </section> -->
-
         <section id="faq" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal rounded-xl my-12 shadow-inner section-white-gradient">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-slate-800">Najczęściej Zadawane Pytania</h2>
             <div class="max-w-3xl mx-auto space-y-4 text-left">
@@ -362,176 +377,156 @@
             </div>
         </section>
 
-        <section id="newsletter" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal my-12">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Bądź na Bieżąco!</h2>
-            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                Zapisz się do naszego newslettera i otrzymuj najnowsze porady dotyczące widoczności online, aktualności branżowe i ekskluzywne oferty!
+        <section id="contact-form-section" class="py-20 md:py-32 w-full md:px-8">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="lg:order-2 text-center lg:text-center scroll-reveal">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8 text-slate-800">Zdecydowałeś albo masz pytanie?</h2>
+                    <p class="text-base md:text-xl text-slate-600 mb-12">
+                        Wyślij nam wiadomość, a my skontaktujemy się z tobą i pomożemy ci ze wszystkim.
+                    </p>
+                </div>
+                <div class="max-w-2xl flex justify-center items-center gap-12 mx-auto md:px-32">
+                    <div class="glass-card p-8 rounded-xl text-left w-full">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label id="contact-form-input-first" for="contact-email" class="block text-slate-700 text-lg font-medium mb-2">Twój Adres E-mail:</label>
+                                <input placeholder="example@mail.com" type="email" id="contact-email" name="email" required
+                                       class="w-full p-3 rounded-lg bg-white text-slate-800 border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm">
+                            </div>
+                            <div>
+                                <label id="contact-form-input-second" for="contact-message" class="block text-slate-700 text-lg font-medium mb-2">Wiadomość:</label>
+                                <textarea placeholder="Czego chciałbyś się dowiedzieć od nas?" id="contact-message" name="message" rows="2" required
+                                          class="w-full p-3 rounded-lg bg-white text-slate-800 border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm"></textarea>
+                            </div>
+                            <div class="flex w-full justify-center">
+                                <button type="submit" class="btn-primary" style="padding-inline: 60px;">
+                                    Wyślij wiadomość
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="w-full px-4 text-center scroll-reveal pb-20">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-slate-800">Zapisz się do newslettera!</h2>
+            <p class="text-lg md:text-base text-slate-600 max-w-3xl mx-auto mb-3">
+                Będziesz otrzymywał od nas porady dotyczące widoczności twojej firmy w sieci i zwiększaniu sprzedaży.
             </p>
             <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4 justify-center">
                 <input type="email" id="newsletter-email" placeholder="Wpisz swój adres e-mail"
                        class="flex-grow p-4 rounded-lg bg-white text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 focus:outline-none border border-slate-300 shadow-sm">
-                <button id="newsletter-signup-btn"
-                        class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105">
+                <button id="newsletter-signup-btn" class="btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M36.4 353.2c4.1-14.6 11.8-27.9 22.6-38.7l181.2-181.2 33.9-33.9c16.6 16.6 51.3 51.3 104 104l33.9 33.9-33.9 33.9-181.2 181.2c-10.7 10.7-24.1 18.5-38.7 22.6L30.4 510.6c-8.3 2.3-17.3 0-23.4-6.2S-1.4 489.3 .9 481L36.4 353.2zm55.6-3.7c-4.4 4.7-7.6 10.4-9.3 16.6l-24.1 86.9 86.9-24.1c6.4-1.8 12.2-5.1 17-9.7L91.9 349.5zm354-146.1c-16.6-16.6-51.3-51.3-104-104L308 65.5C334.5 39 349.4 24.1 352.9 20.6 366.4 7 384.8-.6 404-.6S441.6 7 455.1 20.6l35.7 35.7C504.4 69.9 512 88.3 512 107.4s-7.6 37.6-21.2 51.1c-3.5 3.5-18.4 18.4-44.9 44.9z"/></svg>
                     Zapisz się!
                 </button>
             </div>
             <div class="mt-4 flex items-center justify-center">
                 <input type="checkbox" id="newsletter-rules-accept" class="form-checkbox h-4 w-4 text-blue-600">
                 <label for="newsletter-rules-accept" class="ml-2 text-slate-600 text-sm">
-                    Akceptuję <a href="dokumenty/Polityka_prywatności_2025-06.pdf" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">regulamin i politykę prywatności</a>
+                    Akceptuję 
+                    <a href="../dokumenty/Regulamin_2025-07.pdf" class="document-link" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">regulamin </a>
+                    i
+                    <a href="../dokumenty/Polityka_prywatności_2025-06.pdf" class="document-link" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">politykę prywatności</a>
                 </label>
-            </div>
-        </section>
-
-        <section id="contact" class="py-16 md:py-24 px-4 container mx-auto text-center scroll-reveal my-12">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-slate-800">Gotowy na Cyfrową Rewolucję?</h2>
-            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-12">
-                Skontaktuj się z nami, aby omówić Twój projekt. Stworzymy dla Ciebie stronę, która nie tylko będzie widoczna, ale i zachwyci każdego odwiedzającego!
-            </p>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                <div class="glass-card p-8 rounded-xl text-left">
-                    <h3 class="text-3xl font-bold text-slate-800 mb-6">Wyślij nam Wiadomość</h3>
-                    <form id="contact-form" class="space-y-6">
-                        <div>
-                            <label for="contact-name" class="block text-slate-700 text-lg font-medium mb-2">Twoje Imię:</label>
-                            <input type="text" id="contact-name" name="name" required
-                                   class="w-full p-3 rounded-lg bg-white text-slate-800 border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm">
-                        </div>
-                        <div>
-                            <label for="contact-email" class="block text-slate-700 text-lg font-medium mb-2">Twój Adres E-mail:</label>
-                            <input type="email" id="contact-email" name="email" required
-                                   class="w-full p-3 rounded-lg bg-white text-slate-800 border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm">
-                        </div>
-                        <div>
-                            <label for="contact-subject" class="block text-slate-700 text-lg font-medium mb-2">Temat:</label>
-                            <input type="text" id="contact-subject" name="subject" required
-                                   class="w-full p-3 rounded-lg bg-white text-slate-800 border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm">
-                        </div>
-                        <div>
-                            <label for="contact-message" class="block text-slate-700 text-lg font-medium mb-2">Twoja Wiadomość:</label>
-                            <textarea id="contact-message" name="message" rows="5" required
-                                      class="w-full p-3 rounded-lg bg-white text-slate-800 border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm"></textarea>
-                        </div>
-                        <button type="submit"
-                                class="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105 w-full">
-                            Wyślij Wiadomość
-                        </button>
-                    </form>
-                </div>
-
-                <div class="glass-card p-8 rounded-xl text-left flex flex-col justify-center" style="height: fit-content;">
-                    <h3 class="text-3xl font-bold text-slate-800 mb-6">Nasze Dane Kontaktowe</h3>
-                    <div class="space-y-6 text-base text-slate-700">
-                        <p class="flex items-center">
-                            <!-- <i class="fas fa-envelope text-blue-500 mr-3 text-2xl"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2b7fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail text-blue-500 mr-3 text-2xl"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-                            <a href="mailto:kontakt@twojawidocznosc.pl" class="hover:text-blue-600 transition-colors">kontakt@twojawidocznosc.online</a>
-                        </p>
-                        <p class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2b7fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone text-blue-500 mr-3 text-2xl"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
-                            +48 604 175 360
-                        </p>
-                        <!-- <p class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-blue-500 mr-3 text-2xl"></i>
-                            ul. , Polska
-                        </p> -->
-                        <div class="pt-4">
-                            <h4 class="text-xl font-semibold text-slate-800 mb-3">Znajdź nas w mediach społecznościowych:</h4>
-                            <div class="flex space-x-6 justify-center lg:justify-start">
-                                <a href="https://www.facebook.com/twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="Facebook Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
-                                    <img style="height: 24px; width: 24px;" src="icons/facebook.svg" alt="Facebook Twoja Widoczność">
-                                </a>
-                                <a href="https://www.youtube.com/@twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="Youtube Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
-                                    <img style="height: 24px; width: 24px;" src="icons/youtube.svg" alt="Youtube Twoja Widoczność">
-                                </a>
-                                <a href="https://www.tiktok.com/@twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="TikTok Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
-                                    <img style="height: 24px; width: 24px;" src="icons/tiktok.svg" alt="TikTok Twoja Widoczność">
-                                </a>
-                                <a href="https://www.instagram.com/twoja.widocznosc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
-                                    <img style="height: 24px; width: 24px;" src="icons/instagram.svg" alt="Instagram Twoja Widoczność">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gradient-to-r from-slate-100 to-slate-200 py-10 px-4 text-center text-slate-600 shadow-inner">
-        <div class="max-w-7xl mx-auto">
-            <p>© 2025 Twoja Widoczność. Wszelkie prawa zastrzeżone.</p>
-            <p class="text-sm mt-2">Stworzono z pasją do widoczności w sieci.</p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="dokumenty/Polityka_prywatności_2025-06.pdf" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">Polityka Prywatności</a>
-                <a href="dokumenty/Regulamin_2025-06.pdf" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Regulamin Twoja Widoczność">Regulamin</a>
-                <a href="https://g.co/kgs/p25Lt7P" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Wizytówka Google Twoja Widoczność">Wiztyówka Google</a>
+    <footer class="py-10 px-4 text-center text-slate-600">
+        <div id="footer-container" class="w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-12 px-20">
+            <div class="pt-4">
+                <p class="text-xl font-semibold text-slate-800 mb-3">Znajdź nas w mediach społecznościowych:</p>
+                <div class="flex space-x-6 justify-center lg:justify-start w-full">
+                    <a href="https://www.facebook.com/twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="Facebook Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
+                        <img style="height: 24px; width: 24px;" src="../icons/facebook.svg" alt="Facebook Twoja Widoczność" loading="lazy">
+                    </a>
+                    <a href="https://www.youtube.com/@twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="Youtube Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl" >
+                        <img style="height: 24px; width: 24px;" src="../icons/youtube.svg" alt="Youtube Twoja Widoczność" loading="lazy">
+                    </a>
+                    <a href="https://www.tiktok.com/@twoja.widocznosc" target="_blank" rel="noopener noreferrer" aria-label="TikTok Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
+                        <img style="height: 24px; width: 24px;" src="../icons/tiktok.svg" alt="TikTok Twoja Widoczność" loading="lazy">
+                    </a>
+                    <a href="https://www.instagram.com/twoja.widocznosc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Twoja Widoczność" class="text-blue-700 hover:text-blue-900 transition-colors text-3xl">
+                        <img style="height: 24px; width: 24px;" src="../icons/instagram.svg" alt="Instagram Twoja Widoczność" loading="lazy">
+                    </a>
+                </div>
             </div>
+            <div class="flex flex-col justify-center space-x-4 gap-2">
+                <a href="../dokumenty/Polityka_prywatności_2025-06.pdf" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">Polityka Prywatności</a>
+                <a href="../dokumenty/Regulamin_2025-06.pdf" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Regulamin Twoja Widoczność">Regulamin</a>
+                <a href="https://g.co/kgs/p25Lt7P" class="text-slate-600 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Wizytówka Google Twoja Widoczność">Wizytówka Google</a>
+            </div>
+            <a href="" id="open-cookie-preferences-footer" class="text-slate-400 hover:text-white transition duration-300">
+                Zarządzaj zgodami na pliki cookie
+            </a>    
         </div>
     </footer>
 
     <div id="universal-modal" class="modal-overlay">
-        <div class="modal-content">
+        <div class="modal-content max-w-xl">
             <button class="modal-close-button" id="modal-close-btn">×</button>
-            <h3 id="modal-title" class="text-3xl font-bold text-slate-800 mb-4"></h3>
-            <div id="modal-body" class="text-slate-700 text-lg leading-relaxed whitespace-pre-wrap"></div>
+            <h3 id="modal-title" class="text-5xl font-bold text-slate-800 mb-8 text-center"></h3>
+            <div id="modal-body" class="text-slate-700 text-xl leading-relaxed whitespace-pre-wrap text-center"></div>
         </div>
     </div>
 
-    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-slate-800 text-white p-4 shadow-lg z-50 transform translate-y-full transition-transform duration-500 ease-out">
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 text-white p-4 shadow-lg z-50 transform translate-y-full transition-transform duration-500 ease-out w-full" style="background: var(--tw_gradient_dark-90); max-width: 100vw; min-height: 100px;">
         <div class="mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <p class="text-sm md:text-base mb-2 md:mb-0">
-                Używamy plików cookie, aby zapewnić najlepszą jakość korzystania z naszej witryny. Umożliwiają one personalizację treści i reklam, analizę ruchu oraz prawidłowe funkcjonowanie strony. Aby uzyskać więcej informacji, zapoznaj się z naszą <a href="dokumenty/Polityka_prywatności_2025-06.pdf" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">Polityka Prywatności</a>.
+            <p class="text-sm md:text-base mb-2 md:mb-0 max-w-3xl">
+                Używamy plików cookie, aby zapewnić najlepszą jakość korzystania z naszej witryny. Umożliwiają one personalizację treści i reklam, analizę ruchu oraz prawidłowe funkcjonowanie strony. Aby uzyskać więcej informacji, zapoznaj się z naszą <a href="../dokumenty/Polityka_prywatności_2025-06.pdf" class="document-link" target="_blank" rel="noopener noreferrer" aria-label="Polityka Prywatności Twoja Widoczność">Polityka Prywatności</a>.
             </p>
-            <div class="flex flex-col sm:flex-row gap-3" style="width: -webkit-fill-available;">
-                <button id="accept-all-cookies" class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105 text-sm whitespace-nowrap">
+            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <button id="accept-all-cookies" class="btn-primary">
                     Akceptuj wszystkie
                 </button>
-                <button id="reject-all-cookies" class="bg-white text-slate-800 font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105 text-sm whitespace-nowrap border border-slate-300">
+                <button id="reject-all-cookies" class="btn-secondary" style="background: white;">
                     Odrzuć wszystkie
                 </button>
-                <button id="manage-cookies-btn" class="bg-slate-600 hover:bg-slate-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105 text-sm whitespace-nowrap">
+                <button id="manage-cookies-btn" class="btn-secondary">
                     Zarządzaj zgodami
                 </button>
             </div>
         </div>
     </div>
 
-    <div id="cookie-preferences-modal" class="fixed inset-0 bg-slate-900-05 bg-opacity-75 flex items-center justify-center p-4 z-[100] opacity-0 pointer-events-none transition-opacity duration-300 ease-out" style="backdrop-filter: blur(10px);">
-        <div class="bg-white rounded-lg p-6 w-full max-w-md shadow-xl transform scale-95 transition-transform duration-300 ease-out">
-            <h3 class="text-2xl font-bold mb-4 text-slate-800">Zarządzaj swoimi zgodami na pliki cookie</h3>
-            <p class="text-slate-600 text-sm mb-6">Możesz zmienić swoje preferencje dotyczące plików cookie w dowolnym momencie. Zmiany wejdą w życie po odświeżeniu strony.</p>
+    <div id="cookie-preferences-modal" class="max-w-6xl fixed inset-0 p-4 bg-slate-900-05 bg-opacity-75 flex items-center justify-center z-[100] opacity-0 pointer-events-none transition-opacity duration-300 ease-out" style="backdrop-filter: blur(6px); max-width: 100vw;">
+        <div class="bg-white rounded-lg px-6 py-10 md:px-20 md:py-12 max-w-md shadow-xl transform scale-95 transition-transform duration-300 ease-out flex flex-col items-center">
+            <h3 class="text-3xl md:text-5xl text-center font-bold mb-4 text-slate-800">Zarządzaj swoimi zgodami na pliki cookie</h3>
+            <p class="max-w-3xl text-slate-600 text-center text-sm md:text-xl mb-4 md:mb-8">Możesz zmienić swoje preferencje dotyczące plików cookie w dowolnym momencie. Zmiany wejdą w życie po odświeżeniu strony.</p>
 
-            <div class="mb-4">
-                <label class="inline-flex items-center cursor-pointer">
-                    <input type="checkbox" id="cookie-necessary" class="form-checkbox h-5 w-5 text-blue-600" checked disabled>
-                    <span class="ml-3 text-lg font-medium text-slate-700">Niezbędne pliki cookie</span>
-                </label>
-                <p class="text-slate-500 text-sm ml-8">Te pliki cookie są kluczowe dla prawidłowego funkcjonowania strony i nie mogą być wyłączone.</p>
-            </div>
-
-            <div class="mb-4">
-                <label class="inline-flex items-center cursor-pointer">
-                    <input type="checkbox" id="cookie-analytics" class="form-checkbox h-5 w-5 text-blue-600">
-                    <span class="ml-3 text-lg font-medium text-slate-700">Analityczne pliki cookie</span>
-                </label>
-                <p class="text-slate-500 text-sm ml-8">Pozwalają nam analizować ruch na stronie i poprawiać jej działanie.</p>
-            </div>
-
-            <div class="mb-6">
-                <label class="inline-flex items-center cursor-pointer">
-                    <input type="checkbox" id="cookie-marketing" class="form-checkbox h-5 w-5 text-blue-600">
-                    <span class="ml-3 text-lg font-medium text-slate-700">Marketingowe pliki cookie</span>
-                </label>
-                <p class="text-slate-500 text-sm ml-8">Służą do wyświetlania spersonalizowanych reklam i treści.</p>
+            <div class="py-4 md:py-12">
+                <div class="mb-4">
+                    <label class="inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="cookie-necessary" class="form-checkbox h-5 w-5 text-blue-600" checked disabled>
+                        <span class="ml-3 text-lg font-medium text-slate-700">Niezbędne pliki cookie</span>
+                    </label>
+                    <p class="text-slate-500 text-sm ml-8">Te pliki cookie są kluczowe dla prawidłowego funkcjonowania strony i nie mogą być wyłączone.</p>
+                </div>
+    
+                <div class="mb-4">
+                    <label class="inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="cookie-analytics" class="form-checkbox h-5 w-5 text-blue-600">
+                        <span class="ml-3 text-lg font-medium text-slate-700">Analityczne pliki cookie</span>
+                    </label>
+                    <p class="text-slate-500 text-sm ml-8">Pozwalają nam analizować ruch na stronie i poprawiać jej działanie.</p>
+                </div>
+    
+                <div class="mb-6">
+                    <label class="inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="cookie-marketing" class="form-checkbox h-5 w-5 text-blue-600">
+                        <span class="ml-3 text-lg font-medium text-slate-700">Marketingowe pliki cookie</span>
+                    </label>
+                    <p class="text-slate-500 text-sm ml-8">Służą do wyświetlania spersonalizowanych reklam i treści.</p>
+                </div>
             </div>
 
             <div class="flex justify-end gap-3">
-                <button id="save-cookie-preferences" class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105">
+                <button id="save-cookie-preferences" class="btn-primary">
                     Zapisz preferencje
                 </button>
-                <button id="close-cookie-preferences" class="bg-slate-300 hover:bg-slate-400 text-slate-800 font-bold py-2 px-6 rounded-full shadow-md transition duration-300 hover:scale-105">
+                <button id="close-cookie-preferences" class="btn-secondary">
                     Anuluj
                 </button>
             </div>
@@ -539,59 +534,73 @@
     </div>
 
     <script type="application/ld+json">
-        [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
             {
-              "@context": "http://schema.org",
               "@type": "WebSite",
+              "@id": "https://twojawidocznosc.online/#website",
+              "url": "https://twojawidocznosc.online/",
               "name": "Twoja Widoczność",
-              "url": "https://twojawidocznosc.online/"
+              "publisher": {
+                "@id": "https://twojawidocznosc.online/#firma"
+              }
             },
-
             {
-                "@context": "http://schema.org",
-                "@type": "Organization",
-                "name": "Twoja Widoczność",
-                "url": "https://twojawidocznosc.online/",
-                "logo": "https://twojawidocznosc.online/image/brand/logo/android-chrome-512x512.png",
-                "description": "Profesjonalne tworzenie nowoczesnych stron internetowych i kompleksowe usługi SEO dla firm w Polsce.",
-                "sameAs": [
-                    "https://www.facebook.com/twoja.widocznosc",
-                    "https://www.youtube.com/@twoja.widocznosc",
-                    "https://www.tiktok.com/@twoja.widocznosc",
-                    "https://www.instagram.com/twoja.widocznosc",
-                    "https://g.co/kgs/NUQ6RMx"
-                ],
-                "contactPoint": [
-                    {
-                        "@type": "ContactPoint",
-                        "telephone": "+48-604-175-360", // Twój numer telefonu
-                        "contactType": "customer service",
-                        "areaServed": "PL",
-                        "availableLanguage": "pl"
-                    },
-                    {
-                        "@type": "ContactPoint",
-                        "email": "kontakt@twojawidocznosc.online",
-                        "contactType": "customer service",
-                        "areaServed": "PL",
-                        "availableLanguage": "pl"
-                    }
+              "@type": "WebPage",
+              "@id": "https://twojawidocznosc.online/",
+              "url": "https://twojawidocznosc.online/",
+              "name": "Strona Główna | Twoja Widoczność",
+              "description": "Tworzymy strony internetowe, które zwiększają widoczność Twojej firmy w sieci. Oferujemy nowoczesny design, responsywność i rozwiązania dopasowane do Twoich potrzeb.",
+              "isPartOf": {
+                "@id": "https://twojawidocznosc.online/#website"
+              },
+              "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Strona Główna",
+                    "item": "https://twojawidocznosc.online/"
+                  }
                 ]
-            },
-
-            {
-              "@context": "http://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
+              },
+              "hasPart": [
                 {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Strona Główna",
-                  "item": "https://twojawidocznosc.online/"
+                  "@type": "WebPage",
+                  "@id": "https://twojawidocznosc.online/menu-qr/"
+                }
+              ]
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://twojawidocznosc.online/#firma",
+              "name": "Twoja Widoczność",
+              "url": "https://twojawidocznosc.online",
+              "logo": "https://twojawidocznosc.online/image/brand/logo/android-chrome-512x512.png",
+              "image": "https://twojawidocznosc.online/image/brand/logotype/TW_full.png",
+              "description": "Specjalizujemy się w tworzeniu nowoczesnych stron internetowych oraz zwiększaniu widoczności firm w internecie.",
+              "sameAs": [
+                "https://www.facebook.com/twoja.widocznosc",
+                "https://www.youtube.com/@twoja.widocznosc",
+                "https://www.tiktok.com/@twoja.widocznosc",
+                "https://www.instagram.com/twoja.widocznosc",
+                "https://g.co/kgs/NUQ6RMx"
+              ],
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "contactType": "customer service",
+                  "areaServed": "PL",
+                  "availableLanguage": "pl",
+                  "email": "kontakt@twojawidocznosc.online",
+                  "telephone": "+48-604-175-360"
                 }
               ]
             }
-        ]
+          ]
+        }
     </script>
     <script src="index.js?v=2" defer></script>
 </body>
