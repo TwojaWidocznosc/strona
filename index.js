@@ -166,12 +166,11 @@
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault(); // Prevent default form submission
 
-            const name = document.getElementById('contact-name').value.trim();
             const email = document.getElementById('contact-email').value.trim();
-            const subject = document.getElementById('contact-subject').value.trim();
             const message = document.getElementById('contact-message').value.trim();
 
-            if (!name || !email || !subject || !message) {
+
+            if (!email || !message) {
                 openModal('Błąd Wprowadzania', 'Proszę wypełnić wszystkie pola formularza.');
                 return;
             }
@@ -182,10 +181,9 @@
             }
 
             const payload = {
-                name: name,
                 email: email,
-                subject: subject,
-                message: message
+                message: message,
+                source: window.location.href
             };
 
             const res = await fetch('https://api.twojawidocznosc.online/contact', {
@@ -195,7 +193,7 @@
             });
         
             if (res.ok) {
-                openModal('Wiadomość Wysłana!', `Dziękujemy, ${name}! Twoja wiadomość została do nas wysłana i skontaktujemy się z Tobą wkrótce.`);
+                openModal('Wiadomość Wysłana!', `Dziękujemy, Twoja wiadomość została do nas wysłana i skontaktujemy się z Tobą wkrótce.`);
                 // Clear form fields
                 contactForm.reset();
             } else {
