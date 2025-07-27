@@ -572,3 +572,92 @@ function handlePricingAnimation() {
 }
 window.addEventListener('load', handlePricingAnimation);
 window.addEventListener('scroll', handlePricingAnimation);
+
+    //     // Nowy Intersection Observer dla tekstu w sekcji benefits
+    //     // Nowy Intersection Observer dla kafelków w sekcji benefits
+    //     document.addEventListener('DOMContentLoaded', () => {
+    //         const benefitsTilesContainer = document.querySelector('.benefits-tiles-animation-wrapper');
+    //         const benefitsSection = document.getElementById('benefits');
+
+    //         if (benefitsTilesContainer && benefitsSection) {
+    //             const handleScroll = () => {
+    //                 const sectionRect = benefitsSection.getBoundingClientRect();
+    //                 const viewportHeight = window.innerHeight;
+
+    //                 // Punkt startowy animacji: gdy góra sekcji jest na dole viewportu (sekcja zaczyna wchodzić)
+    //                 const animationStartPoint = viewportHeight;
+    //                 // Punkt końcowy animacji: gdy góra sekcji jest na 20% wysokości viewportu (sekcja jest dobrze widoczna)
+    //                 const animationEndPoint = viewportHeight * 0.4;
+
+    //                 // Oblicz aktualną pozycję góry sekcji względem viewportu
+    //                 const currentSectionTop = sectionRect.top;
+
+    //                 // Oblicz postęp animacji (od 0 do 1)
+    //                 // progress = 0, gdy sekcja jest całkowicie poniżej punktu startowego animacji
+    //                 // progress = 1, gdy sekcja osiągnie punkt końcowy animacji lub jest wyżej
+    //                 let progress = 1 - (currentSectionTop - animationEndPoint) / (animationStartPoint - animationEndPoint);
+
+    //                 // Ogranicz postęp do zakresu od 0 do 1, aby uniknąć niepożądanych wartości
+    //                 progress = Math.max(0, Math.min(1, progress));
+
+    //                 // Zastosuj transformację translateX i opacity w oparciu o postęp
+    //                 // translateX: od 50px (ukryte w prawo) do 0px (widoczne)
+    //                 const translateX = 600 * (1 - progress);
+    //                 // opacity: od 0 (niewidoczne) do 1 (widoczne)
+    //                 const opacity = progress ;
+
+    //                 benefitsTilesContainer.style.transform = `translateX(${translateX}px)`;
+    //                 benefitsTilesContainer.style.opacity = opacity;
+    //             };
+
+    //             // Wywołaj funkcję raz na początku, aby ustawić początkowy stan elementu
+    //             handleScroll();
+    //             // Dodaj nasłuchiwanie na zdarzenie scrollowania, aby animacja była ciągła
+    //             window.addEventListener('scroll', handleScroll);
+    //         }
+    //     });
+    //     document.addEventListener('DOMContentLoaded', () => {
+    //         const ipadMockup = document.getElementById('ipad-mockup');
+    //         const sampleMenuSection = document.getElementById('sample-menu');
+
+    //         if (ipadMockup && sampleMenuSection) {
+    //             const handleScrollAnimation = () => {
+    //                 // Pobierz aktualne wymiary i pozycję sekcji
+    //                 const sectionRect = sampleMenuSection.getBoundingClientRect();
+    //                 const viewportHeight = window.innerHeight;
+
+    //                 // Określ zakres przewijania dla animacji
+    //                 // Animacja zaczyna się, gdy dół sekcji wchodzi w viewport
+    //                 const animationStartScroll = sectionRect.top + sectionRect.height;
+    //                 // Animacja kończy się, gdy góra sekcji osiąga środek viewportu (lub inny punkt, dostosuj)
+    //                 const animationEndPoint = viewportHeight / 5; // Możesz dostosować ten punkt
+
+    //                 // Oblicz postęp animacji (wartość od 0 do 1)
+    //                 // Gdy sekcja jest poniżej punktu startowego, progress = 0
+    //                 // Gdy sekcja osiągnie punkt końcowy, progress = 1
+    //                 let progress = 1 - (animationStartScroll - viewportHeight) / (animationStartScroll - animationEndPoint);
+
+    //                 // Ogranicz postęp do zakresu od 0 do 1
+    //                 progress = Math.max(0, Math.min(1, progress));
+
+    //                 // Interpoluj właściwości transformacji na podstawie postępu
+    //                 // rotateX: od 45deg (przekrzywiony) do 0deg (wyprostowany)
+    //                 const rotateX = 90 * (1 - progress);
+    //                 // rotateY: od -20deg (przekrzywiony) do 0deg (wyprostowany)
+    //                 const rotateY = -90 * (1 - progress);
+    //                 // scale: od 0.7 (mniejszy) do 1 (większy)
+    //                 const scale = 0.7 + (1 - 0.7) * progress;
+    //                 // translateY: aby przesunąć go w górę, gdy się prostuje (dostosuj wartość)
+    //                 const translateY = 50 * (1 - progress); // Przesuwa się z offsetu 50px do 0px
+
+    //                 // Zastosuj transformacje i przezroczystość
+    //                 ipadMockup.style.transform = `translateY(${translateY}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`;
+    //                 // ipadMockup.style.opacity = progress; // Stopniowe pojawianie się
+    //             };
+
+    //             // Wywołaj funkcję raz na początku, aby ustawić początkowy stan elementu
+    //             handleScrollAnimation();
+    //             // Dodaj nasłuchiwanie na zdarzenie scrollowania, aby animacja była ciągła
+    //             window.addEventListener('scroll', handleScrollAnimation);
+    //         }
+    //     });
