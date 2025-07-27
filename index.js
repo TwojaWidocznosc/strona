@@ -143,7 +143,7 @@
                     return;
                 }
     
-                const res = await fetch('https://api.twojawidocznosc.online/newsletter', {
+                const res = await fetch('https://api.twojawidocznosc.online/newsletter/subscribe', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email: email })

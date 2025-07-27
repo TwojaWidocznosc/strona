@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Wypisz się z newslettera</title>
+</head>
+<body>
+  <p id="status">Przetwarzam wypisanie z newslettera...</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get("email");
+
+    if (email) {
+      fetch('https://api.twojawidocznosc.online/newsletter/unsubscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          document.getElementById("status").textContent = "Zostałeś wypisany z newslettera.";
+        } else {
+          document.getElementById("status").textContent = "Wystąpił problem z wypisaniem.";
+        }
+      })
+      .catch(() => {
+        document.getElementById("status").textContent = "Wystąpił błąd sieci.";
+      });
+    } else {
+      document.getElementById("status").textContent = "Brak adresu e-mail.";
+    }
+  </script>
+</body>
+</html>
